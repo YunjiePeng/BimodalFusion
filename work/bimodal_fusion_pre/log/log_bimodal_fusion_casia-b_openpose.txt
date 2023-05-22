@@ -1,0 +1,525 @@
+INFO:root:{'WORK_PATH': './work/bimodal_fusion', 'CUDA_VISIBLE_DEVICES': '0,1', 'dataset': 'CASIA-B', 'model': {'pretrain_pgg': 'pretrain_pgg/pgg_casia-b_gait-temporal_openpose_CASIA-B_OPENPOSE_73_False_body_12_gait_temporal_3_64_full_128_30_0.2-100000-encoder.ptm', 'pretrain_cnn': 'pretrain_cnn/gaitpart_casia-b_CASIA-B_73_False_128_128_full_128_30_0.2-120000-encoder.ptm', 'cnn_branch': 'gaitpart', 'cnn_cfg': {'hidden_dim': 128, 'out_channels': 128}, 'pgcn_cfg': {'in_channels': 3, 'graph_cfg': {'layout': 'body_12', 'strategy': 'gait_temporal'}, 'edge_importance_weighting': True, 'out_channels': 64, 'num_id': 73}, 'fuse_cfg': {'out_channels': 128}, 'lr': 0.1, 'margin': 0.2, 'frame_num': {'silhouette': 30, 'skeleton': 30}, 'frame_num_min': {'silhouette': 15, 'skeleton': 30}, 'num_workers': 24, 'restore_iter': 0, 'hard_or_full_trip': 'full', 'batch_size': (8, 16), 'step_iter': 2000, 'total_iter': 10000, 'model_name': 'bimodal_fusion_openpose'}, 'data': {'data_type': 'all', 'CASIA-B': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/silhouettes64/', '/data_1/pengyunjie/dataset/casia-b/pose/openpose/pyramid_keypoints']}, 'OUMVLP': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/ou-mvlp/silhouettes/', '/data_1/pengyunjie/dataset/ou-mvlp/pose/pyramid_alpha_pose_npy']}, 'FVG': {'resolution': '64', 'pid_num': 126, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/fvg/fvg_new/silhouettes64/', '/home/pengyunjie/data/fvg/hrnet/pyramid_keypoints']}}}
+INFO:root:Initialzing...
+INFO:root:Initializing data source...
+INFO:root:dataset:CASIA-B, data_type:all, data_path:['/home/pengyunjie/data/casia-b/silhouettes64/', '/data_1/pengyunjie/dataset/casia-b/pose/openpose/pyramid_keypoints'], cache:False
+INFO:root:pid_train:['001', '002', '003', '004', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032', '033', '034', '035', '036', '037', '038', '039', '040', '041', '042', '043', '044', '045', '046', '047', '048', '049', '050', '051', '052', '053', '054', '055', '056', '057', '058', '059', '060', '061', '062', '063', '064', '065', '066', '067', '068', '069', '070', '071', '072', '073', '074']
+pid_test:['075', '076', '077', '078', '079', '080', '081', '082', '083', '084', '085', '086', '087', '088', '089', '090', '091', '092', '093', '094', '095', '096', '097', '098', '099', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124']
+INFO:root:len(pid_train):73, len(pid_test):50
+INFO:root:Data initialization complete.
+INFO:root:Initializing model...
+INFO:root:Model initialization complete.
+INFO:root:Training START
+INFO:root:
+ske 100:     gcn-hard_loss_metric=0.10624379, full_loss_metric=0.15002391, full_loss_num=1000.05999756, mean_dist=3.69539404, softmax_loss=0.08571775
+sil 100:     cnn-hard_loss_metric=0.19607443, full_loss_metric=0.20657885, full_loss_num=2393.90551758, mean_dist=4.02106571
+fus 100:    fuse-hard_loss_metric=0.31393293, full_loss_metric=0.19162990, full_loss_num=11764.68261719, mean_dist=2.80405784, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 200:     gcn-hard_loss_metric=0.09276722, full_loss_metric=0.15001513, full_loss_num=780.04998779, mean_dist=3.71522617, softmax_loss=0.06951186
+sil 200:     cnn-hard_loss_metric=0.20506926, full_loss_metric=0.20578147, full_loss_num=2545.09130859, mean_dist=4.00203228
+fus 200:    fuse-hard_loss_metric=0.24751247, full_loss_metric=0.26701364, full_loss_num=2128.96240234, mean_dist=4.63914728, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 300:     gcn-hard_loss_metric=0.10252450, full_loss_metric=0.15152636, full_loss_num=899.65997314, mean_dist=3.76399231, softmax_loss=0.07975260
+sil 300:     cnn-hard_loss_metric=0.20336200, full_loss_metric=0.20374249, full_loss_num=2680.05688477, mean_dist=3.94088054
+fus 300:    fuse-hard_loss_metric=0.23172186, full_loss_metric=0.30793390, full_loss_num=1582.32568359, mean_dist=5.75322342, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 400:     gcn-hard_loss_metric=0.10677769, full_loss_metric=0.15245944, full_loss_num=940.75000000, mean_dist=3.75207186, softmax_loss=0.08126290
+sil 400:     cnn-hard_loss_metric=0.20525056, full_loss_metric=0.20055132, full_loss_num=2626.99804688, mean_dist=3.88348055
+fus 400:    fuse-hard_loss_metric=0.23291132, full_loss_metric=0.33198944, full_loss_num=1368.50317383, mean_dist=6.41271019, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 500:     gcn-hard_loss_metric=0.10744857, full_loss_metric=0.15458705, full_loss_num=915.97998047, mean_dist=3.75736046, softmax_loss=0.08049306
+sil 500:     cnn-hard_loss_metric=0.20245962, full_loss_metric=0.19933774, full_loss_num=2588.57690430, mean_dist=3.85640478
+fus 500:    fuse-hard_loss_metric=0.22128460, full_loss_metric=0.34565985, full_loss_num=1145.60937500, mean_dist=7.00986576, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 600:     gcn-hard_loss_metric=0.11247274, full_loss_metric=0.15528089, full_loss_num=995.78002930, mean_dist=3.71775961, softmax_loss=0.08286472
+sil 600:     cnn-hard_loss_metric=0.21031298, full_loss_metric=0.20078899, full_loss_num=2754.77636719, mean_dist=3.82332468
+fus 600:    fuse-hard_loss_metric=0.22259822, full_loss_metric=0.35645810, full_loss_num=1118.62561035, mean_dist=7.43119764, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 700:     gcn-hard_loss_metric=0.09754787, full_loss_metric=0.15483136, full_loss_num=809.30999756, mean_dist=3.77689767, softmax_loss=0.08515535
+sil 700:     cnn-hard_loss_metric=0.21076255, full_loss_metric=0.20113924, full_loss_num=2863.72436523, mean_dist=3.80853891
+fus 700:    fuse-hard_loss_metric=0.23032241, full_loss_metric=0.37831992, full_loss_num=1139.98559570, mean_dist=7.82905293, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 800:     gcn-hard_loss_metric=0.09584028, full_loss_metric=0.15438253, full_loss_num=819.95001221, mean_dist=3.78548336, softmax_loss=0.07478160
+sil 800:     cnn-hard_loss_metric=0.20299728, full_loss_metric=0.19906212, full_loss_num=2673.65502930, mean_dist=3.79030752
+fus 800:    fuse-hard_loss_metric=0.21249092, full_loss_metric=0.38535199, full_loss_num=969.03186035, mean_dist=8.19902420, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 900:     gcn-hard_loss_metric=0.10808757, full_loss_metric=0.15453224, full_loss_num=906.71002197, mean_dist=3.76631808, softmax_loss=0.07519548
+sil 900:     cnn-hard_loss_metric=0.20265463, full_loss_metric=0.19791365, full_loss_num=2646.79370117, mean_dist=3.73349071
+fus 900:    fuse-hard_loss_metric=0.22055033, full_loss_metric=0.39581734, full_loss_num=961.74877930, mean_dist=8.39271736, lr=0.100000, hard or full='full'
+
+INFO:root:0:16:22.159040
+INFO:root:
+ske 1000:     gcn-hard_loss_metric=0.10000753, full_loss_metric=0.15459587, full_loss_num=854.07000732, mean_dist=3.82432461, softmax_loss=0.08257896
+sil 1000:     cnn-hard_loss_metric=0.20529629, full_loss_metric=0.19770201, full_loss_num=2861.44433594, mean_dist=3.73373771
+fus 1000:    fuse-hard_loss_metric=0.22462088, full_loss_metric=0.40387699, full_loss_num=1011.38751221, mean_dist=8.57172012, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1100:     gcn-hard_loss_metric=0.10588339, full_loss_metric=0.15447357, full_loss_num=902.84997559, mean_dist=3.80977416, softmax_loss=0.07884207
+sil 1100:     cnn-hard_loss_metric=0.20833372, full_loss_metric=0.19641404, full_loss_num=2893.95385742, mean_dist=3.66845083
+fus 1100:    fuse-hard_loss_metric=0.21055210, full_loss_metric=0.39002419, full_loss_num=903.08563232, mean_dist=8.61317062, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1200:     gcn-hard_loss_metric=0.10067384, full_loss_metric=0.15409344, full_loss_num=828.44000244, mean_dist=3.76980019, softmax_loss=0.08315601
+sil 1200:     cnn-hard_loss_metric=0.19827746, full_loss_metric=0.19373985, full_loss_num=2665.75561523, mean_dist=3.70530725
+fus 1200:    fuse-hard_loss_metric=0.20991653, full_loss_metric=0.40108845, full_loss_num=860.89935303, mean_dist=8.87620640, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1300:     gcn-hard_loss_metric=0.10113236, full_loss_metric=0.15426208, full_loss_num=846.01000977, mean_dist=3.85240722, softmax_loss=0.07968122
+sil 1300:     cnn-hard_loss_metric=0.20867847, full_loss_metric=0.19637892, full_loss_num=2813.75488281, mean_dist=3.69257665
+fus 1300:    fuse-hard_loss_metric=0.22351147, full_loss_metric=0.41006225, full_loss_num=917.60125732, mean_dist=8.93886185, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1400:     gcn-hard_loss_metric=0.10387783, full_loss_metric=0.15407516, full_loss_num=902.36999512, mean_dist=3.83310294, softmax_loss=0.08416152
+sil 1400:     cnn-hard_loss_metric=0.20231105, full_loss_metric=0.19326437, full_loss_num=2813.81567383, mean_dist=3.65947747
+fus 1400:    fuse-hard_loss_metric=0.21629216, full_loss_metric=0.41212747, full_loss_num=904.78564453, mean_dist=9.00286388, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1500:     gcn-hard_loss_metric=0.10374172, full_loss_metric=0.15402804, full_loss_num=836.72998047, mean_dist=3.86440182, softmax_loss=0.08687249
+sil 1500:     cnn-hard_loss_metric=0.20440052, full_loss_metric=0.19550203, full_loss_num=2854.46069336, mean_dist=3.68174553
+fus 1500:    fuse-hard_loss_metric=0.21249314, full_loss_metric=0.41563565, full_loss_num=884.47625732, mean_dist=9.18885803, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1600:     gcn-hard_loss_metric=0.11197381, full_loss_metric=0.15438057, full_loss_num=943.95001221, mean_dist=3.79047251, softmax_loss=0.08681253
+sil 1600:     cnn-hard_loss_metric=0.20240997, full_loss_metric=0.19294597, full_loss_num=2815.25488281, mean_dist=3.64147615
+fus 1600:    fuse-hard_loss_metric=0.21492679, full_loss_metric=0.42284709, full_loss_num=881.47814941, mean_dist=9.25765038, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1700:     gcn-hard_loss_metric=0.09846684, full_loss_metric=0.15437530, full_loss_num=808.44000244, mean_dist=3.81006861, softmax_loss=0.08067534
+sil 1700:     cnn-hard_loss_metric=0.19919588, full_loss_metric=0.19320993, full_loss_num=2767.56176758, mean_dist=3.64857197
+fus 1700:    fuse-hard_loss_metric=0.21072362, full_loss_metric=0.41838878, full_loss_num=816.73437500, mean_dist=9.42758751, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1800:     gcn-hard_loss_metric=0.11078914, full_loss_metric=0.15457711, full_loss_num=953.73999023, mean_dist=3.80133462, softmax_loss=0.09093114
+sil 1800:     cnn-hard_loss_metric=0.20163670, full_loss_metric=0.19410481, full_loss_num=2790.20312500, mean_dist=3.65350699
+fus 1800:    fuse-hard_loss_metric=0.21684992, full_loss_metric=0.42419255, full_loss_num=865.02563477, mean_dist=9.51252651, lr=0.100000, hard or full='full'
+
+INFO:root:
+ske 1900:     gcn-hard_loss_metric=0.10396142, full_loss_metric=0.15438725, full_loss_num=909.61999512, mean_dist=3.82799816, softmax_loss=0.08719815
+sil 1900:     cnn-hard_loss_metric=0.20305127, full_loss_metric=0.19341406, full_loss_num=2847.04492188, mean_dist=3.63710666
+fus 1900:    fuse-hard_loss_metric=0.20838882, full_loss_metric=0.41685021, full_loss_num=850.42248535, mean_dist=9.50394917, lr=0.100000, hard or full='full'
+
+INFO:root:0:10:50.457895
+INFO:root:
+ske 2000:     gcn-hard_loss_metric=0.10012947, full_loss_metric=0.15436800, full_loss_num=853.16998291, mean_dist=3.82584929, softmax_loss=0.08252072
+sil 2000:     cnn-hard_loss_metric=0.20233177, full_loss_metric=0.19199696, full_loss_num=2844.48559570, mean_dist=3.62743187
+fus 2000:    fuse-hard_loss_metric=0.21350777, full_loss_metric=0.42357188, full_loss_num=861.53564453, mean_dist=9.53547287, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2100:     gcn-hard_loss_metric=0.09859059, full_loss_metric=0.15437986, full_loss_num=823.19000244, mean_dist=3.90651727, softmax_loss=0.07491294
+sil 2100:     cnn-hard_loss_metric=0.19352008, full_loss_metric=0.19033515, full_loss_num=2592.86181641, mean_dist=3.62943697
+fus 2100:    fuse-hard_loss_metric=0.15776289, full_loss_metric=0.38057941, full_loss_num=630.54498291, mean_dist=9.34114265, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2200:     gcn-hard_loss_metric=0.09567796, full_loss_metric=0.15432522, full_loss_num=813.77001953, mean_dist=3.85702372, softmax_loss=0.08284383
+sil 2200:     cnn-hard_loss_metric=0.19545564, full_loss_metric=0.18939041, full_loss_num=2741.13818359, mean_dist=3.64215112
+fus 2200:    fuse-hard_loss_metric=0.13475579, full_loss_metric=0.35524228, full_loss_num=563.65252686, mean_dist=9.37909508, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2300:     gcn-hard_loss_metric=0.11103404, full_loss_metric=0.15465128, full_loss_num=979.27001953, mean_dist=3.82160616, softmax_loss=0.08637997
+sil 2300:     cnn-hard_loss_metric=0.19953832, full_loss_metric=0.19176503, full_loss_num=2818.91186523, mean_dist=3.60018635
+fus 2300:    fuse-hard_loss_metric=0.13676214, full_loss_metric=0.36144239, full_loss_num=593.51562500, mean_dist=9.17115021, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2400:     gcn-hard_loss_metric=0.10236846, full_loss_metric=0.15474902, full_loss_num=846.53002930, mean_dist=3.88996911, softmax_loss=0.08512517
+sil 2400:     cnn-hard_loss_metric=0.20079410, full_loss_metric=0.18958759, full_loss_num=2916.15942383, mean_dist=3.60734034
+fus 2400:    fuse-hard_loss_metric=0.12183720, full_loss_metric=0.33915624, full_loss_num=541.93188477, mean_dist=9.14564323, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2500:     gcn-hard_loss_metric=0.10070542, full_loss_metric=0.15460268, full_loss_num=903.76000977, mean_dist=3.79075098, softmax_loss=0.07676713
+sil 2500:     cnn-hard_loss_metric=0.19819868, full_loss_metric=0.18956403, full_loss_num=2826.95996094, mean_dist=3.61092782
+fus 2500:    fuse-hard_loss_metric=0.11861301, full_loss_metric=0.33766374, full_loss_num=541.33752441, mean_dist=9.11973858, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2600:     gcn-hard_loss_metric=0.09917873, full_loss_metric=0.15461181, full_loss_num=843.63000488, mean_dist=3.83279872, softmax_loss=0.08579614
+sil 2600:     cnn-hard_loss_metric=0.19691931, full_loss_metric=0.19009310, full_loss_num=2790.06933594, mean_dist=3.63544703
+fus 2600:    fuse-hard_loss_metric=0.11990870, full_loss_metric=0.33718082, full_loss_num=534.90747070, mean_dist=9.10894680, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2700:     gcn-hard_loss_metric=0.10905259, full_loss_metric=0.15455279, full_loss_num=961.60998535, mean_dist=3.81646919, softmax_loss=0.09123115
+sil 2700:     cnn-hard_loss_metric=0.19949818, full_loss_metric=0.18995844, full_loss_num=2842.85131836, mean_dist=3.58375955
+fus 2700:    fuse-hard_loss_metric=0.11717965, full_loss_metric=0.33276969, full_loss_num=525.93811035, mean_dist=8.88688469, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2800:     gcn-hard_loss_metric=0.10790563, full_loss_metric=0.15462570, full_loss_num=941.45001221, mean_dist=3.76596642, softmax_loss=0.07876642
+sil 2800:     cnn-hard_loss_metric=0.19574794, full_loss_metric=0.19034059, full_loss_num=2760.28491211, mean_dist=3.60667014
+fus 2800:    fuse-hard_loss_metric=0.11336811, full_loss_metric=0.32535377, full_loss_num=512.24249268, mean_dist=8.88394070, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 2900:     gcn-hard_loss_metric=0.10937038, full_loss_metric=0.15462242, full_loss_num=937.13000488, mean_dist=3.85431886, softmax_loss=0.08663929
+sil 2900:     cnn-hard_loss_metric=0.19110872, full_loss_metric=0.18972532, full_loss_num=2624.77807617, mean_dist=3.63312960
+fus 2900:    fuse-hard_loss_metric=0.10839833, full_loss_metric=0.32817483, full_loss_num=486.50750732, mean_dist=8.83089447, lr=0.010000, hard or full='full'
+
+INFO:root:0:11:45.042271
+INFO:root:
+ske 3000:     gcn-hard_loss_metric=0.09657193, full_loss_metric=0.15450259, full_loss_num=787.84002686, mean_dist=3.80736971, softmax_loss=0.08144913
+sil 3000:     cnn-hard_loss_metric=0.18995216, full_loss_metric=0.18917404, full_loss_num=2687.02001953, mean_dist=3.64377308
+fus 3000:    fuse-hard_loss_metric=0.10415210, full_loss_metric=0.31709144, full_loss_num=500.14123535, mean_dist=8.84180450, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3100:     gcn-hard_loss_metric=0.09877878, full_loss_metric=0.15448229, full_loss_num=816.44000244, mean_dist=3.86956859, softmax_loss=0.08237633
+sil 3100:     cnn-hard_loss_metric=0.18511127, full_loss_metric=0.18683071, full_loss_num=2618.14184570, mean_dist=3.65473366
+fus 3100:    fuse-hard_loss_metric=0.09873030, full_loss_metric=0.31074971, full_loss_num=464.38562012, mean_dist=8.81776905, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3200:     gcn-hard_loss_metric=0.10470290, full_loss_metric=0.15469362, full_loss_num=879.02001953, mean_dist=3.71603155, softmax_loss=0.07983793
+sil 3200:     cnn-hard_loss_metric=0.19355810, full_loss_metric=0.18879686, full_loss_num=2748.27319336, mean_dist=3.65079975
+fus 3200:    fuse-hard_loss_metric=0.10749315, full_loss_metric=0.31043950, full_loss_num=515.78125000, mean_dist=8.73046207, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3300:     gcn-hard_loss_metric=0.10509510, full_loss_metric=0.15466422, full_loss_num=886.52001953, mean_dist=3.77189302, softmax_loss=0.08155575
+sil 3300:     cnn-hard_loss_metric=0.19800861, full_loss_metric=0.19001575, full_loss_num=2825.68994141, mean_dist=3.63344979
+fus 3300:    fuse-hard_loss_metric=0.11081586, full_loss_metric=0.31627119, full_loss_num=523.71875000, mean_dist=8.63847446, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3400:     gcn-hard_loss_metric=0.10495296, full_loss_metric=0.15470617, full_loss_num=894.26000977, mean_dist=3.83424520, softmax_loss=0.08020947
+sil 3400:     cnn-hard_loss_metric=0.19411020, full_loss_metric=0.19130290, full_loss_num=2698.57250977, mean_dist=3.63585019
+fus 3400:    fuse-hard_loss_metric=0.10672699, full_loss_metric=0.31216899, full_loss_num=507.60000610, mean_dist=8.56871700, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3500:     gcn-hard_loss_metric=0.10110515, full_loss_metric=0.15469122, full_loss_num=854.82000732, mean_dist=3.80104518, softmax_loss=0.08094668
+sil 3500:     cnn-hard_loss_metric=0.19340405, full_loss_metric=0.18791704, full_loss_num=2712.48632812, mean_dist=3.60492063
+fus 3500:    fuse-hard_loss_metric=0.10927991, full_loss_metric=0.31236705, full_loss_num=535.79748535, mean_dist=8.46742916, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3600:     gcn-hard_loss_metric=0.10090903, full_loss_metric=0.15472205, full_loss_num=850.64001465, mean_dist=3.79155087, softmax_loss=0.07855373
+sil 3600:     cnn-hard_loss_metric=0.19655766, full_loss_metric=0.18990099, full_loss_num=2993.67944336, mean_dist=3.62857151
+fus 3600:    fuse-hard_loss_metric=0.10286126, full_loss_metric=0.29840615, full_loss_num=509.85000610, mean_dist=8.51858425, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3700:     gcn-hard_loss_metric=0.10401253, full_loss_metric=0.15484913, full_loss_num=865.52001953, mean_dist=3.86223960, softmax_loss=0.08967816
+sil 3700:     cnn-hard_loss_metric=0.19097075, full_loss_metric=0.18814476, full_loss_num=2712.06738281, mean_dist=3.64954376
+fus 3700:    fuse-hard_loss_metric=0.09982461, full_loss_metric=0.30255681, full_loss_num=489.33563232, mean_dist=8.48533535, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3800:     gcn-hard_loss_metric=0.10215112, full_loss_metric=0.15485862, full_loss_num=886.63000488, mean_dist=3.87171626, softmax_loss=0.08010254
+sil 3800:     cnn-hard_loss_metric=0.19250032, full_loss_metric=0.18949950, full_loss_num=2725.34692383, mean_dist=3.66066670
+fus 3800:    fuse-hard_loss_metric=0.10084222, full_loss_metric=0.30060416, full_loss_num=488.57000732, mean_dist=8.46879292, lr=0.010000, hard or full='full'
+
+INFO:root:
+ske 3900:     gcn-hard_loss_metric=0.10654781, full_loss_metric=0.15476550, full_loss_num=942.80999756, mean_dist=3.82904530, softmax_loss=0.08375287
+sil 3900:     cnn-hard_loss_metric=0.18472958, full_loss_metric=0.18741214, full_loss_num=2490.88500977, mean_dist=3.64810634
+fus 3900:    fuse-hard_loss_metric=0.09703635, full_loss_metric=0.29501545, full_loss_num=469.49624634, mean_dist=8.32738113, lr=0.010000, hard or full='full'
+
+INFO:root:0:12:33.602288
+INFO:root:
+ske 4000:     gcn-hard_loss_metric=0.11812037, full_loss_metric=0.15490913, full_loss_num=1028.67004395, mean_dist=3.74916530, softmax_loss=0.08655488
+sil 4000:     cnn-hard_loss_metric=0.19363654, full_loss_metric=0.19030496, full_loss_num=2690.54248047, mean_dist=3.66518593
+fus 4000:    fuse-hard_loss_metric=0.10110834, full_loss_metric=0.29988593, full_loss_num=496.41876221, mean_dist=8.31308556, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4100:     gcn-hard_loss_metric=0.10756837, full_loss_metric=0.15496337, full_loss_num=941.15997314, mean_dist=3.82381225, softmax_loss=0.09156384
+sil 4100:     cnn-hard_loss_metric=0.18987662, full_loss_metric=0.18918881, full_loss_num=2660.83569336, mean_dist=3.66799998
+fus 4100:    fuse-hard_loss_metric=0.09904501, full_loss_metric=0.29510999, full_loss_num=512.93438721, mean_dist=8.31014061, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4200:     gcn-hard_loss_metric=0.10355052, full_loss_metric=0.15491134, full_loss_num=894.53002930, mean_dist=3.77326012, softmax_loss=0.08533400
+sil 4200:     cnn-hard_loss_metric=0.18717989, full_loss_metric=0.18735696, full_loss_num=2589.47119141, mean_dist=3.68200588
+fus 4200:    fuse-hard_loss_metric=0.09886289, full_loss_metric=0.29093269, full_loss_num=506.72436523, mean_dist=8.30712700, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4300:     gcn-hard_loss_metric=0.10124895, full_loss_metric=0.15489082, full_loss_num=867.96997070, mean_dist=3.78267646, softmax_loss=0.08074208
+sil 4300:     cnn-hard_loss_metric=0.18704271, full_loss_metric=0.18935889, full_loss_num=2571.71069336, mean_dist=3.69114256
+fus 4300:    fuse-hard_loss_metric=0.09508522, full_loss_metric=0.28978094, full_loss_num=475.06188965, mean_dist=8.34428692, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4400:     gcn-hard_loss_metric=0.09581239, full_loss_metric=0.15512319, full_loss_num=817.15002441, mean_dist=3.83059382, softmax_loss=0.07648015
+sil 4400:     cnn-hard_loss_metric=0.19047293, full_loss_metric=0.19005169, full_loss_num=2634.00244141, mean_dist=3.67925072
+fus 4400:    fuse-hard_loss_metric=0.09678116, full_loss_metric=0.29240078, full_loss_num=491.53686523, mean_dist=8.31477070, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4500:     gcn-hard_loss_metric=0.10173747, full_loss_metric=0.15506949, full_loss_num=864.69000244, mean_dist=3.85912609, softmax_loss=0.08083077
+sil 4500:     cnn-hard_loss_metric=0.18557747, full_loss_metric=0.18760040, full_loss_num=2614.45629883, mean_dist=3.68803859
+fus 4500:    fuse-hard_loss_metric=0.09155576, full_loss_metric=0.28388602, full_loss_num=468.84436035, mean_dist=8.33638382, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4600:     gcn-hard_loss_metric=0.10532638, full_loss_metric=0.15507351, full_loss_num=901.72998047, mean_dist=3.77204776, softmax_loss=0.08448663
+sil 4600:     cnn-hard_loss_metric=0.19046557, full_loss_metric=0.18960685, full_loss_num=2612.20385742, mean_dist=3.66136956
+fus 4600:    fuse-hard_loss_metric=0.09386455, full_loss_metric=0.29086822, full_loss_num=475.40686035, mean_dist=8.25831509, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4700:     gcn-hard_loss_metric=0.10391812, full_loss_metric=0.15502295, full_loss_num=873.94000244, mean_dist=3.82899928, softmax_loss=0.08036487
+sil 4700:     cnn-hard_loss_metric=0.19613129, full_loss_metric=0.19137415, full_loss_num=2757.03759766, mean_dist=3.63517618
+fus 4700:    fuse-hard_loss_metric=0.09905506, full_loss_metric=0.29321477, full_loss_num=496.29501343, mean_dist=8.23044205, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4800:     gcn-hard_loss_metric=0.10490469, full_loss_metric=0.15507747, full_loss_num=888.86999512, mean_dist=3.80321360, softmax_loss=0.08585545
+sil 4800:     cnn-hard_loss_metric=0.19902121, full_loss_metric=0.18963553, full_loss_num=2878.49633789, mean_dist=3.63254857
+fus 4800:    fuse-hard_loss_metric=0.09802317, full_loss_metric=0.28897649, full_loss_num=504.91561890, mean_dist=8.20656013, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 4900:     gcn-hard_loss_metric=0.10785611, full_loss_metric=0.15507291, full_loss_num=934.57000732, mean_dist=3.77446127, softmax_loss=0.08365659
+sil 4900:     cnn-hard_loss_metric=0.18912090, full_loss_metric=0.18829614, full_loss_num=2679.21630859, mean_dist=3.65360713
+fus 4900:    fuse-hard_loss_metric=0.08903061, full_loss_metric=0.28112030, full_loss_num=453.57812500, mean_dist=8.24633789, lr=0.001000, hard or full='full'
+
+INFO:root:0:09:51.480413
+INFO:root:
+ske 5000:     gcn-hard_loss_metric=0.10749388, full_loss_metric=0.15510644, full_loss_num=932.03997803, mean_dist=3.73493886, softmax_loss=0.09236102
+sil 5000:     cnn-hard_loss_metric=0.20162956, full_loss_metric=0.19053657, full_loss_num=2846.72802734, mean_dist=3.62537694
+fus 5000:    fuse-hard_loss_metric=0.10346222, full_loss_metric=0.29426783, full_loss_num=531.76000977, mean_dist=8.17142200, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5100:     gcn-hard_loss_metric=0.10356345, full_loss_metric=0.15508392, full_loss_num=892.27001953, mean_dist=3.81102085, softmax_loss=0.08217044
+sil 5100:     cnn-hard_loss_metric=0.18416911, full_loss_metric=0.18862548, full_loss_num=2525.95312500, mean_dist=3.66201305
+fus 5100:    fuse-hard_loss_metric=0.09421046, full_loss_metric=0.28595170, full_loss_num=477.33938599, mean_dist=8.23154354, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5200:     gcn-hard_loss_metric=0.10161129, full_loss_metric=0.15506339, full_loss_num=835.65997314, mean_dist=3.82668018, softmax_loss=0.07265121
+sil 5200:     cnn-hard_loss_metric=0.19131093, full_loss_metric=0.19091055, full_loss_num=2632.07250977, mean_dist=3.65231729
+fus 5200:    fuse-hard_loss_metric=0.09162543, full_loss_metric=0.28679162, full_loss_num=459.20126343, mean_dist=8.21382332, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5300:     gcn-hard_loss_metric=0.10581923, full_loss_metric=0.15507370, full_loss_num=899.08001709, mean_dist=3.81969166, softmax_loss=0.09252732
+sil 5300:     cnn-hard_loss_metric=0.19610173, full_loss_metric=0.18922597, full_loss_num=2782.89697266, mean_dist=3.67910957
+fus 5300:    fuse-hard_loss_metric=0.09630293, full_loss_metric=0.28502923, full_loss_num=500.70062256, mean_dist=8.25261688, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5400:     gcn-hard_loss_metric=0.09955935, full_loss_metric=0.15503792, full_loss_num=809.22998047, mean_dist=3.83717489, softmax_loss=0.08266763
+sil 5400:     cnn-hard_loss_metric=0.18841526, full_loss_metric=0.18945061, full_loss_num=2647.83129883, mean_dist=3.67540073
+fus 5400:    fuse-hard_loss_metric=0.09128268, full_loss_metric=0.28842759, full_loss_num=466.52438354, mean_dist=8.24652576, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5500:     gcn-hard_loss_metric=0.09820472, full_loss_metric=0.15502626, full_loss_num=812.85998535, mean_dist=3.82832026, softmax_loss=0.07829614
+sil 5500:     cnn-hard_loss_metric=0.19001199, full_loss_metric=0.18751411, full_loss_num=2670.57495117, mean_dist=3.64119148
+fus 5500:    fuse-hard_loss_metric=0.08715864, full_loss_metric=0.27921644, full_loss_num=431.60125732, mean_dist=8.17623520, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5600:     gcn-hard_loss_metric=0.10200487, full_loss_metric=0.15499781, full_loss_num=886.51000977, mean_dist=3.76889873, softmax_loss=0.08346570
+sil 5600:     cnn-hard_loss_metric=0.19138853, full_loss_metric=0.18871905, full_loss_num=2657.56176758, mean_dist=3.67608571
+fus 5600:    fuse-hard_loss_metric=0.09498570, full_loss_metric=0.29029596, full_loss_num=464.28250122, mean_dist=8.23134613, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5700:     gcn-hard_loss_metric=0.10545354, full_loss_metric=0.15492901, full_loss_num=915.69000244, mean_dist=3.83395147, softmax_loss=0.08997460
+sil 5700:     cnn-hard_loss_metric=0.19043553, full_loss_metric=0.18872575, full_loss_num=2667.13867188, mean_dist=3.66968441
+fus 5700:    fuse-hard_loss_metric=0.09432718, full_loss_metric=0.28327647, full_loss_num=505.05813599, mean_dist=8.20350933, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5800:     gcn-hard_loss_metric=0.10112181, full_loss_metric=0.15496577, full_loss_num=863.46002197, mean_dist=3.83521605, softmax_loss=0.08272073
+sil 5800:     cnn-hard_loss_metric=0.18686540, full_loss_metric=0.18668129, full_loss_num=2658.42822266, mean_dist=3.66912603
+fus 5800:    fuse-hard_loss_metric=0.08646939, full_loss_metric=0.27593786, full_loss_num=458.46563721, mean_dist=8.20774269, lr=0.001000, hard or full='full'
+
+INFO:root:
+ske 5900:     gcn-hard_loss_metric=0.10391849, full_loss_metric=0.15507039, full_loss_num=862.26000977, mean_dist=3.80849242, softmax_loss=0.08105750
+sil 5900:     cnn-hard_loss_metric=0.18732359, full_loss_metric=0.19029173, full_loss_num=2542.19189453, mean_dist=3.67801309
+fus 5900:    fuse-hard_loss_metric=0.08718122, full_loss_metric=0.28337538, full_loss_num=449.33563232, mean_dist=8.21030521, lr=0.001000, hard or full='full'
+
+INFO:root:0:08:37.766694
+INFO:root:
+ske 6000:     gcn-hard_loss_metric=0.09857850, full_loss_metric=0.15498126, full_loss_num=809.83001709, mean_dist=3.82506371, softmax_loss=0.08057950
+sil 6000:     cnn-hard_loss_metric=0.19411945, full_loss_metric=0.19099081, full_loss_num=2696.46679688, mean_dist=3.65661931
+fus 6000:    fuse-hard_loss_metric=0.09652548, full_loss_metric=0.28429073, full_loss_num=501.24124146, mean_dist=8.16823006, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6100:     gcn-hard_loss_metric=0.10002968, full_loss_metric=0.15495174, full_loss_num=881.35998535, mean_dist=3.79685092, softmax_loss=0.08131396
+sil 6100:     cnn-hard_loss_metric=0.18749456, full_loss_metric=0.18796033, full_loss_num=2557.64624023, mean_dist=3.67087579
+fus 6100:    fuse-hard_loss_metric=0.08906996, full_loss_metric=0.28120434, full_loss_num=460.64813232, mean_dist=8.20160484, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6200:     gcn-hard_loss_metric=0.09957717, full_loss_metric=0.15496160, full_loss_num=827.58001709, mean_dist=3.85280156, softmax_loss=0.08721720
+sil 6200:     cnn-hard_loss_metric=0.19074115, full_loss_metric=0.18971315, full_loss_num=2546.89746094, mean_dist=3.67345905
+fus 6200:    fuse-hard_loss_metric=0.08655658, full_loss_metric=0.28187945, full_loss_num=422.81811523, mean_dist=8.21068668, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6300:     gcn-hard_loss_metric=0.10862110, full_loss_metric=0.15495221, full_loss_num=919.09997559, mean_dist=3.80898261, softmax_loss=0.08635610
+sil 6300:     cnn-hard_loss_metric=0.19482656, full_loss_metric=0.19188948, full_loss_num=2727.48364258, mean_dist=3.64238334
+fus 6300:    fuse-hard_loss_metric=0.09451082, full_loss_metric=0.28496858, full_loss_num=506.84686279, mean_dist=8.15019131, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6400:     gcn-hard_loss_metric=0.09458759, full_loss_metric=0.15487412, full_loss_num=780.75000000, mean_dist=3.83340049, softmax_loss=0.07393327
+sil 6400:     cnn-hard_loss_metric=0.18391185, full_loss_metric=0.18992667, full_loss_num=2490.82568359, mean_dist=3.68401337
+fus 6400:    fuse-hard_loss_metric=0.08791031, full_loss_metric=0.28001454, full_loss_num=450.32562256, mean_dist=8.21406460, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6500:     gcn-hard_loss_metric=0.10133671, full_loss_metric=0.15482652, full_loss_num=858.72998047, mean_dist=3.80766964, softmax_loss=0.07862736
+sil 6500:     cnn-hard_loss_metric=0.19857822, full_loss_metric=0.19070253, full_loss_num=2735.23632812, mean_dist=3.64407253
+fus 6500:    fuse-hard_loss_metric=0.09941123, full_loss_metric=0.28903124, full_loss_num=512.79809570, mean_dist=8.16069889, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6600:     gcn-hard_loss_metric=0.10225894, full_loss_metric=0.15484053, full_loss_num=881.67999268, mean_dist=3.83194184, softmax_loss=0.09227997
+sil 6600:     cnn-hard_loss_metric=0.18479267, full_loss_metric=0.18836384, full_loss_num=2541.31884766, mean_dist=3.69280386
+fus 6600:    fuse-hard_loss_metric=0.08604439, full_loss_metric=0.27709517, full_loss_num=444.77688599, mean_dist=8.24096680, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6700:     gcn-hard_loss_metric=0.10856427, full_loss_metric=0.15492517, full_loss_num=970.69000244, mean_dist=3.84998083, softmax_loss=0.08679949
+sil 6700:     cnn-hard_loss_metric=0.19255960, full_loss_metric=0.19121905, full_loss_num=2727.59741211, mean_dist=3.66985607
+fus 6700:    fuse-hard_loss_metric=0.09616611, full_loss_metric=0.28239498, full_loss_num=511.38812256, mean_dist=8.19775772, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6800:     gcn-hard_loss_metric=0.10058576, full_loss_metric=0.15487050, full_loss_num=848.30999756, mean_dist=3.78382421, softmax_loss=0.08012870
+sil 6800:     cnn-hard_loss_metric=0.18830544, full_loss_metric=0.18823095, full_loss_num=2585.96801758, mean_dist=3.66647053
+fus 6800:    fuse-hard_loss_metric=0.08977509, full_loss_metric=0.28274825, full_loss_num=473.50186157, mean_dist=8.18725014, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 6900:     gcn-hard_loss_metric=0.10386968, full_loss_metric=0.15496658, full_loss_num=856.72998047, mean_dist=3.81721854, softmax_loss=0.07997921
+sil 6900:     cnn-hard_loss_metric=0.18893826, full_loss_metric=0.18762293, full_loss_num=2620.91503906, mean_dist=3.66245341
+fus 6900:    fuse-hard_loss_metric=0.08972426, full_loss_metric=0.27991712, full_loss_num=452.84625244, mean_dist=8.18780231, lr=0.000100, hard or full='full'
+
+INFO:root:0:08:44.710552
+INFO:root:
+ske 7000:     gcn-hard_loss_metric=0.09849439, full_loss_metric=0.15507954, full_loss_num=871.39001465, mean_dist=3.83290195, softmax_loss=0.07643076
+sil 7000:     cnn-hard_loss_metric=0.18330778, full_loss_metric=0.18708520, full_loss_num=2508.21801758, mean_dist=3.67265439
+fus 7000:    fuse-hard_loss_metric=0.08889692, full_loss_metric=0.28026077, full_loss_num=470.70748901, mean_dist=8.19713497, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7100:     gcn-hard_loss_metric=0.09564965, full_loss_metric=0.15504666, full_loss_num=795.66998291, mean_dist=3.84744120, softmax_loss=0.07698715
+sil 7100:     cnn-hard_loss_metric=0.18800740, full_loss_metric=0.18778715, full_loss_num=2587.81811523, mean_dist=3.67226481
+fus 7100:    fuse-hard_loss_metric=0.08707858, full_loss_metric=0.28012401, full_loss_num=450.54501343, mean_dist=8.19959068, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7200:     gcn-hard_loss_metric=0.09894023, full_loss_metric=0.15502143, full_loss_num=850.48999023, mean_dist=3.76561642, softmax_loss=0.07758030
+sil 7200:     cnn-hard_loss_metric=0.18810993, full_loss_metric=0.18752174, full_loss_num=2651.51879883, mean_dist=3.68423057
+fus 7200:    fuse-hard_loss_metric=0.08465323, full_loss_metric=0.27216846, full_loss_num=445.93936157, mean_dist=8.21937943, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7300:     gcn-hard_loss_metric=0.09995995, full_loss_metric=0.15498127, full_loss_num=832.59997559, mean_dist=3.78809881, softmax_loss=0.08469757
+sil 7300:     cnn-hard_loss_metric=0.19607778, full_loss_metric=0.19092266, full_loss_num=2745.71997070, mean_dist=3.63065100
+fus 7300:    fuse-hard_loss_metric=0.09446634, full_loss_metric=0.28356904, full_loss_num=492.08999634, mean_dist=8.11380768, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7400:     gcn-hard_loss_metric=0.10058245, full_loss_metric=0.15502574, full_loss_num=835.77001953, mean_dist=3.81750679, softmax_loss=0.08086110
+sil 7400:     cnn-hard_loss_metric=0.19277588, full_loss_metric=0.18972343, full_loss_num=2655.62622070, mean_dist=3.63695073
+fus 7400:    fuse-hard_loss_metric=0.09486108, full_loss_metric=0.28713295, full_loss_num=473.34811401, mean_dist=8.12756443, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7500:     gcn-hard_loss_metric=0.11269584, full_loss_metric=0.15514240, full_loss_num=1046.30004883, mean_dist=3.80835104, softmax_loss=0.08656249
+sil 7500:     cnn-hard_loss_metric=0.19327775, full_loss_metric=0.18885206, full_loss_num=2748.95239258, mean_dist=3.64354396
+fus 7500:    fuse-hard_loss_metric=0.09935269, full_loss_metric=0.28642839, full_loss_num=529.92065430, mean_dist=8.14526081, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7600:     gcn-hard_loss_metric=0.10096423, full_loss_metric=0.15531991, full_loss_num=846.22998047, mean_dist=3.85968256, softmax_loss=0.07318179
+sil 7600:     cnn-hard_loss_metric=0.18372387, full_loss_metric=0.18628401, full_loss_num=2456.75439453, mean_dist=3.67957091
+fus 7600:    fuse-hard_loss_metric=0.08457156, full_loss_metric=0.28007588, full_loss_num=423.28561401, mean_dist=8.20519447, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7700:     gcn-hard_loss_metric=0.09509493, full_loss_metric=0.15526603, full_loss_num=822.46002197, mean_dist=3.79791737, softmax_loss=0.07524467
+sil 7700:     cnn-hard_loss_metric=0.18714042, full_loss_metric=0.18753916, full_loss_num=2501.79125977, mean_dist=3.64874148
+fus 7700:    fuse-hard_loss_metric=0.08657756, full_loss_metric=0.27440375, full_loss_num=425.16876221, mean_dist=8.14095688, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7800:     gcn-hard_loss_metric=0.10305896, full_loss_metric=0.15530191, full_loss_num=899.13000488, mean_dist=3.86138058, softmax_loss=0.08009516
+sil 7800:     cnn-hard_loss_metric=0.19380209, full_loss_metric=0.19072533, full_loss_num=2678.69067383, mean_dist=3.65940499
+fus 7800:    fuse-hard_loss_metric=0.09585623, full_loss_metric=0.28434432, full_loss_num=502.91436768, mean_dist=8.16805458, lr=0.000100, hard or full='full'
+
+INFO:root:
+ske 7900:     gcn-hard_loss_metric=0.10557321, full_loss_metric=0.15533634, full_loss_num=925.71002197, mean_dist=3.77778006, softmax_loss=0.08434278
+sil 7900:     cnn-hard_loss_metric=0.19567539, full_loss_metric=0.19192810, full_loss_num=2810.80249023, mean_dist=3.64622569
+fus 7900:    fuse-hard_loss_metric=0.09440786, full_loss_metric=0.28374267, full_loss_num=500.15686035, mean_dist=8.13474846, lr=0.000100, hard or full='full'
+
+INFO:root:0:08:53.553882
+INFO:root:
+ske 8000:     gcn-hard_loss_metric=0.10554821, full_loss_metric=0.15533923, full_loss_num=848.46997070, mean_dist=3.84119773, softmax_loss=0.08201973
+sil 8000:     cnn-hard_loss_metric=0.19063914, full_loss_metric=0.18993726, full_loss_num=2593.46118164, mean_dist=3.66295433
+fus 8000:    fuse-hard_loss_metric=0.09306820, full_loss_metric=0.28599805, full_loss_num=470.95187378, mean_dist=8.16691303, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8100:     gcn-hard_loss_metric=0.10002030, full_loss_metric=0.15531075, full_loss_num=861.25000000, mean_dist=3.84152293, softmax_loss=0.07818920
+sil 8100:     cnn-hard_loss_metric=0.18573241, full_loss_metric=0.18766622, full_loss_num=2497.90820312, mean_dist=3.68782234
+fus 8100:    fuse-hard_loss_metric=0.08687932, full_loss_metric=0.27879044, full_loss_num=438.44812012, mean_dist=8.20850563, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8200:     gcn-hard_loss_metric=0.10512467, full_loss_metric=0.15533186, full_loss_num=888.00000000, mean_dist=3.76291633, softmax_loss=0.08087163
+sil 8200:     cnn-hard_loss_metric=0.19238473, full_loss_metric=0.18959002, full_loss_num=2626.05615234, mean_dist=3.68807435
+fus 8200:    fuse-hard_loss_metric=0.09354768, full_loss_metric=0.28319937, full_loss_num=485.83624268, mean_dist=8.20334244, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8300:     gcn-hard_loss_metric=0.10854516, full_loss_metric=0.15530342, full_loss_num=1012.15002441, mean_dist=3.74055696, softmax_loss=0.08366274
+sil 8300:     cnn-hard_loss_metric=0.19348998, full_loss_metric=0.18978986, full_loss_num=2742.68432617, mean_dist=3.64755034
+fus 8300:    fuse-hard_loss_metric=0.09958373, full_loss_metric=0.29163730, full_loss_num=537.01000977, mean_dist=8.12785721, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8400:     gcn-hard_loss_metric=0.09837537, full_loss_metric=0.15529725, full_loss_num=823.30999756, mean_dist=3.83319712, softmax_loss=0.08265549
+sil 8400:     cnn-hard_loss_metric=0.19366448, full_loss_metric=0.18989421, full_loss_num=2748.02246094, mean_dist=3.63849974
+fus 8400:    fuse-hard_loss_metric=0.09388664, full_loss_metric=0.28584969, full_loss_num=485.02813721, mean_dist=8.12582016, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8500:     gcn-hard_loss_metric=0.09766838, full_loss_metric=0.15529566, full_loss_num=814.25000000, mean_dist=3.79983759, softmax_loss=0.08069661
+sil 8500:     cnn-hard_loss_metric=0.19487688, full_loss_metric=0.19054472, full_loss_num=2794.87744141, mean_dist=3.66431999
+fus 8500:    fuse-hard_loss_metric=0.09362207, full_loss_metric=0.28730020, full_loss_num=477.18936157, mean_dist=8.17385483, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8600:     gcn-hard_loss_metric=0.10571475, full_loss_metric=0.15530303, full_loss_num=916.98999023, mean_dist=3.76719356, softmax_loss=0.08215788
+sil 8600:     cnn-hard_loss_metric=0.19475302, full_loss_metric=0.18814318, full_loss_num=2686.87622070, mean_dist=3.62545037
+fus 8600:    fuse-hard_loss_metric=0.09531116, full_loss_metric=0.28151298, full_loss_num=499.65438843, mean_dist=8.09054565, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8700:     gcn-hard_loss_metric=0.10687041, full_loss_metric=0.15529200, full_loss_num=919.35998535, mean_dist=3.81006551, softmax_loss=0.08415395
+sil 8700:     cnn-hard_loss_metric=0.18672697, full_loss_metric=0.18916993, full_loss_num=2454.82617188, mean_dist=3.66475582
+fus 8700:    fuse-hard_loss_metric=0.09039138, full_loss_metric=0.28120038, full_loss_num=443.59375000, mean_dist=8.16708660, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8800:     gcn-hard_loss_metric=0.09873357, full_loss_metric=0.15528232, full_loss_num=852.42999268, mean_dist=3.84662223, softmax_loss=0.07573465
+sil 8800:     cnn-hard_loss_metric=0.18273219, full_loss_metric=0.18576454, full_loss_num=2496.26684570, mean_dist=3.67524862
+fus 8800:    fuse-hard_loss_metric=0.08508770, full_loss_metric=0.27457324, full_loss_num=451.96936035, mean_dist=8.19356060, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 8900:     gcn-hard_loss_metric=0.09236959, full_loss_metric=0.15523298, full_loss_num=742.19000244, mean_dist=3.86282229, softmax_loss=0.08017972
+sil 8900:     cnn-hard_loss_metric=0.19015257, full_loss_metric=0.18919350, full_loss_num=2626.49926758, mean_dist=3.66238284
+fus 8900:    fuse-hard_loss_metric=0.08799618, full_loss_metric=0.28301677, full_loss_num=443.04000854, mean_dist=8.16884232, lr=0.000010, hard or full='full'
+
+INFO:root:0:08:51.761012
+INFO:root:
+ske 9000:     gcn-hard_loss_metric=0.10531007, full_loss_metric=0.15526859, full_loss_num=934.21997070, mean_dist=3.77200937, softmax_loss=0.07760249
+sil 9000:     cnn-hard_loss_metric=0.18745142, full_loss_metric=0.18788479, full_loss_num=2647.96069336, mean_dist=3.66083503
+fus 9000:    fuse-hard_loss_metric=0.09020782, full_loss_metric=0.28087461, full_loss_num=468.79626465, mean_dist=8.16443634, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9100:     gcn-hard_loss_metric=0.10912374, full_loss_metric=0.15530927, full_loss_num=906.53002930, mean_dist=3.80598450, softmax_loss=0.08678201
+sil 9100:     cnn-hard_loss_metric=0.18763405, full_loss_metric=0.18852234, full_loss_num=2536.35937500, mean_dist=3.67587137
+fus 9100:    fuse-hard_loss_metric=0.08999350, full_loss_metric=0.27695569, full_loss_num=459.52563477, mean_dist=8.18992233, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9200:     gcn-hard_loss_metric=0.10102295, full_loss_metric=0.15527798, full_loss_num=849.70001221, mean_dist=3.75586843, softmax_loss=0.07906029
+sil 9200:     cnn-hard_loss_metric=0.19173753, full_loss_metric=0.18861806, full_loss_num=2611.18872070, mean_dist=3.63772774
+fus 9200:    fuse-hard_loss_metric=0.09106431, full_loss_metric=0.28168380, full_loss_num=455.25561523, mean_dist=8.11801720, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9300:     gcn-hard_loss_metric=0.09741461, full_loss_metric=0.15524767, full_loss_num=832.72998047, mean_dist=3.86719489, softmax_loss=0.07959089
+sil 9300:     cnn-hard_loss_metric=0.18838139, full_loss_metric=0.18810433, full_loss_num=2613.63574219, mean_dist=3.66771460
+fus 9300:    fuse-hard_loss_metric=0.09085829, full_loss_metric=0.27930558, full_loss_num=473.69250488, mean_dist=8.17744064, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9400:     gcn-hard_loss_metric=0.10591975, full_loss_metric=0.15527128, full_loss_num=906.79998779, mean_dist=3.84400535, softmax_loss=0.08234678
+sil 9400:     cnn-hard_loss_metric=0.18915066, full_loss_metric=0.18919453, full_loss_num=2661.40258789, mean_dist=3.66324806
+fus 9400:    fuse-hard_loss_metric=0.08861650, full_loss_metric=0.27954951, full_loss_num=459.83624268, mean_dist=8.17636395, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9500:     gcn-hard_loss_metric=0.10188257, full_loss_metric=0.15526906, full_loss_num=878.70001221, mean_dist=3.87439108, softmax_loss=0.08418571
+sil 9500:     cnn-hard_loss_metric=0.19270498, full_loss_metric=0.19074570, full_loss_num=2643.72509766, mean_dist=3.68777609
+fus 9500:    fuse-hard_loss_metric=0.09103397, full_loss_metric=0.28193840, full_loss_num=468.68249512, mean_dist=8.21516514, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9600:     gcn-hard_loss_metric=0.10194289, full_loss_metric=0.15526287, full_loss_num=826.77001953, mean_dist=3.83272099, softmax_loss=0.08381926
+sil 9600:     cnn-hard_loss_metric=0.19349930, full_loss_metric=0.19086656, full_loss_num=2663.81054688, mean_dist=3.65467072
+fus 9600:    fuse-hard_loss_metric=0.09193485, full_loss_metric=0.28481156, full_loss_num=466.48187256, mean_dist=8.15729523, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9700:     gcn-hard_loss_metric=0.10109279, full_loss_metric=0.15526944, full_loss_num=863.50000000, mean_dist=3.74419522, softmax_loss=0.07809125
+sil 9700:     cnn-hard_loss_metric=0.19265547, full_loss_metric=0.19042368, full_loss_num=2688.14697266, mean_dist=3.65057182
+fus 9700:    fuse-hard_loss_metric=0.09322935, full_loss_metric=0.28038824, full_loss_num=481.35501099, mean_dist=8.14144993, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9800:     gcn-hard_loss_metric=0.10151570, full_loss_metric=0.15525897, full_loss_num=827.50000000, mean_dist=3.82625437, softmax_loss=0.08542690
+sil 9800:     cnn-hard_loss_metric=0.18929130, full_loss_metric=0.18849149, full_loss_num=2611.49682617, mean_dist=3.65211892
+fus 9800:    fuse-hard_loss_metric=0.08851361, full_loss_metric=0.27857077, full_loss_num=439.25186157, mean_dist=8.15038681, lr=0.000010, hard or full='full'
+
+INFO:root:
+ske 9900:     gcn-hard_loss_metric=0.09742458, full_loss_metric=0.15522453, full_loss_num=808.33001709, mean_dist=3.83564734, softmax_loss=0.08182935
+sil 9900:     cnn-hard_loss_metric=0.19334412, full_loss_metric=0.19016233, full_loss_num=2637.54687500, mean_dist=3.64983940
+fus 9900:    fuse-hard_loss_metric=0.09767304, full_loss_metric=0.29255378, full_loss_num=517.05938721, mean_dist=8.13380527, lr=0.000010, hard or full='full'
+
+INFO:root:0:08:56.263323
+INFO:root:
+ske 10000:     gcn-hard_loss_metric=0.09640483, full_loss_metric=0.15518287, full_loss_num=799.28002930, mean_dist=3.82502198, softmax_loss=0.07228028
+sil 10000:     cnn-hard_loss_metric=0.18315777, full_loss_metric=0.18784298, full_loss_num=2515.80175781, mean_dist=3.68299556
+fus 10000:    fuse-hard_loss_metric=0.08828415, full_loss_metric=0.27399999, full_loss_num=463.25186157, mean_dist=8.19884491, lr=0.000001, hard or full='full'
+
+INFO:root:Training COMPLETE
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************

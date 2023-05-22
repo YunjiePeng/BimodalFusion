@@ -1,0 +1,21 @@
+conf: {'WORK_PATH': './work/bimodal_fusion', 'CUDA_VISIBLE_DEVICES': '0,1', 'dataset': 'CASIA-B', 'model': {'pretrain_pgg': 'pretrain_pgg/pgg_casia-b_gait-temporal_CASIA-B_HRNET_73_False_body_12_gait_temporal_3_64_full_128_30_0.2-100000-encoder.ptm', 'pretrain_cnn': 'pretrain_cnn/gaitpart_casia-b_CASIA-B_73_False_128_128_full_128_30_0.2-120000-encoder.ptm', 'cnn_branch': 'gaitpart', 'cnn_cfg': {'hidden_dim': 128, 'out_channels': 128}, 'pgcn_cfg': {'in_channels': 3, 'graph_cfg': {'layout': 'body_12', 'strategy': 'gait_temporal'}, 'edge_importance_weighting': True, 'out_channels': 64, 'num_id': 73}, 'fuse_cfg': {'out_channels': 128}, 'lr': 0.1, 'margin': 0.2, 'frame_num': 30, 'num_workers': 24, 'restore_iter': 0, 'hard_or_full_trip': 'full', 'batch_size': (8, 16), 'step_iter': 2000, 'total_iter': 10000, 'model_name': 'bimodal_fusion_casia-b'}, 'data': {'data_type': 'all', 'CASIA-B': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/silhouettes64/', '/home/pengyunjie/data/casia-b/hrnet/pyramid_keypoints']}, 'FVG': {'resolution': '64', 'pid_num': 126, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/fvg/fvg_new/silhouettes64/', '/home/pengyunjie/data/fvg/hrnet/pyramid_keypoints']}}}
+opt: Namespace(batch_size=1, cache=False, ckp_prefix=None, iter=10000, model='fuse')
+Loading the model of iteration 10000...
+checkpoint/bimodal_fusion_casia-b/bimodal_fusion_casia-b_CASIA-B_73_False_128_body_12_gait_temporal_3_64_full_128_30_0.2-10000-gcn_encoder.ptm
+Transforming...
+Evaluating...
+---in evaluation---, part_dim: 128
+acc.shape: (3, 11, 11, 5)
+Evaluation complete. Cost: 0:16:14.945991
+===Rank-1 (Include identical-view cases)===
+NM: 98.025,	BG: 95.419,	CL:91.298
+===Rank-1 (Exclude identical-view cases)===
+NM: 97.855,	BG: 95.034,	CL:90.591
+===Rank-1 of each angle (Exclude identical-view cases)===
+NM: [97.10 98.40 99.00 98.50 96.70 95.90 97.90 98.90 99.50 99.20 95.30]
+BG: [95.30 96.57 98.18 97.76 94.10 90.90 92.40 95.40 97.40 96.47 90.90]
+CL: [87.70 93.00 94.80 93.30 89.10 87.00 89.90 93.70 93.40 91.40 83.20]
+===Rank-1 of each angle (Include identical-view cases)===
+NM: [97.36 98.55 99.09 98.64 97.00 96.27 98.09 98.91 99.36 99.27 95.73]
+BG: [95.73 96.88 98.35 97.96 94.64 91.73 93.09 95.64 97.45 96.60 91.55]
+CL: [88.55 93.64 95.27 93.91 89.91 88.09 90.73 93.91 93.82 92.00 84.45]

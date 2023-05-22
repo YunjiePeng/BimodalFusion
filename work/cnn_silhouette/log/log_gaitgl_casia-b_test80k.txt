@@ -1,0 +1,32 @@
+INFO:root:conf:{'WORK_PATH': './work/cnn_silhouette', 'CUDA_VISIBLE_DEVICES': '0,1,2,3', 'dataset': 'CASIA-B', 'model': {'model_cfg': {'hidden_dim': 128, 'out_channels': 128}, 'lr': 0.0001, 'margin': 0.2, 'frame_num': 30, 'frame_num_min': 15, 'num_workers': 24, 'restore_iter': 0, 'hard_or_full_trip': 'full', 'batch_size': (8, 16), 'milestones': [70000], 'total_iter': 80000, 'model_name': 'gaitgl_casia-b'}, 'data': {'data_type': 'silhouettes', 'CASIA-B': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/silhouettes64/']}, 'OUMVLP': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/ou-mvlp/silhouettes/']}}}
+opt:Namespace(batch_size=2, cache=False, ckp_prefix=None, iter=80000, local_rank=0, model='cnn_gaitgl')
+INFO:root:Initialzing...
+INFO:root:Initializing data source...
+INFO:root:dataset:CASIA-B, data_type:silhouettes, data_path:['/home/pengyunjie/data/casia-b/silhouettes64/'], cache:False
+INFO:root:pid_train:['001', '002', '003', '004', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032', '033', '034', '035', '036', '037', '038', '039', '040', '041', '042', '043', '044', '045', '046', '047', '048', '049', '050', '051', '052', '053', '054', '055', '056', '057', '058', '059', '060', '061', '062', '063', '064', '065', '066', '067', '068', '069', '070', '071', '072', '073', '074']
+pid_test:['075', '076', '077', '078', '079', '080', '081', '082', '083', '084', '085', '086', '087', '088', '089', '090', '091', '092', '093', '094', '095', '096', '097', '098', '099', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124']
+INFO:root:len(pid_train):73, len(pid_test):50
+INFO:root:Data initialization complete.
+INFO:root:Initializing model...
+INFO:root:Model initialization complete.
+INFO:root:Loading the model of iteration 80000...
+INFO:root:Transforming...
+INFO:root:Transformation complete. Cost:0:02:24.990022
+INFO:root:Evaluating...
+INFO:root:acc.shape:(3, 11, 11, 5)
+INFO:root:Evaluation complete. Cost:0:00:08.437946
+===Rank-1 (Include identical-view cases)===
+NM: 97.521,	BG: 95.052,	CL:84.190
+===Rank-1 (Exclude identical-view cases)===
+NM: 97.345,	BG: 94.630,	CL:82.836
+===Rank-1 of each angle (Exclude identical-view cases)===
+NM: [96.20 98.40 99.00 97.70 96.40 95.20 96.60 98.90 99.30 98.60 94.50]
+BG: [91.40 96.26 97.07 96.43 93.70 90.60 92.40 96.60 98.60 96.77 91.10]
+CL: [74.60 89.30 90.90 88.10 82.90 77.10 82.20 86.30 87.70 84.80 67.30]
+===Rank-1 of each angle (Include identical-view cases)===
+NM: [96.55 98.55 99.09 97.91 96.73 95.64 96.91 98.82 99.18 98.55 94.82]
+BG: [92.18 96.60 97.34 96.75 94.27 91.45 93.09 96.73 98.55 96.88 91.73]
+CL: [76.82 90.09 91.73 89.18 84.45 79.18 83.73 87.18 88.45 85.82 69.45]
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************

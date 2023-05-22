@@ -1,0 +1,4115 @@
+INFO:root:{'WORK_PATH': './work/ablation_study', 'CUDA_VISIBLE_DEVICES': '2,3', 'dataset': 'CASIA-B_HRNET', 'model': {'model_cfg': {'in_channels': 3, 'graph_cfg': {'layout': 'body_12', 'strategy': 'spatial'}, 'edge_importance_weighting': True, 'out_channels': 64, 'num_id': 73}, 'lr': 0.1, 'margin': 0.2, 'frame_num': 30, 'frame_num_min': 30, 'num_workers': 24, 'restore_iter': 0, 'step_iter': 25000, 'total_iter': 100000, 'hard_or_full_trip': 'full', 'batch_size': (8, 16), 'model_name': 'st-gcn_casia-b_spatial'}, 'data': {'data_type': 'skeletons', 'CASIA-B_HRNET': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/hrnet/pyramid_keypoints']}, 'CASIA-B_OPENPOSE': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/casia-b/pose/openpose/pyramid_keypoints']}, 'OUMVLP_ALPHAPOSE': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/ou-mvlp/pose/pyramid_alpha_pose_npy']}, 'OUMVLP_OPENPOSE': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/ou-mvlp/pose/pyramid_open_pose_npy']}, }
+INFO:root:Initialzing...
+INFO:root:Initializing data source...
+INFO:root:dataset:CASIA-B_HRNET, data_type:skeletons, data_path:['/home/pengyunjie/data/casia-b/hrnet/pyramid_keypoints'], cache:False
+INFO:root:pid_train:['001', '002', '003', '004', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032', '033', '034', '035', '036', '037', '038', '039', '040', '041', '042', '043', '044', '045', '046', '047', '048', '049', '050', '051', '052', '053', '054', '055', '056', '057', '058', '059', '060', '061', '062', '063', '064', '065', '066', '067', '068', '069', '070', '071', '072', '073', '074']
+pid_test:['075', '076', '077', '078', '079', '080', '081', '082', '083', '084', '085', '086', '087', '088', '089', '090', '091', '092', '093', '094', '095', '096', '097', '098', '099', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124']
+INFO:root:len(pid_train):73, len(pid_test):50
+INFO:root:Data initialization complete.
+INFO:root:Initializing model...
+INFO:root:Model initialization complete.
+INFO:root:Training START
+INFO:root:local_rank: 0
+iter 100:, hard_loss_metric=0.85926056, full_loss_metric=0.29516155, full_loss_num=194542.20312500, mean_dist=0.43771023
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 200:, hard_loss_metric=0.54560339, full_loss_metric=0.20138198, full_loss_num=185717.12500000, mean_dist=0.25965974
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 300:, hard_loss_metric=0.55195761, full_loss_metric=0.19921179, full_loss_num=168063.04687500, mean_dist=0.29523075
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 400:, hard_loss_metric=0.54985332, full_loss_metric=0.20260248, full_loss_num=171110.93750000, mean_dist=0.28982663
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 500:, hard_loss_metric=0.54823792, full_loss_metric=0.19973311, full_loss_num=162872.87500000, mean_dist=0.31016442
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 600:, hard_loss_metric=0.54473382, full_loss_metric=0.19916132, full_loss_num=165037.28125000, mean_dist=0.30715013
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 700:, hard_loss_metric=0.55718058, full_loss_metric=0.19990984, full_loss_num=148683.45312500, mean_dist=0.34975362
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 800:, hard_loss_metric=0.56200522, full_loss_metric=0.20158118, full_loss_num=152038.93750000, mean_dist=0.34324998
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 900:, hard_loss_metric=0.54921949, full_loss_metric=0.19905137, full_loss_num=150928.46875000, mean_dist=0.34290767
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:41.972869
+INFO:root:local_rank: 0
+iter 1000:, hard_loss_metric=0.55474532, full_loss_metric=0.20034826, full_loss_num=144395.95312500, mean_dist=0.36853397
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1100:, hard_loss_metric=0.55621243, full_loss_metric=0.19871993, full_loss_num=140166.10937500, mean_dist=0.37224948
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1200:, hard_loss_metric=0.57492787, full_loss_metric=0.20334563, full_loss_num=141428.04687500, mean_dist=0.37867612
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1300:, hard_loss_metric=0.56776941, full_loss_metric=0.20123142, full_loss_num=136684.04687500, mean_dist=0.38681829
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1400:, hard_loss_metric=0.55394095, full_loss_metric=0.19771905, full_loss_num=136316.96875000, mean_dist=0.38079557
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1500:, hard_loss_metric=0.56077707, full_loss_metric=0.19985934, full_loss_num=131433.87500000, mean_dist=0.40726647
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1600:, hard_loss_metric=0.55860269, full_loss_metric=0.19898476, full_loss_num=127724.20312500, mean_dist=0.41239694
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1700:, hard_loss_metric=0.56419969, full_loss_metric=0.20041059, full_loss_num=126930.00781250, mean_dist=0.42253795
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1800:, hard_loss_metric=0.56103486, full_loss_metric=0.19950394, full_loss_num=125288.79687500, mean_dist=0.42324662
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 1900:, hard_loss_metric=0.56573790, full_loss_metric=0.20136963, full_loss_num=114019.82812500, mean_dist=0.46759415
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:19.776105
+INFO:root:local_rank: 0
+iter 2000:, hard_loss_metric=0.55750024, full_loss_metric=0.19962883, full_loss_num=120423.39843750, mean_dist=0.43921092
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2100:, hard_loss_metric=0.55753887, full_loss_metric=0.20013006, full_loss_num=115964.99218750, mean_dist=0.45678082
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2200:, hard_loss_metric=0.55692804, full_loss_metric=0.19943810, full_loss_num=117501.72656250, mean_dist=0.44720471
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2300:, hard_loss_metric=0.56129640, full_loss_metric=0.20165230, full_loss_num=113626.67968750, mean_dist=0.46127486
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2400:, hard_loss_metric=0.54586160, full_loss_metric=0.19745819, full_loss_num=113903.71093750, mean_dist=0.45936263
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2500:, hard_loss_metric=0.55432069, full_loss_metric=0.19849953, full_loss_num=111347.35156250, mean_dist=0.46976003
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2600:, hard_loss_metric=0.56984258, full_loss_metric=0.20115037, full_loss_num=110599.85156250, mean_dist=0.47064990
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2700:, hard_loss_metric=0.56139082, full_loss_metric=0.19953346, full_loss_num=106337.65625000, mean_dist=0.49652442
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2800:, hard_loss_metric=0.54618365, full_loss_metric=0.19540274, full_loss_num=110175.28125000, mean_dist=0.46077168
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 2900:, hard_loss_metric=0.55836552, full_loss_metric=0.20020483, full_loss_num=106386.32812500, mean_dist=0.49013025
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:13.574581
+INFO:root:local_rank: 0
+iter 3000:, hard_loss_metric=0.56089759, full_loss_metric=0.20021652, full_loss_num=103569.40625000, mean_dist=0.50233430
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3100:, hard_loss_metric=0.54796702, full_loss_metric=0.19757286, full_loss_num=100749.93750000, mean_dist=0.51475751
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3200:, hard_loss_metric=0.55814135, full_loss_metric=0.19993590, full_loss_num=106957.29687500, mean_dist=0.49273720
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3300:, hard_loss_metric=0.54802501, full_loss_metric=0.19928454, full_loss_num=103558.96875000, mean_dist=0.50696772
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3400:, hard_loss_metric=0.55560827, full_loss_metric=0.19984965, full_loss_num=100174.18750000, mean_dist=0.51672369
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3500:, hard_loss_metric=0.54832405, full_loss_metric=0.19593179, full_loss_num=98761.50781250, mean_dist=0.52233559
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3600:, hard_loss_metric=0.56336123, full_loss_metric=0.19969070, full_loss_num=100531.61718750, mean_dist=0.51414704
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3700:, hard_loss_metric=0.56794786, full_loss_metric=0.20139837, full_loss_num=100270.81250000, mean_dist=0.52429563
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3800:, hard_loss_metric=0.55398548, full_loss_metric=0.19874151, full_loss_num=101163.99218750, mean_dist=0.51205641
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 3900:, hard_loss_metric=0.55451262, full_loss_metric=0.19835116, full_loss_num=95333.21093750, mean_dist=0.54464656
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:15.141301
+INFO:root:local_rank: 0
+iter 4000:, hard_loss_metric=0.55455041, full_loss_metric=0.19831827, full_loss_num=100648.27343750, mean_dist=0.51498950
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4100:, hard_loss_metric=0.55879724, full_loss_metric=0.19896181, full_loss_num=97817.85156250, mean_dist=0.53116673
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4200:, hard_loss_metric=0.55142158, full_loss_metric=0.19771455, full_loss_num=104538.75000000, mean_dist=0.50575614
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4300:, hard_loss_metric=0.56110668, full_loss_metric=0.19933695, full_loss_num=101345.64843750, mean_dist=0.52316594
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4400:, hard_loss_metric=0.56107557, full_loss_metric=0.19991876, full_loss_num=102631.57812500, mean_dist=0.51515830
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4500:, hard_loss_metric=0.55358052, full_loss_metric=0.19792679, full_loss_num=94875.75000000, mean_dist=0.54362899
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4600:, hard_loss_metric=0.56265068, full_loss_metric=0.20040460, full_loss_num=97938.50781250, mean_dist=0.53841400
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4700:, hard_loss_metric=0.55518496, full_loss_metric=0.19695053, full_loss_num=91575.63281250, mean_dist=0.55248487
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4800:, hard_loss_metric=0.56912458, full_loss_metric=0.20209415, full_loss_num=92676.78125000, mean_dist=0.56566709
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 4900:, hard_loss_metric=0.54811192, full_loss_metric=0.19586489, full_loss_num=95434.14843750, mean_dist=0.53926378
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:13.414515
+INFO:root:local_rank: 0
+iter 5000:, hard_loss_metric=0.56843054, full_loss_metric=0.20075397, full_loss_num=94353.40625000, mean_dist=0.54846627
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5100:, hard_loss_metric=0.55703491, full_loss_metric=0.20008713, full_loss_num=94914.02343750, mean_dist=0.55310303
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5200:, hard_loss_metric=0.55506402, full_loss_metric=0.19750166, full_loss_num=93925.86718750, mean_dist=0.55264509
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5300:, hard_loss_metric=0.56989646, full_loss_metric=0.20130807, full_loss_num=94542.22656250, mean_dist=0.55769259
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5400:, hard_loss_metric=0.55269909, full_loss_metric=0.19717190, full_loss_num=88320.53906250, mean_dist=0.58267689
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5500:, hard_loss_metric=0.55941546, full_loss_metric=0.19911058, full_loss_num=87847.10156250, mean_dist=0.58817655
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5600:, hard_loss_metric=0.55154437, full_loss_metric=0.19692959, full_loss_num=91950.67968750, mean_dist=0.55999130
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5700:, hard_loss_metric=0.56361526, full_loss_metric=0.20128447, full_loss_num=90107.38281250, mean_dist=0.57815450
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5800:, hard_loss_metric=0.56422400, full_loss_metric=0.19979192, full_loss_num=85845.32031250, mean_dist=0.59667987
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 5900:, hard_loss_metric=0.55939621, full_loss_metric=0.19893213, full_loss_num=91698.81250000, mean_dist=0.56567568
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:11.972369
+INFO:root:local_rank: 0
+iter 6000:, hard_loss_metric=0.57195759, full_loss_metric=0.20266908, full_loss_num=91894.67968750, mean_dist=0.57855153
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6100:, hard_loss_metric=0.55646020, full_loss_metric=0.19948171, full_loss_num=89179.96875000, mean_dist=0.57503539
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6200:, hard_loss_metric=0.55333996, full_loss_metric=0.19867271, full_loss_num=85604.85156250, mean_dist=0.59728736
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6300:, hard_loss_metric=0.55464435, full_loss_metric=0.19730335, full_loss_num=89061.18750000, mean_dist=0.57684523
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6400:, hard_loss_metric=0.57887602, full_loss_metric=0.20381550, full_loss_num=87977.04687500, mean_dist=0.59857535
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6500:, hard_loss_metric=0.54424071, full_loss_metric=0.19690643, full_loss_num=85547.60937500, mean_dist=0.58778840
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6600:, hard_loss_metric=0.56514955, full_loss_metric=0.19891453, full_loss_num=82738.93750000, mean_dist=0.60926563
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6700:, hard_loss_metric=0.56239581, full_loss_metric=0.19981071, full_loss_num=84753.59375000, mean_dist=0.60739017
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6800:, hard_loss_metric=0.56273991, full_loss_metric=0.20073691, full_loss_num=90042.04687500, mean_dist=0.57919359
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 6900:, hard_loss_metric=0.56222749, full_loss_metric=0.20008843, full_loss_num=85146.36718750, mean_dist=0.60158587
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:12.796504
+INFO:root:local_rank: 0
+iter 7000:, hard_loss_metric=0.55769479, full_loss_metric=0.19930033, full_loss_num=81192.88281250, mean_dist=0.62870145
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7100:, hard_loss_metric=0.56588322, full_loss_metric=0.20097502, full_loss_num=83038.46875000, mean_dist=0.61570257
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7200:, hard_loss_metric=0.55827445, full_loss_metric=0.19829884, full_loss_num=87323.21875000, mean_dist=0.59074479
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7300:, hard_loss_metric=0.56744796, full_loss_metric=0.20185287, full_loss_num=83432.57031250, mean_dist=0.60797381
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7400:, hard_loss_metric=0.55842137, full_loss_metric=0.19855136, full_loss_num=85565.95312500, mean_dist=0.59785408
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7500:, hard_loss_metric=0.55810022, full_loss_metric=0.20004806, full_loss_num=80885.82031250, mean_dist=0.61795676
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7600:, hard_loss_metric=0.56719959, full_loss_metric=0.20331356, full_loss_num=81308.71093750, mean_dist=0.62811661
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7700:, hard_loss_metric=0.54798770, full_loss_metric=0.19731615, full_loss_num=82400.09375000, mean_dist=0.62132019
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7800:, hard_loss_metric=0.55968100, full_loss_metric=0.20076010, full_loss_num=79108.17187500, mean_dist=0.63626307
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 7900:, hard_loss_metric=0.55887246, full_loss_metric=0.19964811, full_loss_num=83788.13281250, mean_dist=0.61576575
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:13.211817
+INFO:root:local_rank: 0
+iter 8000:, hard_loss_metric=0.57287127, full_loss_metric=0.20056795, full_loss_num=82310.43750000, mean_dist=0.61624086
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8100:, hard_loss_metric=0.55339110, full_loss_metric=0.19905505, full_loss_num=78794.50781250, mean_dist=0.63439459
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8200:, hard_loss_metric=0.56134021, full_loss_metric=0.19926311, full_loss_num=83841.47656250, mean_dist=0.60774893
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8300:, hard_loss_metric=0.57035357, full_loss_metric=0.20254822, full_loss_num=88991.46875000, mean_dist=0.59274548
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8400:, hard_loss_metric=0.56196588, full_loss_metric=0.19839063, full_loss_num=81366.93750000, mean_dist=0.61850542
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8500:, hard_loss_metric=0.57316041, full_loss_metric=0.20229349, full_loss_num=82774.78125000, mean_dist=0.60866678
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8600:, hard_loss_metric=0.56078959, full_loss_metric=0.20087795, full_loss_num=83644.90625000, mean_dist=0.60973060
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8700:, hard_loss_metric=0.54363096, full_loss_metric=0.19728465, full_loss_num=84701.96875000, mean_dist=0.59808785
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8800:, hard_loss_metric=0.56885618, full_loss_metric=0.20334566, full_loss_num=76958.53125000, mean_dist=0.65765768
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 8900:, hard_loss_metric=0.56029433, full_loss_metric=0.19735491, full_loss_num=78591.92968750, mean_dist=0.62028104
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:10.333775
+INFO:root:local_rank: 0
+iter 9000:, hard_loss_metric=0.56229138, full_loss_metric=0.20044504, full_loss_num=80308.50000000, mean_dist=0.61975467
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9100:, hard_loss_metric=0.55469304, full_loss_metric=0.19797225, full_loss_num=77207.28125000, mean_dist=0.63883567
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9200:, hard_loss_metric=0.56785166, full_loss_metric=0.20176035, full_loss_num=83385.68750000, mean_dist=0.61205423
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9300:, hard_loss_metric=0.55384070, full_loss_metric=0.19926682, full_loss_num=76787.04687500, mean_dist=0.65498817
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9400:, hard_loss_metric=0.57092643, full_loss_metric=0.20307200, full_loss_num=81303.93750000, mean_dist=0.62650353
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9500:, hard_loss_metric=0.55107778, full_loss_metric=0.19671196, full_loss_num=79500.60937500, mean_dist=0.62352359
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9600:, hard_loss_metric=0.56050438, full_loss_metric=0.20067319, full_loss_num=77642.38281250, mean_dist=0.63823873
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9700:, hard_loss_metric=0.56498027, full_loss_metric=0.19975245, full_loss_num=85547.86718750, mean_dist=0.59834445
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9800:, hard_loss_metric=0.55716074, full_loss_metric=0.19942647, full_loss_num=73926.52343750, mean_dist=0.67017245
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 9900:, hard_loss_metric=0.56133628, full_loss_metric=0.20162050, full_loss_num=78608.59375000, mean_dist=0.64676088
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:12.522472
+INFO:root:local_rank: 0
+iter 10000:, hard_loss_metric=0.55702311, full_loss_metric=0.19686919, full_loss_num=76232.35156250, mean_dist=0.64329290
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10100:, hard_loss_metric=0.56001455, full_loss_metric=0.20036186, full_loss_num=71375.42968750, mean_dist=0.69580704
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10200:, hard_loss_metric=0.56960750, full_loss_metric=0.20231833, full_loss_num=73834.74218750, mean_dist=0.66108185
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10300:, hard_loss_metric=0.55276328, full_loss_metric=0.19862856, full_loss_num=76654.89062500, mean_dist=0.62711900
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10400:, hard_loss_metric=0.55370271, full_loss_metric=0.19898848, full_loss_num=73235.81250000, mean_dist=0.66609895
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10500:, hard_loss_metric=0.56904376, full_loss_metric=0.20199265, full_loss_num=76305.92968750, mean_dist=0.65412742
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10600:, hard_loss_metric=0.55918717, full_loss_metric=0.20017554, full_loss_num=74150.27343750, mean_dist=0.64015955
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10700:, hard_loss_metric=0.55508697, full_loss_metric=0.19854897, full_loss_num=75526.89062500, mean_dist=0.64752328
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10800:, hard_loss_metric=0.57012975, full_loss_metric=0.20306793, full_loss_num=74558.65625000, mean_dist=0.66217333
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 10900:, hard_loss_metric=0.56628585, full_loss_metric=0.20132482, full_loss_num=82548.35937500, mean_dist=0.60933036
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:11.393931
+INFO:root:local_rank: 0
+iter 11000:, hard_loss_metric=0.56468624, full_loss_metric=0.19965923, full_loss_num=80386.84375000, mean_dist=0.62816042
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11100:, hard_loss_metric=0.56023711, full_loss_metric=0.19939059, full_loss_num=73793.75000000, mean_dist=0.65962952
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11200:, hard_loss_metric=0.57112056, full_loss_metric=0.20267549, full_loss_num=76565.21093750, mean_dist=0.64393151
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11300:, hard_loss_metric=0.53333086, full_loss_metric=0.19608240, full_loss_num=72400.17187500, mean_dist=0.66666639
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11400:, hard_loss_metric=0.55246907, full_loss_metric=0.19831038, full_loss_num=73603.07812500, mean_dist=0.67450994
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11500:, hard_loss_metric=0.56728578, full_loss_metric=0.20206527, full_loss_num=70489.09375000, mean_dist=0.68539423
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11600:, hard_loss_metric=0.56485271, full_loss_metric=0.20055936, full_loss_num=78082.60156250, mean_dist=0.63712019
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11700:, hard_loss_metric=0.56355119, full_loss_metric=0.20229954, full_loss_num=78024.95312500, mean_dist=0.64292580
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11800:, hard_loss_metric=0.55897206, full_loss_metric=0.20069486, full_loss_num=74697.28906250, mean_dist=0.66378945
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 11900:, hard_loss_metric=0.55448866, full_loss_metric=0.19762382, full_loss_num=76064.14843750, mean_dist=0.64326102
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:08.869323
+INFO:root:local_rank: 0
+iter 12000:, hard_loss_metric=0.54944974, full_loss_metric=0.19951907, full_loss_num=67256.78125000, mean_dist=0.70771897
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12100:, hard_loss_metric=0.55480158, full_loss_metric=0.20127474, full_loss_num=68966.17187500, mean_dist=0.69490057
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12200:, hard_loss_metric=0.55080771, full_loss_metric=0.19796214, full_loss_num=70061.32812500, mean_dist=0.68381411
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12300:, hard_loss_metric=0.56327611, full_loss_metric=0.20118289, full_loss_num=73902.36718750, mean_dist=0.65743548
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12400:, hard_loss_metric=0.56650692, full_loss_metric=0.20261721, full_loss_num=75887.40625000, mean_dist=0.65641779
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12500:, hard_loss_metric=0.54831171, full_loss_metric=0.19617964, full_loss_num=68984.32812500, mean_dist=0.68521988
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12600:, hard_loss_metric=0.56158423, full_loss_metric=0.20097023, full_loss_num=73356.61718750, mean_dist=0.67432898
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12700:, hard_loss_metric=0.56673455, full_loss_metric=0.20173228, full_loss_num=76200.22656250, mean_dist=0.65160453
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12800:, hard_loss_metric=0.56725127, full_loss_metric=0.20126362, full_loss_num=73064.22656250, mean_dist=0.67492020
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 12900:, hard_loss_metric=0.55950797, full_loss_metric=0.19977508, full_loss_num=69399.27343750, mean_dist=0.68623400
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:10.538914
+INFO:root:local_rank: 0
+iter 13000:, hard_loss_metric=0.55907303, full_loss_metric=0.19986847, full_loss_num=76809.78906250, mean_dist=0.64527220
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13100:, hard_loss_metric=0.57118285, full_loss_metric=0.20127310, full_loss_num=77057.96093750, mean_dist=0.64508837
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13200:, hard_loss_metric=0.55270898, full_loss_metric=0.19939142, full_loss_num=70502.24218750, mean_dist=0.67194253
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13300:, hard_loss_metric=0.56923980, full_loss_metric=0.20186926, full_loss_num=75470.86718750, mean_dist=0.65105629
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13400:, hard_loss_metric=0.56425536, full_loss_metric=0.19986220, full_loss_num=71570.92968750, mean_dist=0.66975367
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13500:, hard_loss_metric=0.55469030, full_loss_metric=0.19919293, full_loss_num=71048.89843750, mean_dist=0.67106509
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13600:, hard_loss_metric=0.56775546, full_loss_metric=0.20206785, full_loss_num=69054.25781250, mean_dist=0.70913726
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13700:, hard_loss_metric=0.55472642, full_loss_metric=0.19850163, full_loss_num=72983.39062500, mean_dist=0.65816116
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13800:, hard_loss_metric=0.56088293, full_loss_metric=0.19988202, full_loss_num=70841.93750000, mean_dist=0.68548208
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 13900:, hard_loss_metric=0.55088651, full_loss_metric=0.19921945, full_loss_num=72694.15625000, mean_dist=0.66010988
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:10.134696
+INFO:root:local_rank: 0
+iter 14000:, hard_loss_metric=0.56284362, full_loss_metric=0.20160654, full_loss_num=69714.04687500, mean_dist=0.69649905
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14100:, hard_loss_metric=0.55463213, full_loss_metric=0.19903027, full_loss_num=69929.22656250, mean_dist=0.68534529
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14200:, hard_loss_metric=0.55494529, full_loss_metric=0.19837856, full_loss_num=70753.85156250, mean_dist=0.67712921
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14300:, hard_loss_metric=0.57132500, full_loss_metric=0.20295033, full_loss_num=73884.92187500, mean_dist=0.66008484
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14400:, hard_loss_metric=0.56234175, full_loss_metric=0.19966707, full_loss_num=72244.03906250, mean_dist=0.68147743
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14500:, hard_loss_metric=0.54401791, full_loss_metric=0.19807640, full_loss_num=67413.40625000, mean_dist=0.69472903
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14600:, hard_loss_metric=0.56523740, full_loss_metric=0.20125867, full_loss_num=70096.25781250, mean_dist=0.69099182
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14700:, hard_loss_metric=0.55913728, full_loss_metric=0.20062546, full_loss_num=68159.67968750, mean_dist=0.69458044
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14800:, hard_loss_metric=0.55424070, full_loss_metric=0.20019874, full_loss_num=69434.15625000, mean_dist=0.68451113
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 14900:, hard_loss_metric=0.56171960, full_loss_metric=0.20038687, full_loss_num=68536.82812500, mean_dist=0.69694930
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:06.771043
+INFO:root:local_rank: 0
+iter 15000:, hard_loss_metric=0.56364495, full_loss_metric=0.20071724, full_loss_num=69059.06250000, mean_dist=0.68433350
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15100:, hard_loss_metric=0.55676657, full_loss_metric=0.20014648, full_loss_num=69498.29687500, mean_dist=0.68649012
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15200:, hard_loss_metric=0.56904429, full_loss_metric=0.20240679, full_loss_num=70922.31250000, mean_dist=0.67923826
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15300:, hard_loss_metric=0.55176044, full_loss_metric=0.19701342, full_loss_num=66810.47656250, mean_dist=0.68616849
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15400:, hard_loss_metric=0.55578291, full_loss_metric=0.20029747, full_loss_num=70671.34375000, mean_dist=0.67882812
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15500:, hard_loss_metric=0.56149149, full_loss_metric=0.20000197, full_loss_num=64089.41015625, mean_dist=0.72896802
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15600:, hard_loss_metric=0.55813372, full_loss_metric=0.19990522, full_loss_num=65110.44140625, mean_dist=0.71903563
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15700:, hard_loss_metric=0.55810422, full_loss_metric=0.20069508, full_loss_num=66344.43750000, mean_dist=0.70460284
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15800:, hard_loss_metric=0.56941789, full_loss_metric=0.20327793, full_loss_num=69840.25000000, mean_dist=0.69879222
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 15900:, hard_loss_metric=0.56504917, full_loss_metric=0.20009060, full_loss_num=65848.22656250, mean_dist=0.71540695
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:10.175142
+INFO:root:local_rank: 0
+iter 16000:, hard_loss_metric=0.56690973, full_loss_metric=0.20251092, full_loss_num=72315.22656250, mean_dist=0.65997434
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16100:, hard_loss_metric=0.55338252, full_loss_metric=0.19824599, full_loss_num=66695.49218750, mean_dist=0.70069796
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16200:, hard_loss_metric=0.55532908, full_loss_metric=0.19862181, full_loss_num=68255.40625000, mean_dist=0.68934363
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16300:, hard_loss_metric=0.56316000, full_loss_metric=0.20061989, full_loss_num=67281.17187500, mean_dist=0.69857305
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16400:, hard_loss_metric=0.57312685, full_loss_metric=0.20389067, full_loss_num=70633.95312500, mean_dist=0.69356692
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16500:, hard_loss_metric=0.55125785, full_loss_metric=0.19772524, full_loss_num=66779.96093750, mean_dist=0.69839782
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16600:, hard_loss_metric=0.57300258, full_loss_metric=0.20433679, full_loss_num=67183.67968750, mean_dist=0.70467114
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16700:, hard_loss_metric=0.56133336, full_loss_metric=0.19988705, full_loss_num=72275.96093750, mean_dist=0.65890092
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16800:, hard_loss_metric=0.55838066, full_loss_metric=0.20174257, full_loss_num=71528.82031250, mean_dist=0.67707741
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 16900:, hard_loss_metric=0.53827798, full_loss_metric=0.19622427, full_loss_num=63771.37890625, mean_dist=0.70424080
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:11.005515
+INFO:root:local_rank: 0
+iter 17000:, hard_loss_metric=0.56969196, full_loss_metric=0.20286600, full_loss_num=75127.99218750, mean_dist=0.64484590
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17100:, hard_loss_metric=0.55498385, full_loss_metric=0.19858083, full_loss_num=63055.33984375, mean_dist=0.72453654
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17200:, hard_loss_metric=0.56525606, full_loss_metric=0.20022640, full_loss_num=72248.46875000, mean_dist=0.67600173
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17300:, hard_loss_metric=0.56999701, full_loss_metric=0.20328690, full_loss_num=66294.96093750, mean_dist=0.70063418
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17400:, hard_loss_metric=0.56257254, full_loss_metric=0.20012105, full_loss_num=68185.40625000, mean_dist=0.70946139
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17500:, hard_loss_metric=0.55646205, full_loss_metric=0.19961338, full_loss_num=68840.71093750, mean_dist=0.69127166
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17600:, hard_loss_metric=0.56101209, full_loss_metric=0.20017400, full_loss_num=66629.67187500, mean_dist=0.71102786
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17700:, hard_loss_metric=0.55882442, full_loss_metric=0.19901592, full_loss_num=68286.92187500, mean_dist=0.68932694
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17800:, hard_loss_metric=0.57578945, full_loss_metric=0.20320076, full_loss_num=68807.07812500, mean_dist=0.69897944
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 17900:, hard_loss_metric=0.55041820, full_loss_metric=0.19608653, full_loss_num=67009.82812500, mean_dist=0.70428711
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:07.669030
+INFO:root:local_rank: 0
+iter 18000:, hard_loss_metric=0.56858611, full_loss_metric=0.20171617, full_loss_num=65138.92968750, mean_dist=0.71586782
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18100:, hard_loss_metric=0.55969679, full_loss_metric=0.20126356, full_loss_num=63889.87109375, mean_dist=0.72237176
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18200:, hard_loss_metric=0.56958890, full_loss_metric=0.20139794, full_loss_num=68103.75000000, mean_dist=0.68901217
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18300:, hard_loss_metric=0.55215758, full_loss_metric=0.19914022, full_loss_num=67342.47656250, mean_dist=0.70777994
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18400:, hard_loss_metric=0.54936373, full_loss_metric=0.19909237, full_loss_num=62059.75000000, mean_dist=0.73807794
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18500:, hard_loss_metric=0.55637991, full_loss_metric=0.19933678, full_loss_num=68502.32812500, mean_dist=0.69193918
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18600:, hard_loss_metric=0.56389368, full_loss_metric=0.20214485, full_loss_num=68601.39062500, mean_dist=0.68758255
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18700:, hard_loss_metric=0.56199986, full_loss_metric=0.20028672, full_loss_num=67619.67968750, mean_dist=0.70690048
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18800:, hard_loss_metric=0.57688719, full_loss_metric=0.20285450, full_loss_num=74951.71875000, mean_dist=0.65739310
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 18900:, hard_loss_metric=0.55595559, full_loss_metric=0.19733536, full_loss_num=69082.14062500, mean_dist=0.67003715
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:09.509517
+INFO:root:local_rank: 0
+iter 19000:, hard_loss_metric=0.56061631, full_loss_metric=0.20200130, full_loss_num=65374.30859375, mean_dist=0.71619552
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19100:, hard_loss_metric=0.55593890, full_loss_metric=0.19880049, full_loss_num=69677.68750000, mean_dist=0.66607231
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19200:, hard_loss_metric=0.55739272, full_loss_metric=0.19868021, full_loss_num=64729.98828125, mean_dist=0.70916337
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19300:, hard_loss_metric=0.56423599, full_loss_metric=0.20117897, full_loss_num=67539.32031250, mean_dist=0.69738561
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19400:, hard_loss_metric=0.55655879, full_loss_metric=0.19972074, full_loss_num=69841.17968750, mean_dist=0.68435419
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19500:, hard_loss_metric=0.56056863, full_loss_metric=0.20130055, full_loss_num=68483.85937500, mean_dist=0.69883585
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19600:, hard_loss_metric=0.56627786, full_loss_metric=0.20033862, full_loss_num=69012.06250000, mean_dist=0.68621248
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19700:, hard_loss_metric=0.56636930, full_loss_metric=0.20140098, full_loss_num=68434.07812500, mean_dist=0.68842316
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19800:, hard_loss_metric=0.55344534, full_loss_metric=0.19880833, full_loss_num=66042.14062500, mean_dist=0.70275551
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 19900:, hard_loss_metric=0.56633544, full_loss_metric=0.20198970, full_loss_num=65492.85937500, mean_dist=0.72746241
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:09.701690
+INFO:root:local_rank: 0
+iter 20000:, hard_loss_metric=0.56007838, full_loss_metric=0.20116402, full_loss_num=64539.67187500, mean_dist=0.72611558
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20100:, hard_loss_metric=0.55686593, full_loss_metric=0.20009556, full_loss_num=66579.13281250, mean_dist=0.70949560
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20200:, hard_loss_metric=0.55773234, full_loss_metric=0.19832966, full_loss_num=67461.02343750, mean_dist=0.69383383
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20300:, hard_loss_metric=0.55787593, full_loss_metric=0.20117721, full_loss_num=65726.96093750, mean_dist=0.70950508
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20400:, hard_loss_metric=0.56410855, full_loss_metric=0.19951792, full_loss_num=67273.46875000, mean_dist=0.71672714
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20500:, hard_loss_metric=0.56461686, full_loss_metric=0.20187862, full_loss_num=63368.44921875, mean_dist=0.72274065
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20600:, hard_loss_metric=0.55420780, full_loss_metric=0.19984478, full_loss_num=63888.78906250, mean_dist=0.71978509
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20700:, hard_loss_metric=0.54781240, full_loss_metric=0.19852118, full_loss_num=63459.32031250, mean_dist=0.70929533
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20800:, hard_loss_metric=0.56712139, full_loss_metric=0.20172703, full_loss_num=64288.28906250, mean_dist=0.72704673
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 20900:, hard_loss_metric=0.56482702, full_loss_metric=0.19984737, full_loss_num=64547.32031250, mean_dist=0.70855868
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:08.920962
+INFO:root:local_rank: 0
+iter 21000:, hard_loss_metric=0.56316739, full_loss_metric=0.20221740, full_loss_num=67909.17968750, mean_dist=0.70390457
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21100:, hard_loss_metric=0.55472094, full_loss_metric=0.19945458, full_loss_num=63544.19921875, mean_dist=0.73047578
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21200:, hard_loss_metric=0.57583207, full_loss_metric=0.20267214, full_loss_num=70937.09375000, mean_dist=0.67835879
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21300:, hard_loss_metric=0.54067111, full_loss_metric=0.19774115, full_loss_num=61047.16015625, mean_dist=0.72823906
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21400:, hard_loss_metric=0.56046849, full_loss_metric=0.20169525, full_loss_num=64972.39843750, mean_dist=0.72716993
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21500:, hard_loss_metric=0.56334329, full_loss_metric=0.20022045, full_loss_num=65437.03125000, mean_dist=0.71879423
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21600:, hard_loss_metric=0.54978651, full_loss_metric=0.19841079, full_loss_num=64509.19921875, mean_dist=0.71150923
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21700:, hard_loss_metric=0.56330466, full_loss_metric=0.20118031, full_loss_num=61581.35937500, mean_dist=0.73926961
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21800:, hard_loss_metric=0.55822104, full_loss_metric=0.20195109, full_loss_num=62491.19140625, mean_dist=0.74950820
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 21900:, hard_loss_metric=0.54936087, full_loss_metric=0.19882315, full_loss_num=61454.10156250, mean_dist=0.73369390
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:08.367644
+INFO:root:local_rank: 0
+iter 22000:, hard_loss_metric=0.55628318, full_loss_metric=0.19982734, full_loss_num=62639.82031250, mean_dist=0.73832870
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22100:, hard_loss_metric=0.55973375, full_loss_metric=0.20291424, full_loss_num=62834.25000000, mean_dist=0.73717016
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22200:, hard_loss_metric=0.55461252, full_loss_metric=0.19932680, full_loss_num=65808.85156250, mean_dist=0.70202261
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22300:, hard_loss_metric=0.54633546, full_loss_metric=0.19958617, full_loss_num=63382.42187500, mean_dist=0.73530251
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22400:, hard_loss_metric=0.54769659, full_loss_metric=0.19922227, full_loss_num=63180.05078125, mean_dist=0.73013079
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22500:, hard_loss_metric=0.57296526, full_loss_metric=0.20256744, full_loss_num=65542.85156250, mean_dist=0.72379541
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22600:, hard_loss_metric=0.56142157, full_loss_metric=0.20085245, full_loss_num=65813.92968750, mean_dist=0.71118540
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22700:, hard_loss_metric=0.56174016, full_loss_metric=0.19875747, full_loss_num=68230.10937500, mean_dist=0.69168425
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22800:, hard_loss_metric=0.55762267, full_loss_metric=0.20051396, full_loss_num=65320.32812500, mean_dist=0.72990972
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 22900:, hard_loss_metric=0.57322657, full_loss_metric=0.20341861, full_loss_num=64561.01171875, mean_dist=0.73566711
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:09.585460
+INFO:root:local_rank: 0
+iter 23000:, hard_loss_metric=0.54275811, full_loss_metric=0.19598727, full_loss_num=65477.87109375, mean_dist=0.71362472
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23100:, hard_loss_metric=0.56426519, full_loss_metric=0.20389123, full_loss_num=63570.55078125, mean_dist=0.75166529
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23200:, hard_loss_metric=0.57043409, full_loss_metric=0.20199864, full_loss_num=68549.99218750, mean_dist=0.69413239
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23300:, hard_loss_metric=0.55128402, full_loss_metric=0.19811226, full_loss_num=67905.14062500, mean_dist=0.69989908
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23400:, hard_loss_metric=0.55594420, full_loss_metric=0.20060843, full_loss_num=65445.14062500, mean_dist=0.71675169
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23500:, hard_loss_metric=0.56588095, full_loss_metric=0.20230040, full_loss_num=63538.53125000, mean_dist=0.74803865
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23600:, hard_loss_metric=0.54641902, full_loss_metric=0.19846727, full_loss_num=58474.82812500, mean_dist=0.76855987
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23700:, hard_loss_metric=0.57000780, full_loss_metric=0.20221655, full_loss_num=66142.78125000, mean_dist=0.72692245
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23800:, hard_loss_metric=0.57177740, full_loss_metric=0.20107049, full_loss_num=69927.74218750, mean_dist=0.68863082
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 23900:, hard_loss_metric=0.55951130, full_loss_metric=0.19965293, full_loss_num=63671.82812500, mean_dist=0.72113860
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:07.735957
+INFO:root:local_rank: 0
+iter 24000:, hard_loss_metric=0.56066567, full_loss_metric=0.19964142, full_loss_num=68172.17968750, mean_dist=0.69988525
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24100:, hard_loss_metric=0.56024039, full_loss_metric=0.20143852, full_loss_num=66457.03906250, mean_dist=0.70804429
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24200:, hard_loss_metric=0.56248492, full_loss_metric=0.20106430, full_loss_num=65739.28125000, mean_dist=0.71426690
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24300:, hard_loss_metric=0.56296313, full_loss_metric=0.20173515, full_loss_num=64694.80859375, mean_dist=0.72641456
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24400:, hard_loss_metric=0.55719644, full_loss_metric=0.19839600, full_loss_num=65317.62890625, mean_dist=0.69488984
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24500:, hard_loss_metric=0.56953573, full_loss_metric=0.20018524, full_loss_num=67260.63281250, mean_dist=0.69815993
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24600:, hard_loss_metric=0.56431484, full_loss_metric=0.20068714, full_loss_num=62194.66015625, mean_dist=0.74457520
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24700:, hard_loss_metric=0.55815035, full_loss_metric=0.20137672, full_loss_num=60656.42968750, mean_dist=0.73398125
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24800:, hard_loss_metric=0.53830123, full_loss_metric=0.19977659, full_loss_num=61983.71875000, mean_dist=0.74847847
+, lr=0.100000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 24900:, hard_loss_metric=0.56728655, full_loss_metric=0.20125605, full_loss_num=63450.69921875, mean_dist=0.74113244
+, lr=0.100000, hard or full='full'
+
+INFO:root:0:03:10.530116
+INFO:root:local_rank: 0
+iter 25000:, hard_loss_metric=0.57278132, full_loss_metric=0.20130996, full_loss_num=66309.78125000, mean_dist=0.70132798
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25100:, hard_loss_metric=0.43364155, full_loss_metric=0.17237717, full_loss_num=49831.44140625, mean_dist=0.74756396
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25200:, hard_loss_metric=0.45520487, full_loss_metric=0.18118288, full_loss_num=46810.10937500, mean_dist=0.79722941
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25300:, hard_loss_metric=0.45995671, full_loss_metric=0.18115781, full_loss_num=43064.64062500, mean_dist=0.84494519
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25400:, hard_loss_metric=0.46328261, full_loss_metric=0.18400477, full_loss_num=40704.51171875, mean_dist=0.88015693
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25500:, hard_loss_metric=0.47995126, full_loss_metric=0.19302151, full_loss_num=41735.64843750, mean_dist=0.90617132
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25600:, hard_loss_metric=0.45775512, full_loss_metric=0.18463062, full_loss_num=38149.60156250, mean_dist=0.93586028
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25700:, hard_loss_metric=0.47061154, full_loss_metric=0.18998514, full_loss_num=37838.32031250, mean_dist=0.95307755
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25800:, hard_loss_metric=0.49167255, full_loss_metric=0.19190904, full_loss_num=38899.55859375, mean_dist=0.95259309
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 25900:, hard_loss_metric=0.48722067, full_loss_metric=0.19401798, full_loss_num=39543.26953125, mean_dist=0.96268648
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:08.720217
+INFO:root:local_rank: 0
+iter 26000:, hard_loss_metric=0.47280475, full_loss_metric=0.19112085, full_loss_num=37592.48046875, mean_dist=0.98337638
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26100:, hard_loss_metric=0.48501980, full_loss_metric=0.19287151, full_loss_num=40942.76171875, mean_dist=0.96441978
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26200:, hard_loss_metric=0.45994416, full_loss_metric=0.18759386, full_loss_num=36665.23046875, mean_dist=1.00181937
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26300:, hard_loss_metric=0.46796840, full_loss_metric=0.19073220, full_loss_num=35331.64843750, mean_dist=1.02458823
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26400:, hard_loss_metric=0.48722458, full_loss_metric=0.19432472, full_loss_num=35722.75000000, mean_dist=1.02506435
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26500:, hard_loss_metric=0.48955810, full_loss_metric=0.19564451, full_loss_num=35708.82031250, mean_dist=1.02400613
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26600:, hard_loss_metric=0.48495030, full_loss_metric=0.19369890, full_loss_num=35965.80078125, mean_dist=1.01920342
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26700:, hard_loss_metric=0.50045675, full_loss_metric=0.19741638, full_loss_num=38705.16015625, mean_dist=0.99182421
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26800:, hard_loss_metric=0.46532953, full_loss_metric=0.18883339, full_loss_num=36207.53906250, mean_dist=1.00696039
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 26900:, hard_loss_metric=0.48565793, full_loss_metric=0.19422454, full_loss_num=34698.39843750, mean_dist=1.03055012
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:06.693215
+INFO:root:local_rank: 0
+iter 27000:, hard_loss_metric=0.47158700, full_loss_metric=0.19169895, full_loss_num=33432.91015625, mean_dist=1.05617261
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27100:, hard_loss_metric=0.48009127, full_loss_metric=0.19313063, full_loss_num=35935.50000000, mean_dist=1.03459668
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27200:, hard_loss_metric=0.47409716, full_loss_metric=0.19252950, full_loss_num=34030.35937500, mean_dist=1.05769479
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27300:, hard_loss_metric=0.47913060, full_loss_metric=0.19161683, full_loss_num=34671.01171875, mean_dist=1.07358181
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27400:, hard_loss_metric=0.48410267, full_loss_metric=0.19466907, full_loss_num=35208.83984375, mean_dist=1.06668806
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27500:, hard_loss_metric=0.46850610, full_loss_metric=0.19222945, full_loss_num=33808.98046875, mean_dist=1.08020055
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27600:, hard_loss_metric=0.47434357, full_loss_metric=0.19466157, full_loss_num=34245.82812500, mean_dist=1.08086538
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27700:, hard_loss_metric=0.51006854, full_loss_metric=0.20230061, full_loss_num=37577.03125000, mean_dist=1.03252959
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27800:, hard_loss_metric=0.47988850, full_loss_metric=0.19133705, full_loss_num=36718.71093750, mean_dist=1.03363323
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 27900:, hard_loss_metric=0.49364993, full_loss_metric=0.19602494, full_loss_num=38136.87890625, mean_dist=1.04808903
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:08.296013
+INFO:root:local_rank: 0
+iter 28000:, hard_loss_metric=0.46221846, full_loss_metric=0.19120844, full_loss_num=35009.05859375, mean_dist=1.06691015
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28100:, hard_loss_metric=0.49068081, full_loss_metric=0.19473183, full_loss_num=35254.71093750, mean_dist=1.08056402
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28200:, hard_loss_metric=0.47674096, full_loss_metric=0.19445163, full_loss_num=35963.92968750, mean_dist=1.06380308
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28300:, hard_loss_metric=0.48375392, full_loss_metric=0.19290300, full_loss_num=34495.92187500, mean_dist=1.08104682
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28400:, hard_loss_metric=0.49914104, full_loss_metric=0.19562428, full_loss_num=37659.12890625, mean_dist=1.03520739
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28500:, hard_loss_metric=0.48967972, full_loss_metric=0.19351570, full_loss_num=34391.01171875, mean_dist=1.07222819
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28600:, hard_loss_metric=0.48066461, full_loss_metric=0.19368353, full_loss_num=36148.03906250, mean_dist=1.07152355
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28700:, hard_loss_metric=0.48591870, full_loss_metric=0.19570719, full_loss_num=34762.85156250, mean_dist=1.08548605
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28800:, hard_loss_metric=0.48882684, full_loss_metric=0.19449930, full_loss_num=33955.60937500, mean_dist=1.08740330
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 28900:, hard_loss_metric=0.47120598, full_loss_metric=0.19116960, full_loss_num=33083.85156250, mean_dist=1.08928072
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:10.120487
+INFO:root:local_rank: 0
+iter 29000:, hard_loss_metric=0.49440700, full_loss_metric=0.19794776, full_loss_num=33621.26953125, mean_dist=1.09837985
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29100:, hard_loss_metric=0.48066944, full_loss_metric=0.19290252, full_loss_num=34411.96875000, mean_dist=1.06622767
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29200:, hard_loss_metric=0.47966319, full_loss_metric=0.19685371, full_loss_num=33751.17187500, mean_dist=1.09178042
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29300:, hard_loss_metric=0.48066878, full_loss_metric=0.19356821, full_loss_num=33695.19140625, mean_dist=1.07815588
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29400:, hard_loss_metric=0.48824978, full_loss_metric=0.19385366, full_loss_num=35236.60156250, mean_dist=1.06832814
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29500:, hard_loss_metric=0.49222383, full_loss_metric=0.19478607, full_loss_num=35339.69140625, mean_dist=1.07679045
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29600:, hard_loss_metric=0.46702564, full_loss_metric=0.19079591, full_loss_num=31619.92968750, mean_dist=1.10083997
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29700:, hard_loss_metric=0.49631664, full_loss_metric=0.19865017, full_loss_num=34129.80859375, mean_dist=1.08644140
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29800:, hard_loss_metric=0.48574820, full_loss_metric=0.19322257, full_loss_num=33112.94140625, mean_dist=1.09570599
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 29900:, hard_loss_metric=0.47608063, full_loss_metric=0.19535889, full_loss_num=32353.56054688, mean_dist=1.11114872
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:07.872802
+INFO:root:local_rank: 0
+iter 30000:, hard_loss_metric=0.49014968, full_loss_metric=0.19571698, full_loss_num=34653.92968750, mean_dist=1.08188891
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30100:, hard_loss_metric=0.49042374, full_loss_metric=0.19386894, full_loss_num=36577.44921875, mean_dist=1.07116210
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30200:, hard_loss_metric=0.48363388, full_loss_metric=0.19503643, full_loss_num=33962.80859375, mean_dist=1.09146786
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30300:, hard_loss_metric=0.47291657, full_loss_metric=0.19363290, full_loss_num=33735.07031250, mean_dist=1.09420753
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30400:, hard_loss_metric=0.50003326, full_loss_metric=0.19537996, full_loss_num=34670.19921875, mean_dist=1.08241439
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30500:, hard_loss_metric=0.47945678, full_loss_metric=0.19316047, full_loss_num=33140.28125000, mean_dist=1.09773064
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30600:, hard_loss_metric=0.46218991, full_loss_metric=0.19039236, full_loss_num=30936.25976562, mean_dist=1.11246622
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30700:, hard_loss_metric=0.48462892, full_loss_metric=0.19567949, full_loss_num=32182.94921875, mean_dist=1.12561047
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30800:, hard_loss_metric=0.49944729, full_loss_metric=0.19639544, full_loss_num=33865.92968750, mean_dist=1.09844017
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 30900:, hard_loss_metric=0.49213332, full_loss_metric=0.19822289, full_loss_num=32580.67968750, mean_dist=1.12347782
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:09.960301
+INFO:root:local_rank: 0
+iter 31000:, hard_loss_metric=0.48877448, full_loss_metric=0.19814029, full_loss_num=33614.48828125, mean_dist=1.08923161
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31100:, hard_loss_metric=0.49642575, full_loss_metric=0.19538394, full_loss_num=34622.16015625, mean_dist=1.06907308
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31200:, hard_loss_metric=0.49495381, full_loss_metric=0.19494236, full_loss_num=35686.28125000, mean_dist=1.06386983
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31300:, hard_loss_metric=0.47770020, full_loss_metric=0.19519044, full_loss_num=33041.39062500, mean_dist=1.11177981
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31400:, hard_loss_metric=0.47963357, full_loss_metric=0.19546230, full_loss_num=35428.17187500, mean_dist=1.08789885
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31500:, hard_loss_metric=0.49097052, full_loss_metric=0.19477969, full_loss_num=35378.35156250, mean_dist=1.07023382
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31600:, hard_loss_metric=0.48147690, full_loss_metric=0.19251151, full_loss_num=32563.16015625, mean_dist=1.09000862
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31700:, hard_loss_metric=0.47706997, full_loss_metric=0.19224760, full_loss_num=33558.10937500, mean_dist=1.09237611
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31800:, hard_loss_metric=0.51688921, full_loss_metric=0.20090035, full_loss_num=35118.48046875, mean_dist=1.08696163
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 31900:, hard_loss_metric=0.46519622, full_loss_metric=0.18881351, full_loss_num=31072.49023438, mean_dist=1.10080779
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:07.840751
+INFO:root:local_rank: 0
+iter 32000:, hard_loss_metric=0.49710464, full_loss_metric=0.19614968, full_loss_num=32608.16992188, mean_dist=1.12407041
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32100:, hard_loss_metric=0.47920203, full_loss_metric=0.19599770, full_loss_num=32431.33984375, mean_dist=1.11251211
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32200:, hard_loss_metric=0.49897224, full_loss_metric=0.19831493, full_loss_num=33546.53906250, mean_dist=1.10162222
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32300:, hard_loss_metric=0.48725918, full_loss_metric=0.19373395, full_loss_num=32541.47070312, mean_dist=1.11542416
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32400:, hard_loss_metric=0.49009418, full_loss_metric=0.19705743, full_loss_num=32683.52929688, mean_dist=1.10526347
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32500:, hard_loss_metric=0.49092361, full_loss_metric=0.19353552, full_loss_num=34606.44921875, mean_dist=1.08266521
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32600:, hard_loss_metric=0.48566929, full_loss_metric=0.19524488, full_loss_num=33513.25000000, mean_dist=1.09226704
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32700:, hard_loss_metric=0.50016564, full_loss_metric=0.19633511, full_loss_num=33487.17187500, mean_dist=1.10007012
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32800:, hard_loss_metric=0.50060648, full_loss_metric=0.19826716, full_loss_num=34302.32812500, mean_dist=1.08570743
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 32900:, hard_loss_metric=0.47645921, full_loss_metric=0.19379389, full_loss_num=33933.10156250, mean_dist=1.07217789
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:06.967098
+INFO:root:local_rank: 0
+iter 33000:, hard_loss_metric=0.48430964, full_loss_metric=0.19532694, full_loss_num=33100.64843750, mean_dist=1.10500860
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33100:, hard_loss_metric=0.49139240, full_loss_metric=0.19751169, full_loss_num=34425.89843750, mean_dist=1.08828664
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33200:, hard_loss_metric=0.47480172, full_loss_metric=0.19007906, full_loss_num=35018.35156250, mean_dist=1.07561111
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33300:, hard_loss_metric=0.49855113, full_loss_metric=0.19836022, full_loss_num=34930.53125000, mean_dist=1.08577847
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33400:, hard_loss_metric=0.49899051, full_loss_metric=0.19677168, full_loss_num=34284.05859375, mean_dist=1.08519137
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33500:, hard_loss_metric=0.48436370, full_loss_metric=0.19201964, full_loss_num=33429.14062500, mean_dist=1.08392251
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33600:, hard_loss_metric=0.49015471, full_loss_metric=0.19548778, full_loss_num=32655.44921875, mean_dist=1.11767864
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33700:, hard_loss_metric=0.48182887, full_loss_metric=0.19464904, full_loss_num=31982.59960938, mean_dist=1.10607409
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33800:, hard_loss_metric=0.50011045, full_loss_metric=0.19629814, full_loss_num=34894.53125000, mean_dist=1.09746623
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 33900:, hard_loss_metric=0.49172145, full_loss_metric=0.19835967, full_loss_num=34020.82031250, mean_dist=1.10036528
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:09.917146
+INFO:root:local_rank: 0
+iter 34000:, hard_loss_metric=0.48321602, full_loss_metric=0.19441360, full_loss_num=32624.55078125, mean_dist=1.10351694
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34100:, hard_loss_metric=0.48383167, full_loss_metric=0.19344525, full_loss_num=33981.78906250, mean_dist=1.08851385
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34200:, hard_loss_metric=0.50434917, full_loss_metric=0.19679365, full_loss_num=35321.75000000, mean_dist=1.09152961
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34300:, hard_loss_metric=0.47858521, full_loss_metric=0.19093290, full_loss_num=31749.11914062, mean_dist=1.09159756
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34400:, hard_loss_metric=0.48846173, full_loss_metric=0.19507898, full_loss_num=32744.44921875, mean_dist=1.10266542
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34500:, hard_loss_metric=0.49925405, full_loss_metric=0.19633970, full_loss_num=34590.42187500, mean_dist=1.09504902
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34600:, hard_loss_metric=0.48682457, full_loss_metric=0.19530050, full_loss_num=33488.30859375, mean_dist=1.08784366
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34700:, hard_loss_metric=0.49808398, full_loss_metric=0.19658627, full_loss_num=32559.44921875, mean_dist=1.10175776
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34800:, hard_loss_metric=0.49515286, full_loss_metric=0.19795164, full_loss_num=33976.76171875, mean_dist=1.10217702
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 34900:, hard_loss_metric=0.47961485, full_loss_metric=0.19372942, full_loss_num=32451.13085938, mean_dist=1.10031271
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:08.927987
+INFO:root:local_rank: 0
+iter 35000:, hard_loss_metric=0.49159855, full_loss_metric=0.19346674, full_loss_num=33918.53125000, mean_dist=1.07586825
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35100:, hard_loss_metric=0.48925322, full_loss_metric=0.19471167, full_loss_num=33594.85937500, mean_dist=1.10386264
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35200:, hard_loss_metric=0.45349526, full_loss_metric=0.18566453, full_loss_num=29188.73046875, mean_dist=1.15027213
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35300:, hard_loss_metric=0.48752892, full_loss_metric=0.19781707, full_loss_num=32132.06054688, mean_dist=1.15548587
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35400:, hard_loss_metric=0.49267688, full_loss_metric=0.19499929, full_loss_num=31970.18945312, mean_dist=1.13179994
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35500:, hard_loss_metric=0.48492503, full_loss_metric=0.19589047, full_loss_num=31910.03906250, mean_dist=1.11703634
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35600:, hard_loss_metric=0.48535186, full_loss_metric=0.19474095, full_loss_num=30854.34960938, mean_dist=1.13073301
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35700:, hard_loss_metric=0.47349015, full_loss_metric=0.19302838, full_loss_num=31732.61914062, mean_dist=1.13586807
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35800:, hard_loss_metric=0.48283359, full_loss_metric=0.19385490, full_loss_num=30511.39062500, mean_dist=1.13614070
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 35900:, hard_loss_metric=0.49223125, full_loss_metric=0.19444668, full_loss_num=32298.75976562, mean_dist=1.11847079
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:07.866830
+INFO:root:local_rank: 0
+iter 36000:, hard_loss_metric=0.47297955, full_loss_metric=0.18972260, full_loss_num=28486.88085938, mean_dist=1.14836895
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36100:, hard_loss_metric=0.48388484, full_loss_metric=0.19524454, full_loss_num=30298.81054688, mean_dist=1.14876401
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36200:, hard_loss_metric=0.49579448, full_loss_metric=0.19561544, full_loss_num=32675.02929688, mean_dist=1.13886249
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36300:, hard_loss_metric=0.47736940, full_loss_metric=0.19171777, full_loss_num=30506.51953125, mean_dist=1.14888716
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36400:, hard_loss_metric=0.50093633, full_loss_metric=0.19884227, full_loss_num=32019.09960938, mean_dist=1.12384176
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36500:, hard_loss_metric=0.47404686, full_loss_metric=0.19047078, full_loss_num=31080.93945312, mean_dist=1.11708724
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36600:, hard_loss_metric=0.48251143, full_loss_metric=0.19309962, full_loss_num=29921.09960938, mean_dist=1.15329123
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36700:, hard_loss_metric=0.48586094, full_loss_metric=0.19504532, full_loss_num=30568.23046875, mean_dist=1.16128755
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36800:, hard_loss_metric=0.49304426, full_loss_metric=0.19585128, full_loss_num=32467.60937500, mean_dist=1.13706815
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 36900:, hard_loss_metric=0.47020409, full_loss_metric=0.19212197, full_loss_num=29744.42968750, mean_dist=1.15903926
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:09.530447
+INFO:root:local_rank: 0
+iter 37000:, hard_loss_metric=0.50152701, full_loss_metric=0.19568329, full_loss_num=30716.67968750, mean_dist=1.15188694
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37100:, hard_loss_metric=0.46777463, full_loss_metric=0.18930164, full_loss_num=30125.52929688, mean_dist=1.14766932
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37200:, hard_loss_metric=0.47109538, full_loss_metric=0.18825932, full_loss_num=28870.63085938, mean_dist=1.17066061
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37300:, hard_loss_metric=0.47698936, full_loss_metric=0.18968178, full_loss_num=29222.27929688, mean_dist=1.18699849
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37400:, hard_loss_metric=0.46537986, full_loss_metric=0.18887699, full_loss_num=29036.01953125, mean_dist=1.19050074
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37500:, hard_loss_metric=0.48730007, full_loss_metric=0.19096318, full_loss_num=29502.19921875, mean_dist=1.18598223
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37600:, hard_loss_metric=0.46611953, full_loss_metric=0.18841721, full_loss_num=28133.53906250, mean_dist=1.20775151
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37700:, hard_loss_metric=0.46556577, full_loss_metric=0.18861200, full_loss_num=27110.01953125, mean_dist=1.21099329
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37800:, hard_loss_metric=0.48020735, full_loss_metric=0.19295679, full_loss_num=28651.82031250, mean_dist=1.21743202
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 37900:, hard_loss_metric=0.47286242, full_loss_metric=0.18987799, full_loss_num=27513.16015625, mean_dist=1.21570849
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:11.781971
+INFO:root:local_rank: 0
+iter 38000:, hard_loss_metric=0.46989036, full_loss_metric=0.19064891, full_loss_num=27216.22070312, mean_dist=1.23391175
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38100:, hard_loss_metric=0.48115647, full_loss_metric=0.19254726, full_loss_num=28451.66015625, mean_dist=1.21696079
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38200:, hard_loss_metric=0.48368323, full_loss_metric=0.19297735, full_loss_num=27908.07031250, mean_dist=1.25258601
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38300:, hard_loss_metric=0.49416760, full_loss_metric=0.19415414, full_loss_num=30082.03906250, mean_dist=1.21190810
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38400:, hard_loss_metric=0.47624242, full_loss_metric=0.19034809, full_loss_num=28114.36914062, mean_dist=1.23077142
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38500:, hard_loss_metric=0.49465430, full_loss_metric=0.19507191, full_loss_num=27873.49023438, mean_dist=1.23654330
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38600:, hard_loss_metric=0.47838324, full_loss_metric=0.19248760, full_loss_num=28572.16015625, mean_dist=1.22351444
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38700:, hard_loss_metric=0.47295189, full_loss_metric=0.19175634, full_loss_num=27414.41992188, mean_dist=1.23697805
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38800:, hard_loss_metric=0.47672614, full_loss_metric=0.19094214, full_loss_num=26521.00000000, mean_dist=1.24804795
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 38900:, hard_loss_metric=0.47468692, full_loss_metric=0.19071870, full_loss_num=27067.85937500, mean_dist=1.24996901
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:06.654190
+INFO:root:local_rank: 0
+iter 39000:, hard_loss_metric=0.47882771, full_loss_metric=0.19069344, full_loss_num=26326.15039062, mean_dist=1.25382125
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39100:, hard_loss_metric=0.48251095, full_loss_metric=0.19054991, full_loss_num=26589.30078125, mean_dist=1.27504933
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39200:, hard_loss_metric=0.46599412, full_loss_metric=0.19033548, full_loss_num=25496.88085938, mean_dist=1.24512053
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39300:, hard_loss_metric=0.47249511, full_loss_metric=0.19115919, full_loss_num=26003.50000000, mean_dist=1.27795589
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39400:, hard_loss_metric=0.47394121, full_loss_metric=0.19167435, full_loss_num=26069.96093750, mean_dist=1.27197754
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39500:, hard_loss_metric=0.49354026, full_loss_metric=0.19395714, full_loss_num=26382.21093750, mean_dist=1.27947593
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39600:, hard_loss_metric=0.46454427, full_loss_metric=0.18810199, full_loss_num=25484.94921875, mean_dist=1.27273738
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39700:, hard_loss_metric=0.45930594, full_loss_metric=0.18823601, full_loss_num=25570.13085938, mean_dist=1.26795101
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39800:, hard_loss_metric=0.49250612, full_loss_metric=0.19366586, full_loss_num=27770.93945312, mean_dist=1.26075506
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 39900:, hard_loss_metric=0.46182936, full_loss_metric=0.18748218, full_loss_num=25974.26953125, mean_dist=1.24625731
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:09.660346
+INFO:root:local_rank: 0
+iter 40000:, hard_loss_metric=0.46079713, full_loss_metric=0.18922533, full_loss_num=25791.38085938, mean_dist=1.27244675
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40100:, hard_loss_metric=0.47456300, full_loss_metric=0.18967377, full_loss_num=23984.51953125, mean_dist=1.28571045
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40200:, hard_loss_metric=0.47424439, full_loss_metric=0.19012751, full_loss_num=26293.28906250, mean_dist=1.28738475
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40300:, hard_loss_metric=0.48935744, full_loss_metric=0.19058003, full_loss_num=27520.25000000, mean_dist=1.27036488
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40400:, hard_loss_metric=0.46986279, full_loss_metric=0.18820402, full_loss_num=24752.46093750, mean_dist=1.26036751
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40500:, hard_loss_metric=0.45850223, full_loss_metric=0.18829978, full_loss_num=24947.14062500, mean_dist=1.30308867
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40600:, hard_loss_metric=0.46720654, full_loss_metric=0.19070332, full_loss_num=24835.38085938, mean_dist=1.29920197
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40700:, hard_loss_metric=0.46022099, full_loss_metric=0.18740280, full_loss_num=24017.60937500, mean_dist=1.31584322
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40800:, hard_loss_metric=0.47631508, full_loss_metric=0.19368555, full_loss_num=24856.50976562, mean_dist=1.31314528
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 40900:, hard_loss_metric=0.46288317, full_loss_metric=0.18689407, full_loss_num=22694.91015625, mean_dist=1.32745481
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:10.060308
+INFO:root:local_rank: 0
+iter 41000:, hard_loss_metric=0.44928467, full_loss_metric=0.18742314, full_loss_num=23352.42968750, mean_dist=1.32204723
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41100:, hard_loss_metric=0.48188525, full_loss_metric=0.19236545, full_loss_num=24927.42968750, mean_dist=1.30852675
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41200:, hard_loss_metric=0.45467511, full_loss_metric=0.18732838, full_loss_num=24141.42968750, mean_dist=1.31675684
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41300:, hard_loss_metric=0.47685418, full_loss_metric=0.18780413, full_loss_num=25894.53906250, mean_dist=1.29987347
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41400:, hard_loss_metric=0.45789206, full_loss_metric=0.18815093, full_loss_num=23842.44921875, mean_dist=1.33841145
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41500:, hard_loss_metric=0.44862679, full_loss_metric=0.18760552, full_loss_num=21878.93945312, mean_dist=1.36790192
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41600:, hard_loss_metric=0.48296461, full_loss_metric=0.19354384, full_loss_num=24647.89062500, mean_dist=1.33240354
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41700:, hard_loss_metric=0.44863999, full_loss_metric=0.18632144, full_loss_num=22400.86914062, mean_dist=1.31022298
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41800:, hard_loss_metric=0.48645538, full_loss_metric=0.19207309, full_loss_num=24935.51953125, mean_dist=1.30806684
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 41900:, hard_loss_metric=0.44204789, full_loss_metric=0.18264934, full_loss_num=22319.76953125, mean_dist=1.34708226
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:07.040637
+INFO:root:local_rank: 0
+iter 42000:, hard_loss_metric=0.46312425, full_loss_metric=0.19147132, full_loss_num=23260.33984375, mean_dist=1.36933827
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42100:, hard_loss_metric=0.45764366, full_loss_metric=0.18947847, full_loss_num=21870.08984375, mean_dist=1.37614977
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42200:, hard_loss_metric=0.45520714, full_loss_metric=0.18596637, full_loss_num=23239.94921875, mean_dist=1.34925282
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42300:, hard_loss_metric=0.48122844, full_loss_metric=0.19207455, full_loss_num=24386.09960938, mean_dist=1.34614825
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42400:, hard_loss_metric=0.45227069, full_loss_metric=0.18483505, full_loss_num=23160.89062500, mean_dist=1.35082519
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42500:, hard_loss_metric=0.46289921, full_loss_metric=0.18811749, full_loss_num=22795.13085938, mean_dist=1.36912978
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42600:, hard_loss_metric=0.43965513, full_loss_metric=0.18400154, full_loss_num=21564.50000000, mean_dist=1.37967336
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42700:, hard_loss_metric=0.47210753, full_loss_metric=0.19128345, full_loss_num=22466.50976562, mean_dist=1.40229511
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42800:, hard_loss_metric=0.45407459, full_loss_metric=0.18538944, full_loss_num=22041.46093750, mean_dist=1.38379848
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 42900:, hard_loss_metric=0.48032007, full_loss_metric=0.19090225, full_loss_num=22809.25976562, mean_dist=1.39624190
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:08.488881
+INFO:root:local_rank: 0
+iter 43000:, hard_loss_metric=0.46314466, full_loss_metric=0.18795429, full_loss_num=22628.74023438, mean_dist=1.37466216
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43100:, hard_loss_metric=0.46709555, full_loss_metric=0.18874405, full_loss_num=22709.51953125, mean_dist=1.39394534
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43200:, hard_loss_metric=0.45618919, full_loss_metric=0.18549219, full_loss_num=23160.83984375, mean_dist=1.38776362
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43300:, hard_loss_metric=0.44837257, full_loss_metric=0.18794613, full_loss_num=20429.32031250, mean_dist=1.42736316
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43400:, hard_loss_metric=0.46381909, full_loss_metric=0.19020553, full_loss_num=20701.30078125, mean_dist=1.45025873
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43500:, hard_loss_metric=0.46823937, full_loss_metric=0.18787102, full_loss_num=23343.96093750, mean_dist=1.41272402
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43600:, hard_loss_metric=0.45666394, full_loss_metric=0.19062929, full_loss_num=21216.05078125, mean_dist=1.45622301
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43700:, hard_loss_metric=0.45331904, full_loss_metric=0.18731581, full_loss_num=21517.84960938, mean_dist=1.41709673
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43800:, hard_loss_metric=0.45272571, full_loss_metric=0.18988025, full_loss_num=20296.41015625, mean_dist=1.43025303
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 43900:, hard_loss_metric=0.45604315, full_loss_metric=0.18650025, full_loss_num=21180.41015625, mean_dist=1.43453836
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:09.554705
+INFO:root:local_rank: 0
+iter 44000:, hard_loss_metric=0.45076370, full_loss_metric=0.18881315, full_loss_num=20021.43945312, mean_dist=1.44747496
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44100:, hard_loss_metric=0.46654996, full_loss_metric=0.18772486, full_loss_num=22812.21093750, mean_dist=1.41227329
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44200:, hard_loss_metric=0.47440517, full_loss_metric=0.19101894, full_loss_num=21858.83984375, mean_dist=1.43019521
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44300:, hard_loss_metric=0.46560290, full_loss_metric=0.19081755, full_loss_num=21807.07031250, mean_dist=1.43690181
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44400:, hard_loss_metric=0.44715610, full_loss_metric=0.18650265, full_loss_num=19993.30078125, mean_dist=1.45645308
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44500:, hard_loss_metric=0.44235116, full_loss_metric=0.18530861, full_loss_num=19596.00976562, mean_dist=1.45283747
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44600:, hard_loss_metric=0.46488303, full_loss_metric=0.19061717, full_loss_num=21131.50000000, mean_dist=1.43496156
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44700:, hard_loss_metric=0.46269912, full_loss_metric=0.18903264, full_loss_num=21185.76953125, mean_dist=1.44702113
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44800:, hard_loss_metric=0.45636141, full_loss_metric=0.18497819, full_loss_num=20656.76953125, mean_dist=1.42945635
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 44900:, hard_loss_metric=0.46802258, full_loss_metric=0.19056481, full_loss_num=21871.66015625, mean_dist=1.45338154
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:07.128110
+INFO:root:local_rank: 0
+iter 45000:, hard_loss_metric=0.45312664, full_loss_metric=0.18988705, full_loss_num=19726.74023438, mean_dist=1.44326830
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45100:, hard_loss_metric=0.45865571, full_loss_metric=0.19021398, full_loss_num=21297.58007812, mean_dist=1.43858957
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45200:, hard_loss_metric=0.45633724, full_loss_metric=0.18905416, full_loss_num=20247.21093750, mean_dist=1.43556368
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45300:, hard_loss_metric=0.44829991, full_loss_metric=0.18598936, full_loss_num=20315.02929688, mean_dist=1.45209444
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45400:, hard_loss_metric=0.44720840, full_loss_metric=0.18502694, full_loss_num=20040.67968750, mean_dist=1.47007024
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45500:, hard_loss_metric=0.43507916, full_loss_metric=0.18559259, full_loss_num=19477.08007812, mean_dist=1.49605238
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45600:, hard_loss_metric=0.44543755, full_loss_metric=0.18575819, full_loss_num=19358.15039062, mean_dist=1.47452104
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45700:, hard_loss_metric=0.44661987, full_loss_metric=0.18706846, full_loss_num=19593.16015625, mean_dist=1.46671188
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45800:, hard_loss_metric=0.45683151, full_loss_metric=0.18822505, full_loss_num=19167.00976562, mean_dist=1.48416233
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 45900:, hard_loss_metric=0.45052910, full_loss_metric=0.18907014, full_loss_num=19474.52929688, mean_dist=1.47536099
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:10.032471
+INFO:root:local_rank: 0
+iter 46000:, hard_loss_metric=0.44166976, full_loss_metric=0.18785645, full_loss_num=18159.81054688, mean_dist=1.51335454
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46100:, hard_loss_metric=0.44858089, full_loss_metric=0.18678433, full_loss_num=19253.35937500, mean_dist=1.47430134
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46200:, hard_loss_metric=0.43993509, full_loss_metric=0.18812057, full_loss_num=17894.58984375, mean_dist=1.51460969
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46300:, hard_loss_metric=0.46900764, full_loss_metric=0.19390745, full_loss_num=20197.46093750, mean_dist=1.47030485
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46400:, hard_loss_metric=0.44617942, full_loss_metric=0.18639177, full_loss_num=19608.64062500, mean_dist=1.45887911
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46500:, hard_loss_metric=0.47585946, full_loss_metric=0.19357981, full_loss_num=20733.11914062, mean_dist=1.47675169
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46600:, hard_loss_metric=0.43621540, full_loss_metric=0.18261562, full_loss_num=18538.27929688, mean_dist=1.46888888
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46700:, hard_loss_metric=0.46123448, full_loss_metric=0.19099033, full_loss_num=19358.16015625, mean_dist=1.49551380
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46800:, hard_loss_metric=0.44558877, full_loss_metric=0.18588857, full_loss_num=19541.35937500, mean_dist=1.47307086
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 46900:, hard_loss_metric=0.44306555, full_loss_metric=0.18542454, full_loss_num=19043.89062500, mean_dist=1.49929631
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:09.559487
+INFO:root:local_rank: 0
+iter 47000:, hard_loss_metric=0.44859898, full_loss_metric=0.18979163, full_loss_num=19672.82031250, mean_dist=1.51258802
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47100:, hard_loss_metric=0.47932395, full_loss_metric=0.19115895, full_loss_num=21602.33007812, mean_dist=1.46308756
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47200:, hard_loss_metric=0.44995239, full_loss_metric=0.18768588, full_loss_num=20644.48046875, mean_dist=1.47358203
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47300:, hard_loss_metric=0.43106878, full_loss_metric=0.18434994, full_loss_num=19316.99023438, mean_dist=1.49362278
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47400:, hard_loss_metric=0.43085817, full_loss_metric=0.18121482, full_loss_num=18086.77929688, mean_dist=1.50883603
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47500:, hard_loss_metric=0.43198085, full_loss_metric=0.18616253, full_loss_num=17653.98046875, mean_dist=1.52717304
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47600:, hard_loss_metric=0.45089355, full_loss_metric=0.18956192, full_loss_num=19282.99023438, mean_dist=1.51565135
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47700:, hard_loss_metric=0.43212008, full_loss_metric=0.18473607, full_loss_num=18048.10937500, mean_dist=1.51313818
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47800:, hard_loss_metric=0.44880897, full_loss_metric=0.18696444, full_loss_num=19316.80078125, mean_dist=1.49493349
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 47900:, hard_loss_metric=0.43477413, full_loss_metric=0.18627107, full_loss_num=18834.09960938, mean_dist=1.50353301
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:05.752585
+INFO:root:local_rank: 0
+iter 48000:, hard_loss_metric=0.44955754, full_loss_metric=0.18705477, full_loss_num=19662.67968750, mean_dist=1.50371170
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48100:, hard_loss_metric=0.43481237, full_loss_metric=0.18498555, full_loss_num=18745.91992188, mean_dist=1.52345276
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48200:, hard_loss_metric=0.44685817, full_loss_metric=0.18637760, full_loss_num=19044.10937500, mean_dist=1.53229034
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48300:, hard_loss_metric=0.43060520, full_loss_metric=0.18303785, full_loss_num=17013.84960938, mean_dist=1.54415941
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48400:, hard_loss_metric=0.44629419, full_loss_metric=0.18743794, full_loss_num=18819.86914062, mean_dist=1.52705657
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48500:, hard_loss_metric=0.42247692, full_loss_metric=0.18279926, full_loss_num=17808.89062500, mean_dist=1.55308580
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48600:, hard_loss_metric=0.43730426, full_loss_metric=0.18412647, full_loss_num=17993.25000000, mean_dist=1.56195414
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48700:, hard_loss_metric=0.42771995, full_loss_metric=0.18418156, full_loss_num=16249.03027344, mean_dist=1.58011365
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48800:, hard_loss_metric=0.44224179, full_loss_metric=0.18692532, full_loss_num=17601.96093750, mean_dist=1.54529738
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 48900:, hard_loss_metric=0.44589913, full_loss_metric=0.18644476, full_loss_num=18162.85937500, mean_dist=1.55584657
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:06.805512
+INFO:root:local_rank: 0
+iter 49000:, hard_loss_metric=0.42390293, full_loss_metric=0.18323305, full_loss_num=17291.56054688, mean_dist=1.57240081
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49100:, hard_loss_metric=0.42982715, full_loss_metric=0.18425088, full_loss_num=17573.07031250, mean_dist=1.57211578
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49200:, hard_loss_metric=0.42534885, full_loss_metric=0.18565185, full_loss_num=17092.15039062, mean_dist=1.58339870
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49300:, hard_loss_metric=0.44459069, full_loss_metric=0.18786106, full_loss_num=17578.61914062, mean_dist=1.57537043
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49400:, hard_loss_metric=0.42421305, full_loss_metric=0.18338276, full_loss_num=16618.46093750, mean_dist=1.58405197
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49500:, hard_loss_metric=0.43834594, full_loss_metric=0.18706760, full_loss_num=18618.16992188, mean_dist=1.56138885
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49600:, hard_loss_metric=0.45523697, full_loss_metric=0.18775333, full_loss_num=19436.16015625, mean_dist=1.53858089
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49700:, hard_loss_metric=0.42961052, full_loss_metric=0.18359424, full_loss_num=16972.80078125, mean_dist=1.56175983
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49800:, hard_loss_metric=0.42317215, full_loss_metric=0.18288642, full_loss_num=16632.82031250, mean_dist=1.60262513
+, lr=0.010000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 49900:, hard_loss_metric=0.42820790, full_loss_metric=0.18463998, full_loss_num=16147.74023438, mean_dist=1.61734128
+, lr=0.010000, hard or full='full'
+
+INFO:root:0:03:10.577478
+INFO:root:local_rank: 0
+iter 50000:, hard_loss_metric=0.42490506, full_loss_metric=0.18399689, full_loss_num=16481.41015625, mean_dist=1.60634494
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50100:, hard_loss_metric=0.35032731, full_loss_metric=0.16941151, full_loss_num=12444.95019531, mean_dist=1.64556885
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50200:, hard_loss_metric=0.32997474, full_loss_metric=0.16517764, full_loss_num=11687.16015625, mean_dist=1.64523089
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50300:, hard_loss_metric=0.31738272, full_loss_metric=0.16295238, full_loss_num=11363.57031250, mean_dist=1.66133952
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50400:, hard_loss_metric=0.33557501, full_loss_metric=0.16661365, full_loss_num=11787.26953125, mean_dist=1.67813146
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50500:, hard_loss_metric=0.32048774, full_loss_metric=0.16415359, full_loss_num=11443.04003906, mean_dist=1.65869308
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50600:, hard_loss_metric=0.31736654, full_loss_metric=0.16252548, full_loss_num=10751.76953125, mean_dist=1.70271945
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50700:, hard_loss_metric=0.31363109, full_loss_metric=0.16429582, full_loss_num=10827.75000000, mean_dist=1.69393384
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50800:, hard_loss_metric=0.31717202, full_loss_metric=0.16625613, full_loss_num=10487.57031250, mean_dist=1.72752416
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 50900:, hard_loss_metric=0.32085809, full_loss_metric=0.16353367, full_loss_num=10686.12011719, mean_dist=1.71485138
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:06.316315
+INFO:root:local_rank: 0
+iter 51000:, hard_loss_metric=0.31502733, full_loss_metric=0.16305642, full_loss_num=11036.33984375, mean_dist=1.69087756
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51100:, hard_loss_metric=0.31944215, full_loss_metric=0.16186085, full_loss_num=10564.51953125, mean_dist=1.71500123
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51200:, hard_loss_metric=0.30776954, full_loss_metric=0.16509113, full_loss_num=10171.45019531, mean_dist=1.72895277
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51300:, hard_loss_metric=0.32572365, full_loss_metric=0.16719498, full_loss_num=11327.09960938, mean_dist=1.71270871
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51400:, hard_loss_metric=0.30886164, full_loss_metric=0.16567756, full_loss_num=10611.53027344, mean_dist=1.71817470
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51500:, hard_loss_metric=0.31013337, full_loss_metric=0.16676944, full_loss_num=10542.51953125, mean_dist=1.72436857
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51600:, hard_loss_metric=0.32435948, full_loss_metric=0.16381116, full_loss_num=11017.29003906, mean_dist=1.70480037
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51700:, hard_loss_metric=0.30800340, full_loss_metric=0.16305645, full_loss_num=9993.41015625, mean_dist=1.74151051
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51800:, hard_loss_metric=0.30410478, full_loss_metric=0.16457668, full_loss_num=10375.36035156, mean_dist=1.74027467
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 51900:, hard_loss_metric=0.32464162, full_loss_metric=0.16598226, full_loss_num=11458.78027344, mean_dist=1.72657788
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.271112
+INFO:root:local_rank: 0
+iter 52000:, hard_loss_metric=0.31468967, full_loss_metric=0.16656773, full_loss_num=10229.17968750, mean_dist=1.75299907
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52100:, hard_loss_metric=0.31263718, full_loss_metric=0.16528884, full_loss_num=10552.75976562, mean_dist=1.75473714
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52200:, hard_loss_metric=0.30317867, full_loss_metric=0.16116089, full_loss_num=10540.15039062, mean_dist=1.75185609
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52300:, hard_loss_metric=0.30622384, full_loss_metric=0.16503577, full_loss_num=9441.12011719, mean_dist=1.78405261
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52400:, hard_loss_metric=0.31016326, full_loss_metric=0.16499160, full_loss_num=10181.70996094, mean_dist=1.76242054
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52500:, hard_loss_metric=0.31451404, full_loss_metric=0.16635096, full_loss_num=10313.48046875, mean_dist=1.75889587
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52600:, hard_loss_metric=0.31044778, full_loss_metric=0.16641994, full_loss_num=9869.20996094, mean_dist=1.77323806
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52700:, hard_loss_metric=0.31731805, full_loss_metric=0.16331947, full_loss_num=10364.04980469, mean_dist=1.77331686
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52800:, hard_loss_metric=0.30534217, full_loss_metric=0.16502389, full_loss_num=9821.86035156, mean_dist=1.78756785
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 52900:, hard_loss_metric=0.30703270, full_loss_metric=0.16414100, full_loss_num=9100.69042969, mean_dist=1.80333912
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:08.937842
+INFO:root:local_rank: 0
+iter 53000:, hard_loss_metric=0.32076347, full_loss_metric=0.16718413, full_loss_num=10627.96972656, mean_dist=1.77922165
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53100:, hard_loss_metric=0.29471442, full_loss_metric=0.16204120, full_loss_num=9606.37011719, mean_dist=1.78992260
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53200:, hard_loss_metric=0.31321570, full_loss_metric=0.16345358, full_loss_num=9849.28027344, mean_dist=1.78745818
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53300:, hard_loss_metric=0.30768946, full_loss_metric=0.16746271, full_loss_num=9989.98046875, mean_dist=1.79530430
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53400:, hard_loss_metric=0.30516472, full_loss_metric=0.16364163, full_loss_num=10107.20996094, mean_dist=1.79336977
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53500:, hard_loss_metric=0.31868201, full_loss_metric=0.16748406, full_loss_num=10702.05957031, mean_dist=1.77342772
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53600:, hard_loss_metric=0.31970838, full_loss_metric=0.16264881, full_loss_num=10755.44042969, mean_dist=1.74528074
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53700:, hard_loss_metric=0.31357014, full_loss_metric=0.16474243, full_loss_num=10155.94042969, mean_dist=1.79082990
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53800:, hard_loss_metric=0.30351552, full_loss_metric=0.16399378, full_loss_num=9324.38964844, mean_dist=1.80132902
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 53900:, hard_loss_metric=0.31817833, full_loss_metric=0.17071058, full_loss_num=10381.53027344, mean_dist=1.79865003
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:08.317124
+INFO:root:local_rank: 0
+iter 54000:, hard_loss_metric=0.30677345, full_loss_metric=0.16720027, full_loss_num=9678.57031250, mean_dist=1.81473887
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54100:, hard_loss_metric=0.29401243, full_loss_metric=0.16340561, full_loss_num=9144.44042969, mean_dist=1.82123280
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54200:, hard_loss_metric=0.30512124, full_loss_metric=0.16610870, full_loss_num=9227.23046875, mean_dist=1.83115602
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54300:, hard_loss_metric=0.29894161, full_loss_metric=0.16226086, full_loss_num=9132.83007812, mean_dist=1.82910109
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54400:, hard_loss_metric=0.30381149, full_loss_metric=0.16406003, full_loss_num=9606.87011719, mean_dist=1.82079411
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54500:, hard_loss_metric=0.29031280, full_loss_metric=0.16312052, full_loss_num=8917.96972656, mean_dist=1.82694852
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54600:, hard_loss_metric=0.31297433, full_loss_metric=0.16956893, full_loss_num=9896.96972656, mean_dist=1.82066023
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54700:, hard_loss_metric=0.30898848, full_loss_metric=0.16743849, full_loss_num=9878.04980469, mean_dist=1.82389510
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54800:, hard_loss_metric=0.29586032, full_loss_metric=0.16418223, full_loss_num=8928.66015625, mean_dist=1.81883550
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 54900:, hard_loss_metric=0.29260075, full_loss_metric=0.16421516, full_loss_num=9190.76953125, mean_dist=1.85090947
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:12.020182
+INFO:root:local_rank: 0
+iter 55000:, hard_loss_metric=0.29223311, full_loss_metric=0.16327423, full_loss_num=8935.61035156, mean_dist=1.83317006
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55100:, hard_loss_metric=0.30268848, full_loss_metric=0.16298541, full_loss_num=9581.79003906, mean_dist=1.84655273
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55200:, hard_loss_metric=0.29861033, full_loss_metric=0.16396026, full_loss_num=9062.67968750, mean_dist=1.86005187
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55300:, hard_loss_metric=0.30561236, full_loss_metric=0.16549258, full_loss_num=9641.73046875, mean_dist=1.85922420
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55400:, hard_loss_metric=0.28617299, full_loss_metric=0.16384324, full_loss_num=8316.29003906, mean_dist=1.87272370
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55500:, hard_loss_metric=0.29587013, full_loss_metric=0.16534415, full_loss_num=9056.65039062, mean_dist=1.86136532
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55600:, hard_loss_metric=0.31359842, full_loss_metric=0.16807374, full_loss_num=9945.21972656, mean_dist=1.85563838
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55700:, hard_loss_metric=0.30509251, full_loss_metric=0.16794375, full_loss_num=9045.30957031, mean_dist=1.85087788
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55800:, hard_loss_metric=0.32250020, full_loss_metric=0.16842945, full_loss_num=10139.45996094, mean_dist=1.84607363
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 55900:, hard_loss_metric=0.30923867, full_loss_metric=0.16651857, full_loss_num=9660.50000000, mean_dist=1.85051847
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.373984
+INFO:root:local_rank: 0
+iter 56000:, hard_loss_metric=0.29316869, full_loss_metric=0.16586602, full_loss_num=9094.70019531, mean_dist=1.85421693
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56100:, hard_loss_metric=0.29548579, full_loss_metric=0.16878098, full_loss_num=9069.87011719, mean_dist=1.86298919
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56200:, hard_loss_metric=0.30020779, full_loss_metric=0.16512705, full_loss_num=9055.84960938, mean_dist=1.87188292
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56300:, hard_loss_metric=0.30694860, full_loss_metric=0.16808477, full_loss_num=9259.48046875, mean_dist=1.85084736
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56400:, hard_loss_metric=0.30529311, full_loss_metric=0.16735771, full_loss_num=9690.19042969, mean_dist=1.86031997
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56500:, hard_loss_metric=0.28914803, full_loss_metric=0.16462217, full_loss_num=8039.27978516, mean_dist=1.91152346
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56600:, hard_loss_metric=0.30668038, full_loss_metric=0.16677779, full_loss_num=9213.26953125, mean_dist=1.88895404
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56700:, hard_loss_metric=0.29441360, full_loss_metric=0.16645651, full_loss_num=8861.83007812, mean_dist=1.88631237
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56800:, hard_loss_metric=0.30584261, full_loss_metric=0.16863117, full_loss_num=9264.13964844, mean_dist=1.87888193
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 56900:, hard_loss_metric=0.29130125, full_loss_metric=0.16714548, full_loss_num=8817.42968750, mean_dist=1.88857615
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:07.508657
+INFO:root:local_rank: 0
+iter 57000:, hard_loss_metric=0.30488265, full_loss_metric=0.16563796, full_loss_num=9090.69042969, mean_dist=1.87797725
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57100:, hard_loss_metric=0.29943606, full_loss_metric=0.16718574, full_loss_num=9251.40039062, mean_dist=1.87898970
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57200:, hard_loss_metric=0.30506513, full_loss_metric=0.16741537, full_loss_num=9110.70996094, mean_dist=1.89347315
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57300:, hard_loss_metric=0.28636232, full_loss_metric=0.16405807, full_loss_num=8213.66992188, mean_dist=1.92095554
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57400:, hard_loss_metric=0.29955277, full_loss_metric=0.16522130, full_loss_num=8385.66992188, mean_dist=1.90349567
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57500:, hard_loss_metric=0.29470578, full_loss_metric=0.16520540, full_loss_num=8409.45996094, mean_dist=1.91904736
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57600:, hard_loss_metric=0.28628129, full_loss_metric=0.16165395, full_loss_num=8281.98046875, mean_dist=1.89078248
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57700:, hard_loss_metric=0.31899893, full_loss_metric=0.16986382, full_loss_num=9390.50976562, mean_dist=1.89867604
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57800:, hard_loss_metric=0.29065272, full_loss_metric=0.16602695, full_loss_num=8335.33007812, mean_dist=1.89906728
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 57900:, hard_loss_metric=0.29976323, full_loss_metric=0.16386825, full_loss_num=9054.79980469, mean_dist=1.88533521
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:10.943111
+INFO:root:local_rank: 0
+iter 58000:, hard_loss_metric=0.29609159, full_loss_metric=0.16669858, full_loss_num=8579.05957031, mean_dist=1.90973520
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58100:, hard_loss_metric=0.31437212, full_loss_metric=0.17153805, full_loss_num=9190.69042969, mean_dist=1.90467525
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58200:, hard_loss_metric=0.30125472, full_loss_metric=0.16537230, full_loss_num=9030.00000000, mean_dist=1.89992690
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58300:, hard_loss_metric=0.30085218, full_loss_metric=0.16484630, full_loss_num=8696.40039062, mean_dist=1.92429554
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58400:, hard_loss_metric=0.29298410, full_loss_metric=0.16801560, full_loss_num=8275.96972656, mean_dist=1.93001461
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58500:, hard_loss_metric=0.30466554, full_loss_metric=0.17020231, full_loss_num=9190.84960938, mean_dist=1.89768147
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58600:, hard_loss_metric=0.28929129, full_loss_metric=0.16770363, full_loss_num=8078.62011719, mean_dist=1.90946925
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58700:, hard_loss_metric=0.29392549, full_loss_metric=0.16645512, full_loss_num=8586.70996094, mean_dist=1.93007421
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58800:, hard_loss_metric=0.29902804, full_loss_metric=0.16659130, full_loss_num=8825.83007812, mean_dist=1.92208552
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 58900:, hard_loss_metric=0.29896289, full_loss_metric=0.16664289, full_loss_num=8315.62988281, mean_dist=1.91549635
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:10.763963
+INFO:root:local_rank: 0
+iter 59000:, hard_loss_metric=0.29968730, full_loss_metric=0.16786118, full_loss_num=8694.09960938, mean_dist=1.89553785
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59100:, hard_loss_metric=0.30305496, full_loss_metric=0.16769676, full_loss_num=9262.04003906, mean_dist=1.88613820
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59200:, hard_loss_metric=0.27526614, full_loss_metric=0.16384514, full_loss_num=8071.35986328, mean_dist=1.92851496
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59300:, hard_loss_metric=0.30242875, full_loss_metric=0.16551012, full_loss_num=8840.50000000, mean_dist=1.91611898
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59400:, hard_loss_metric=0.29581687, full_loss_metric=0.16712470, full_loss_num=8247.36035156, mean_dist=1.93223786
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59500:, hard_loss_metric=0.29111752, full_loss_metric=0.16582966, full_loss_num=8384.58984375, mean_dist=1.94541550
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59600:, hard_loss_metric=0.30476972, full_loss_metric=0.16840658, full_loss_num=9035.00976562, mean_dist=1.92188704
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59700:, hard_loss_metric=0.30516970, full_loss_metric=0.16856083, full_loss_num=8827.41015625, mean_dist=1.92667806
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59800:, hard_loss_metric=0.30366200, full_loss_metric=0.16659567, full_loss_num=8713.53027344, mean_dist=1.91253877
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 59900:, hard_loss_metric=0.28848681, full_loss_metric=0.16541111, full_loss_num=8324.96972656, mean_dist=1.95100582
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:07.982442
+INFO:root:local_rank: 0
+iter 60000:, hard_loss_metric=0.30606091, full_loss_metric=0.17069004, full_loss_num=8899.95996094, mean_dist=1.94112015
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60100:, hard_loss_metric=0.30132276, full_loss_metric=0.16919225, full_loss_num=8554.16992188, mean_dist=1.94542468
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60200:, hard_loss_metric=0.29160145, full_loss_metric=0.16691270, full_loss_num=7990.04980469, mean_dist=1.92266572
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60300:, hard_loss_metric=0.29693803, full_loss_metric=0.16706714, full_loss_num=8573.71972656, mean_dist=1.94588208
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60400:, hard_loss_metric=0.30940461, full_loss_metric=0.16987425, full_loss_num=8356.76953125, mean_dist=1.94734025
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60500:, hard_loss_metric=0.29024601, full_loss_metric=0.16532105, full_loss_num=8416.67968750, mean_dist=1.92544866
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60600:, hard_loss_metric=0.30194303, full_loss_metric=0.17000008, full_loss_num=8709.62011719, mean_dist=1.91701984
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60700:, hard_loss_metric=0.30084914, full_loss_metric=0.16702908, full_loss_num=8350.26953125, mean_dist=1.92280650
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60800:, hard_loss_metric=0.29587972, full_loss_metric=0.16621567, full_loss_num=8281.99023438, mean_dist=1.91561937
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 60900:, hard_loss_metric=0.29284230, full_loss_metric=0.16969284, full_loss_num=8397.87988281, mean_dist=1.94387507
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.805557
+INFO:root:local_rank: 0
+iter 61000:, hard_loss_metric=0.30598003, full_loss_metric=0.16902991, full_loss_num=8376.69042969, mean_dist=1.93182516
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61100:, hard_loss_metric=0.34192726, full_loss_metric=0.17969750, full_loss_num=9873.37011719, mean_dist=1.94003844
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61200:, hard_loss_metric=0.28333530, full_loss_metric=0.16619600, full_loss_num=7792.29980469, mean_dist=1.96580410
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61300:, hard_loss_metric=0.30711621, full_loss_metric=0.16849293, full_loss_num=8680.46972656, mean_dist=1.92252803
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61400:, hard_loss_metric=0.28456452, full_loss_metric=0.16278622, full_loss_num=7589.75976562, mean_dist=1.95256913
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61500:, hard_loss_metric=0.28028309, full_loss_metric=0.16582185, full_loss_num=7726.08007812, mean_dist=1.96360242
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61600:, hard_loss_metric=0.29453015, full_loss_metric=0.16755129, full_loss_num=7797.97998047, mean_dist=1.94873166
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61700:, hard_loss_metric=0.29480916, full_loss_metric=0.16874328, full_loss_num=8203.66992188, mean_dist=1.95258069
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61800:, hard_loss_metric=0.28400260, full_loss_metric=0.16873194, full_loss_num=7953.83984375, mean_dist=1.96186841
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 61900:, hard_loss_metric=0.29092431, full_loss_metric=0.16794954, full_loss_num=7842.06005859, mean_dist=1.96276581
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.197657
+INFO:root:local_rank: 0
+iter 62000:, hard_loss_metric=0.29344603, full_loss_metric=0.16883783, full_loss_num=7825.20996094, mean_dist=1.96342742
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62100:, hard_loss_metric=0.29249561, full_loss_metric=0.16740674, full_loss_num=8148.47998047, mean_dist=1.95125306
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62200:, hard_loss_metric=0.29476997, full_loss_metric=0.16790269, full_loss_num=8297.78027344, mean_dist=1.94632566
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62300:, hard_loss_metric=0.30155438, full_loss_metric=0.16931853, full_loss_num=8479.12011719, mean_dist=1.96127605
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62400:, hard_loss_metric=0.30443829, full_loss_metric=0.17060591, full_loss_num=8408.87988281, mean_dist=1.95960796
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62500:, hard_loss_metric=0.29918784, full_loss_metric=0.16810139, full_loss_num=8824.83007812, mean_dist=1.95565379
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62600:, hard_loss_metric=0.30395135, full_loss_metric=0.17063394, full_loss_num=8453.83007812, mean_dist=1.95174193
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62700:, hard_loss_metric=0.28250021, full_loss_metric=0.16772217, full_loss_num=7480.91992188, mean_dist=1.97707260
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62800:, hard_loss_metric=0.29342613, full_loss_metric=0.16683511, full_loss_num=7952.54003906, mean_dist=1.95853770
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 62900:, hard_loss_metric=0.27972704, full_loss_metric=0.16528983, full_loss_num=7315.47021484, mean_dist=1.98440886
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:08.616219
+INFO:root:local_rank: 0
+iter 63000:, hard_loss_metric=0.29213625, full_loss_metric=0.16845930, full_loss_num=7977.70019531, mean_dist=1.98367465
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63100:, hard_loss_metric=0.28951344, full_loss_metric=0.16662489, full_loss_num=8030.00976562, mean_dist=1.96425474
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63200:, hard_loss_metric=0.28150338, full_loss_metric=0.16408630, full_loss_num=7535.60009766, mean_dist=1.99244595
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63300:, hard_loss_metric=0.28086844, full_loss_metric=0.16844083, full_loss_num=7462.83007812, mean_dist=1.99434662
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63400:, hard_loss_metric=0.27694800, full_loss_metric=0.16343260, full_loss_num=7215.10009766, mean_dist=2.00949860
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63500:, hard_loss_metric=0.28096923, full_loss_metric=0.16622651, full_loss_num=7552.50000000, mean_dist=1.97818601
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63600:, hard_loss_metric=0.30828685, full_loss_metric=0.17309183, full_loss_num=8676.74023438, mean_dist=1.96883786
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63700:, hard_loss_metric=0.30070320, full_loss_metric=0.17035653, full_loss_num=8075.41015625, mean_dist=1.97022998
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63800:, hard_loss_metric=0.28726640, full_loss_metric=0.16456813, full_loss_num=7776.52978516, mean_dist=1.97819507
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 63900:, hard_loss_metric=0.29481637, full_loss_metric=0.16815826, full_loss_num=8014.87988281, mean_dist=1.94953394
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:10.377975
+INFO:root:local_rank: 0
+iter 64000:, hard_loss_metric=0.29380944, full_loss_metric=0.16863236, full_loss_num=8123.95019531, mean_dist=1.98289442
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64100:, hard_loss_metric=0.29576319, full_loss_metric=0.17175424, full_loss_num=7953.14990234, mean_dist=2.00995326
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64200:, hard_loss_metric=0.28433749, full_loss_metric=0.16530110, full_loss_num=7846.52001953, mean_dist=1.98940861
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64300:, hard_loss_metric=0.28895292, full_loss_metric=0.16778879, full_loss_num=7846.93994141, mean_dist=2.01136875
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64400:, hard_loss_metric=0.28824422, full_loss_metric=0.16626002, full_loss_num=7517.70019531, mean_dist=2.01056361
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64500:, hard_loss_metric=0.28444269, full_loss_metric=0.16390023, full_loss_num=7463.68017578, mean_dist=1.97422504
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64600:, hard_loss_metric=0.28396925, full_loss_metric=0.16553034, full_loss_num=7325.20019531, mean_dist=2.02068901
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64700:, hard_loss_metric=0.30207521, full_loss_metric=0.16907234, full_loss_num=8351.57031250, mean_dist=1.98040891
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64800:, hard_loss_metric=0.28441840, full_loss_metric=0.16596176, full_loss_num=7792.22021484, mean_dist=2.00327754
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 64900:, hard_loss_metric=0.28934476, full_loss_metric=0.16785821, full_loss_num=8008.29980469, mean_dist=2.02984810
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.857928
+INFO:root:local_rank: 0
+iter 65000:, hard_loss_metric=0.29888144, full_loss_metric=0.16969338, full_loss_num=8256.92968750, mean_dist=1.99582458
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65100:, hard_loss_metric=0.28430122, full_loss_metric=0.16700883, full_loss_num=8096.77001953, mean_dist=1.97211838
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65200:, hard_loss_metric=0.28546301, full_loss_metric=0.16996513, full_loss_num=7768.54003906, mean_dist=2.02101421
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65300:, hard_loss_metric=0.28759712, full_loss_metric=0.16982964, full_loss_num=7455.85986328, mean_dist=2.02715588
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65400:, hard_loss_metric=0.29053393, full_loss_metric=0.17018002, full_loss_num=7776.85009766, mean_dist=2.02044868
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65500:, hard_loss_metric=0.27411637, full_loss_metric=0.16571417, full_loss_num=7263.18994141, mean_dist=2.00966597
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65600:, hard_loss_metric=0.29400039, full_loss_metric=0.16947012, full_loss_num=7865.49023438, mean_dist=2.00356913
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65700:, hard_loss_metric=0.29141027, full_loss_metric=0.16684555, full_loss_num=7790.25976562, mean_dist=1.98723948
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65800:, hard_loss_metric=0.29318377, full_loss_metric=0.16912737, full_loss_num=7597.10009766, mean_dist=2.02108955
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 65900:, hard_loss_metric=0.29487804, full_loss_metric=0.16850621, full_loss_num=7756.93017578, mean_dist=2.01734257
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:06.168273
+INFO:root:local_rank: 0
+iter 66000:, hard_loss_metric=0.27079871, full_loss_metric=0.16710056, full_loss_num=6846.45996094, mean_dist=2.01275396
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66100:, hard_loss_metric=0.28675833, full_loss_metric=0.16931194, full_loss_num=7433.22021484, mean_dist=2.02619243
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66200:, hard_loss_metric=0.27572688, full_loss_metric=0.16614394, full_loss_num=7332.02978516, mean_dist=2.02287722
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66300:, hard_loss_metric=0.28505185, full_loss_metric=0.16506030, full_loss_num=7921.75000000, mean_dist=2.00900507
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66400:, hard_loss_metric=0.29808846, full_loss_metric=0.16924560, full_loss_num=7712.64990234, mean_dist=2.01777339
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66500:, hard_loss_metric=0.29215661, full_loss_metric=0.16756080, full_loss_num=8005.49023438, mean_dist=2.00965023
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66600:, hard_loss_metric=0.29210243, full_loss_metric=0.16976999, full_loss_num=8040.85986328, mean_dist=2.03017259
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66700:, hard_loss_metric=0.29473388, full_loss_metric=0.16579658, full_loss_num=8019.93017578, mean_dist=1.99624813
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66800:, hard_loss_metric=0.28305376, full_loss_metric=0.16643949, full_loss_num=7389.60986328, mean_dist=2.03118491
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 66900:, hard_loss_metric=0.28247264, full_loss_metric=0.16737078, full_loss_num=7746.20019531, mean_dist=2.02916145
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.927709
+INFO:root:local_rank: 0
+iter 67000:, hard_loss_metric=0.29838154, full_loss_metric=0.16987452, full_loss_num=7789.50976562, mean_dist=2.01543450
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67100:, hard_loss_metric=0.29458642, full_loss_metric=0.16902786, full_loss_num=7888.45996094, mean_dist=2.00374365
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67200:, hard_loss_metric=0.27757198, full_loss_metric=0.16676746, full_loss_num=7029.10986328, mean_dist=2.02991033
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67300:, hard_loss_metric=0.29830295, full_loss_metric=0.16946772, full_loss_num=7441.25000000, mean_dist=2.06033134
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67400:, hard_loss_metric=0.29409584, full_loss_metric=0.16769649, full_loss_num=7733.37988281, mean_dist=2.02733326
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67500:, hard_loss_metric=0.27498862, full_loss_metric=0.16685350, full_loss_num=6996.99023438, mean_dist=2.05963373
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67600:, hard_loss_metric=0.29393339, full_loss_metric=0.17365979, full_loss_num=7474.29980469, mean_dist=2.06238532
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67700:, hard_loss_metric=0.27907926, full_loss_metric=0.16623770, full_loss_num=7220.06005859, mean_dist=2.02150440
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67800:, hard_loss_metric=0.28042498, full_loss_metric=0.16758715, full_loss_num=7484.68994141, mean_dist=2.03783011
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 67900:, hard_loss_metric=0.28940612, full_loss_metric=0.17099407, full_loss_num=7432.27001953, mean_dist=2.02571130
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:11.142940
+INFO:root:local_rank: 0
+iter 68000:, hard_loss_metric=0.29253066, full_loss_metric=0.16809179, full_loss_num=7666.50000000, mean_dist=2.03118420
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68100:, hard_loss_metric=0.28722230, full_loss_metric=0.17123687, full_loss_num=7603.43994141, mean_dist=2.04530287
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68200:, hard_loss_metric=0.28709641, full_loss_metric=0.16584297, full_loss_num=7971.79980469, mean_dist=2.01775312
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68300:, hard_loss_metric=0.28020570, full_loss_metric=0.16800737, full_loss_num=7461.18017578, mean_dist=2.01980615
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68400:, hard_loss_metric=0.28285187, full_loss_metric=0.16625914, full_loss_num=6958.87011719, mean_dist=2.06643724
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68500:, hard_loss_metric=0.28577787, full_loss_metric=0.16718073, full_loss_num=7785.39013672, mean_dist=2.06913686
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68600:, hard_loss_metric=0.27304149, full_loss_metric=0.16721317, full_loss_num=7107.47998047, mean_dist=2.04903984
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68700:, hard_loss_metric=0.29002419, full_loss_metric=0.16919839, full_loss_num=7216.93017578, mean_dist=2.07180548
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68800:, hard_loss_metric=0.27733725, full_loss_metric=0.16652979, full_loss_num=7086.95019531, mean_dist=2.04857612
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 68900:, hard_loss_metric=0.28995609, full_loss_metric=0.16711235, full_loss_num=7468.91015625, mean_dist=2.04273057
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.974895
+INFO:root:local_rank: 0
+iter 69000:, hard_loss_metric=0.30575341, full_loss_metric=0.17284279, full_loss_num=8061.62011719, mean_dist=2.03128910
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69100:, hard_loss_metric=0.27724344, full_loss_metric=0.16787156, full_loss_num=7082.08984375, mean_dist=2.05247760
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69200:, hard_loss_metric=0.28121582, full_loss_metric=0.16638620, full_loss_num=7578.22998047, mean_dist=2.01939869
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69300:, hard_loss_metric=0.27967608, full_loss_metric=0.16956533, full_loss_num=7435.56982422, mean_dist=2.04829502
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69400:, hard_loss_metric=0.28701985, full_loss_metric=0.16699888, full_loss_num=7395.70019531, mean_dist=2.01801038
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69500:, hard_loss_metric=0.28650281, full_loss_metric=0.17308682, full_loss_num=7254.24023438, mean_dist=2.06677008
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69600:, hard_loss_metric=0.28092882, full_loss_metric=0.16744271, full_loss_num=7368.04980469, mean_dist=2.01073813
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69700:, hard_loss_metric=0.28040925, full_loss_metric=0.16447727, full_loss_num=7189.81982422, mean_dist=2.03272891
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69800:, hard_loss_metric=0.27041301, full_loss_metric=0.16764179, full_loss_num=6844.54003906, mean_dist=2.06994343
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 69900:, hard_loss_metric=0.27346516, full_loss_metric=0.16584580, full_loss_num=6721.04980469, mean_dist=2.07555461
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:08.426778
+INFO:root:local_rank: 0
+iter 70000:, hard_loss_metric=0.29012176, full_loss_metric=0.16731451, full_loss_num=7333.81005859, mean_dist=2.04048467
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70100:, hard_loss_metric=0.28401792, full_loss_metric=0.16984393, full_loss_num=7340.68017578, mean_dist=2.04782724
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70200:, hard_loss_metric=0.31480193, full_loss_metric=0.17979872, full_loss_num=7908.95019531, mean_dist=2.05067444
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70300:, hard_loss_metric=0.28926805, full_loss_metric=0.16921601, full_loss_num=7567.47021484, mean_dist=1.99706602
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70400:, hard_loss_metric=0.27351758, full_loss_metric=0.16678055, full_loss_num=7072.74023438, mean_dist=2.03566694
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70500:, hard_loss_metric=0.28671607, full_loss_metric=0.16796269, full_loss_num=7240.87988281, mean_dist=2.02298760
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70600:, hard_loss_metric=0.27877435, full_loss_metric=0.16891870, full_loss_num=6942.56005859, mean_dist=2.07203960
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70700:, hard_loss_metric=0.28693831, full_loss_metric=0.16657658, full_loss_num=7150.97021484, mean_dist=2.05290818
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70800:, hard_loss_metric=0.29864922, full_loss_metric=0.17164497, full_loss_num=7697.29003906, mean_dist=2.04104257
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 70900:, hard_loss_metric=0.28274795, full_loss_metric=0.16901030, full_loss_num=7109.06005859, mean_dist=2.05937982
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.782266
+INFO:root:local_rank: 0
+iter 71000:, hard_loss_metric=0.29206100, full_loss_metric=0.16798905, full_loss_num=7119.77978516, mean_dist=2.06925559
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71100:, hard_loss_metric=0.27545869, full_loss_metric=0.16737160, full_loss_num=6885.70019531, mean_dist=2.07411432
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71200:, hard_loss_metric=0.29084945, full_loss_metric=0.16990118, full_loss_num=7296.87011719, mean_dist=2.06864476
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71300:, hard_loss_metric=0.27873114, full_loss_metric=0.16647388, full_loss_num=7059.41992188, mean_dist=2.05938673
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71400:, hard_loss_metric=0.28428361, full_loss_metric=0.16860321, full_loss_num=7052.83984375, mean_dist=2.06338978
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71500:, hard_loss_metric=0.27339411, full_loss_metric=0.16573954, full_loss_num=6506.72021484, mean_dist=2.08431149
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71600:, hard_loss_metric=0.30171302, full_loss_metric=0.17416209, full_loss_num=7383.99023438, mean_dist=2.06586003
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71700:, hard_loss_metric=0.28308290, full_loss_metric=0.16846043, full_loss_num=7246.16015625, mean_dist=2.05426216
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71800:, hard_loss_metric=0.29237765, full_loss_metric=0.17073759, full_loss_num=7181.02978516, mean_dist=2.07827330
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 71900:, hard_loss_metric=0.28040129, full_loss_metric=0.16444927, full_loss_num=6859.24023438, mean_dist=2.07431793
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.056078
+INFO:root:local_rank: 0
+iter 72000:, hard_loss_metric=0.28413972, full_loss_metric=0.17058487, full_loss_num=7274.04003906, mean_dist=2.05981278
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72100:, hard_loss_metric=0.28983590, full_loss_metric=0.16997026, full_loss_num=7013.81005859, mean_dist=2.08339667
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72200:, hard_loss_metric=0.28937498, full_loss_metric=0.17231265, full_loss_num=7107.52978516, mean_dist=2.08625650
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72300:, hard_loss_metric=0.27858269, full_loss_metric=0.16461459, full_loss_num=6912.62011719, mean_dist=2.05216670
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72400:, hard_loss_metric=0.28197643, full_loss_metric=0.16862449, full_loss_num=7141.00000000, mean_dist=2.06715584
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72500:, hard_loss_metric=0.26577288, full_loss_metric=0.16740724, full_loss_num=6259.52978516, mean_dist=2.08430552
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72600:, hard_loss_metric=0.27359045, full_loss_metric=0.16752861, full_loss_num=6439.50976562, mean_dist=2.05986762
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72700:, hard_loss_metric=0.27473536, full_loss_metric=0.17022337, full_loss_num=6729.25000000, mean_dist=2.05528545
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72800:, hard_loss_metric=0.28841138, full_loss_metric=0.17147766, full_loss_num=7459.81005859, mean_dist=2.03988051
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 72900:, hard_loss_metric=0.28014749, full_loss_metric=0.17020765, full_loss_num=6921.87988281, mean_dist=2.08139372
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:07.496305
+INFO:root:local_rank: 0
+iter 73000:, hard_loss_metric=0.27328148, full_loss_metric=0.17069156, full_loss_num=6394.91015625, mean_dist=2.08151817
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73100:, hard_loss_metric=0.26826355, full_loss_metric=0.16234329, full_loss_num=6307.10986328, mean_dist=2.08241916
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73200:, hard_loss_metric=0.27984247, full_loss_metric=0.16841501, full_loss_num=6795.62988281, mean_dist=2.06792545
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73300:, hard_loss_metric=0.27225581, full_loss_metric=0.16801324, full_loss_num=6909.85009766, mean_dist=2.06048822
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73400:, hard_loss_metric=0.29761046, full_loss_metric=0.17420071, full_loss_num=7786.85009766, mean_dist=2.03693604
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73500:, hard_loss_metric=0.29364958, full_loss_metric=0.17023467, full_loss_num=7609.04980469, mean_dist=2.06699634
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73600:, hard_loss_metric=0.27787337, full_loss_metric=0.16672686, full_loss_num=7015.00000000, mean_dist=2.06656671
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73700:, hard_loss_metric=0.27362308, full_loss_metric=0.16745204, full_loss_num=6609.70019531, mean_dist=2.09167695
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73800:, hard_loss_metric=0.27623034, full_loss_metric=0.16674225, full_loss_num=6937.10009766, mean_dist=2.06140256
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 73900:, hard_loss_metric=0.26694942, full_loss_metric=0.16766249, full_loss_num=6396.45996094, mean_dist=2.09865928
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:09.118921
+INFO:root:local_rank: 0
+iter 74000:, hard_loss_metric=0.27775949, full_loss_metric=0.16522551, full_loss_num=6581.02978516, mean_dist=2.08825827
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74100:, hard_loss_metric=0.28242758, full_loss_metric=0.16990210, full_loss_num=6914.68017578, mean_dist=2.06632733
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74200:, hard_loss_metric=0.27560347, full_loss_metric=0.16771013, full_loss_num=6769.06005859, mean_dist=2.11366677
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74300:, hard_loss_metric=0.27567881, full_loss_metric=0.16668981, full_loss_num=7096.16992188, mean_dist=2.07120824
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74400:, hard_loss_metric=0.27482989, full_loss_metric=0.16680716, full_loss_num=6822.50976562, mean_dist=2.06345224
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74500:, hard_loss_metric=0.27568787, full_loss_metric=0.17034620, full_loss_num=6693.08007812, mean_dist=2.07694411
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74600:, hard_loss_metric=0.27213231, full_loss_metric=0.16479002, full_loss_num=6603.31982422, mean_dist=2.06480169
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74700:, hard_loss_metric=0.29455087, full_loss_metric=0.17336872, full_loss_num=7295.18017578, mean_dist=2.05080128
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74800:, hard_loss_metric=0.27397257, full_loss_metric=0.16728340, full_loss_num=6752.54003906, mean_dist=2.05285907
+, lr=0.001000, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 74900:, hard_loss_metric=0.28263474, full_loss_metric=0.17092243, full_loss_num=6685.50976562, mean_dist=2.07822442
+, lr=0.001000, hard or full='full'
+
+INFO:root:0:03:06.316055
+INFO:root:local_rank: 0
+iter 75000:, hard_loss_metric=0.28321487, full_loss_metric=0.16762213, full_loss_num=6870.25976562, mean_dist=2.07631850
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75100:, hard_loss_metric=0.24004214, full_loss_metric=0.15908366, full_loss_num=5551.62988281, mean_dist=2.07655954
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75200:, hard_loss_metric=0.24922828, full_loss_metric=0.16067164, full_loss_num=5835.83984375, mean_dist=2.07902765
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75300:, hard_loss_metric=0.21698140, full_loss_metric=0.15313810, full_loss_num=4786.41015625, mean_dist=2.10806584
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75400:, hard_loss_metric=0.22231525, full_loss_metric=0.15843660, full_loss_num=4814.12011719, mean_dist=2.11557674
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75500:, hard_loss_metric=0.22495306, full_loss_metric=0.15478989, full_loss_num=5077.68017578, mean_dist=2.10692501
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75600:, hard_loss_metric=0.21901546, full_loss_metric=0.15326931, full_loss_num=5025.27978516, mean_dist=2.10873485
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75700:, hard_loss_metric=0.22624370, full_loss_metric=0.15667154, full_loss_num=5051.54980469, mean_dist=2.12635183
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75800:, hard_loss_metric=0.22089384, full_loss_metric=0.15360929, full_loss_num=5182.50976562, mean_dist=2.11671209
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 75900:, hard_loss_metric=0.21599953, full_loss_metric=0.15370497, full_loss_num=4815.62988281, mean_dist=2.13471699
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:09.524943
+INFO:root:local_rank: 0
+iter 76000:, hard_loss_metric=0.22159712, full_loss_metric=0.15399092, full_loss_num=5040.93994141, mean_dist=2.11974716
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76100:, hard_loss_metric=0.21104752, full_loss_metric=0.15573347, full_loss_num=4895.77978516, mean_dist=2.12010860
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76200:, hard_loss_metric=0.22078860, full_loss_metric=0.15594512, full_loss_num=5112.22021484, mean_dist=2.13653827
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76300:, hard_loss_metric=0.22750345, full_loss_metric=0.15381770, full_loss_num=5325.45996094, mean_dist=2.11518645
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76400:, hard_loss_metric=0.22219792, full_loss_metric=0.15538892, full_loss_num=5281.85009766, mean_dist=2.13059092
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76500:, hard_loss_metric=0.22149456, full_loss_metric=0.15512958, full_loss_num=4963.85986328, mean_dist=2.13399506
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76600:, hard_loss_metric=0.22102953, full_loss_metric=0.15271546, full_loss_num=5370.60986328, mean_dist=2.08113384
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76700:, hard_loss_metric=0.22860956, full_loss_metric=0.15058976, full_loss_num=5374.08984375, mean_dist=2.10331535
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76800:, hard_loss_metric=0.23094025, full_loss_metric=0.15346876, full_loss_num=5355.87988281, mean_dist=2.10547566
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 76900:, hard_loss_metric=0.21514647, full_loss_metric=0.15036769, full_loss_num=5277.54980469, mean_dist=2.11312819
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:09.389721
+INFO:root:local_rank: 0
+iter 77000:, hard_loss_metric=0.22785011, full_loss_metric=0.15175545, full_loss_num=5645.60009766, mean_dist=2.10661197
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77100:, hard_loss_metric=0.23353952, full_loss_metric=0.15646547, full_loss_num=5754.45996094, mean_dist=2.10030293
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77200:, hard_loss_metric=0.21842554, full_loss_metric=0.14881293, full_loss_num=5120.33984375, mean_dist=2.10756063
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77300:, hard_loss_metric=0.21023880, full_loss_metric=0.14933302, full_loss_num=4663.43017578, mean_dist=2.12787485
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77400:, hard_loss_metric=0.21706638, full_loss_metric=0.15259343, full_loss_num=4880.91992188, mean_dist=2.12037611
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77500:, hard_loss_metric=0.22728568, full_loss_metric=0.15290537, full_loss_num=5451.87011719, mean_dist=2.11742473
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77600:, hard_loss_metric=0.22878046, full_loss_metric=0.15033795, full_loss_num=5545.72021484, mean_dist=2.08919430
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77700:, hard_loss_metric=0.21983108, full_loss_metric=0.15671092, full_loss_num=5231.43017578, mean_dist=2.12577629
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77800:, hard_loss_metric=0.23766764, full_loss_metric=0.15783481, full_loss_num=5540.79980469, mean_dist=2.10270500
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 77900:, hard_loss_metric=0.20537208, full_loss_metric=0.15110397, full_loss_num=4607.16992188, mean_dist=2.13362980
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:05.860275
+INFO:root:local_rank: 0
+iter 78000:, hard_loss_metric=0.22519200, full_loss_metric=0.15092450, full_loss_num=5332.43017578, mean_dist=2.09046102
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78100:, hard_loss_metric=0.21743694, full_loss_metric=0.15127924, full_loss_num=5013.20996094, mean_dist=2.11837912
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78200:, hard_loss_metric=0.20745109, full_loss_metric=0.14936346, full_loss_num=4880.79980469, mean_dist=2.11705732
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78300:, hard_loss_metric=0.22015782, full_loss_metric=0.15436392, full_loss_num=5136.54003906, mean_dist=2.12501955
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78400:, hard_loss_metric=0.21266523, full_loss_metric=0.15206882, full_loss_num=4773.75976562, mean_dist=2.13647485
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78500:, hard_loss_metric=0.20192775, full_loss_metric=0.14790213, full_loss_num=4647.43994141, mean_dist=2.12419152
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78600:, hard_loss_metric=0.20795822, full_loss_metric=0.14928022, full_loss_num=4634.52001953, mean_dist=2.15781164
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78700:, hard_loss_metric=0.19789557, full_loss_metric=0.14923623, full_loss_num=4420.18994141, mean_dist=2.14234638
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78800:, hard_loss_metric=0.21950164, full_loss_metric=0.15286791, full_loss_num=5137.62011719, mean_dist=2.10659409
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 78900:, hard_loss_metric=0.21799332, full_loss_metric=0.15232617, full_loss_num=4860.12988281, mean_dist=2.12440014
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:07.796846
+INFO:root:local_rank: 0
+iter 79000:, hard_loss_metric=0.21461788, full_loss_metric=0.14850481, full_loss_num=5107.52001953, mean_dist=2.13710880
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79100:, hard_loss_metric=0.21585819, full_loss_metric=0.15264459, full_loss_num=5138.60986328, mean_dist=2.10437202
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79200:, hard_loss_metric=0.22351959, full_loss_metric=0.15405120, full_loss_num=5093.68017578, mean_dist=2.12490582
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79300:, hard_loss_metric=0.22127654, full_loss_metric=0.14993295, full_loss_num=4984.95996094, mean_dist=2.11879921
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79400:, hard_loss_metric=0.21836470, full_loss_metric=0.15209655, full_loss_num=5047.39013672, mean_dist=2.12289333
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79500:, hard_loss_metric=0.21863109, full_loss_metric=0.15206158, full_loss_num=4926.41992188, mean_dist=2.12989044
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79600:, hard_loss_metric=0.22448841, full_loss_metric=0.15260857, full_loss_num=5017.35986328, mean_dist=2.13535118
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79700:, hard_loss_metric=0.20774323, full_loss_metric=0.15057947, full_loss_num=4614.25976562, mean_dist=2.13578558
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79800:, hard_loss_metric=0.20849484, full_loss_metric=0.15144728, full_loss_num=4730.29003906, mean_dist=2.16132426
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 79900:, hard_loss_metric=0.21757846, full_loss_metric=0.15277664, full_loss_num=5048.02978516, mean_dist=2.14892340
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:09.071961
+INFO:root:local_rank: 0
+iter 80000:, hard_loss_metric=0.21815383, full_loss_metric=0.15059780, full_loss_num=5345.10986328, mean_dist=2.11597323
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80100:, hard_loss_metric=0.21182020, full_loss_metric=0.15119275, full_loss_num=5072.00976562, mean_dist=2.11177611
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80200:, hard_loss_metric=0.21856892, full_loss_metric=0.15164056, full_loss_num=4845.04003906, mean_dist=2.13746452
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80300:, hard_loss_metric=0.20842643, full_loss_metric=0.15202148, full_loss_num=4674.37988281, mean_dist=2.13740253
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80400:, hard_loss_metric=0.21898207, full_loss_metric=0.15257698, full_loss_num=5289.04003906, mean_dist=2.14418721
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80500:, hard_loss_metric=0.20728098, full_loss_metric=0.15118799, full_loss_num=4828.97021484, mean_dist=2.14488816
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80600:, hard_loss_metric=0.21762978, full_loss_metric=0.15313743, full_loss_num=4983.70996094, mean_dist=2.12393856
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80700:, hard_loss_metric=0.21526556, full_loss_metric=0.15285000, full_loss_num=4649.52978516, mean_dist=2.13925767
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80800:, hard_loss_metric=0.21264796, full_loss_metric=0.15045805, full_loss_num=4881.68017578, mean_dist=2.10904694
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 80900:, hard_loss_metric=0.21313055, full_loss_metric=0.15270220, full_loss_num=4808.56982422, mean_dist=2.14221931
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:06.362850
+INFO:root:local_rank: 0
+iter 81000:, hard_loss_metric=0.20773529, full_loss_metric=0.15383057, full_loss_num=4873.39990234, mean_dist=2.12085533
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81100:, hard_loss_metric=0.22573350, full_loss_metric=0.15176876, full_loss_num=5280.70019531, mean_dist=2.12804151
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81200:, hard_loss_metric=0.21164058, full_loss_metric=0.15362814, full_loss_num=4908.29980469, mean_dist=2.14192486
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81300:, hard_loss_metric=0.21083240, full_loss_metric=0.15106204, full_loss_num=4836.39013672, mean_dist=2.12251759
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81400:, hard_loss_metric=0.21638945, full_loss_metric=0.15084414, full_loss_num=4930.68994141, mean_dist=2.12904072
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81500:, hard_loss_metric=0.21392687, full_loss_metric=0.15028515, full_loss_num=4954.62011719, mean_dist=2.13293910
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81600:, hard_loss_metric=0.21016790, full_loss_metric=0.15091741, full_loss_num=4694.97021484, mean_dist=2.13142753
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81700:, hard_loss_metric=0.20392536, full_loss_metric=0.14969851, full_loss_num=4513.79003906, mean_dist=2.14568186
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81800:, hard_loss_metric=0.19644304, full_loss_metric=0.14690158, full_loss_num=4490.81005859, mean_dist=2.15099740
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 81900:, hard_loss_metric=0.21528900, full_loss_metric=0.15324044, full_loss_num=4927.41992188, mean_dist=2.12063956
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:07.726396
+INFO:root:local_rank: 0
+iter 82000:, hard_loss_metric=0.20890358, full_loss_metric=0.14779975, full_loss_num=4613.87011719, mean_dist=2.14402413
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82100:, hard_loss_metric=0.21742587, full_loss_metric=0.15321627, full_loss_num=5014.41015625, mean_dist=2.13400054
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82200:, hard_loss_metric=0.21719757, full_loss_metric=0.15195055, full_loss_num=4975.39013672, mean_dist=2.15372610
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82300:, hard_loss_metric=0.22504453, full_loss_metric=0.15486687, full_loss_num=5354.39990234, mean_dist=2.12335896
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82400:, hard_loss_metric=0.21035834, full_loss_metric=0.14990397, full_loss_num=5109.93994141, mean_dist=2.12404728
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82500:, hard_loss_metric=0.20925857, full_loss_metric=0.14698634, full_loss_num=4833.45996094, mean_dist=2.13584328
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82600:, hard_loss_metric=0.22273862, full_loss_metric=0.15179832, full_loss_num=5200.87011719, mean_dist=2.13145971
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82700:, hard_loss_metric=0.20236942, full_loss_metric=0.14701356, full_loss_num=4476.22021484, mean_dist=2.14501953
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82800:, hard_loss_metric=0.21195903, full_loss_metric=0.15104829, full_loss_num=4941.64990234, mean_dist=2.14173555
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 82900:, hard_loss_metric=0.20967403, full_loss_metric=0.15242176, full_loss_num=4771.77978516, mean_dist=2.13742089
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:07.791437
+INFO:root:local_rank: 0
+iter 83000:, hard_loss_metric=0.20455980, full_loss_metric=0.14761508, full_loss_num=4524.60009766, mean_dist=2.13957119
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83100:, hard_loss_metric=0.21946505, full_loss_metric=0.15175106, full_loss_num=5161.97021484, mean_dist=2.12902021
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83200:, hard_loss_metric=0.20619950, full_loss_metric=0.15370147, full_loss_num=4628.47021484, mean_dist=2.16323924
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83300:, hard_loss_metric=0.20510580, full_loss_metric=0.14990793, full_loss_num=4954.10009766, mean_dist=2.11602378
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83400:, hard_loss_metric=0.19971427, full_loss_metric=0.14444572, full_loss_num=4319.39013672, mean_dist=2.15098286
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83500:, hard_loss_metric=0.22095628, full_loss_metric=0.15101755, full_loss_num=5178.95996094, mean_dist=2.12011623
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83600:, hard_loss_metric=0.22272648, full_loss_metric=0.15583766, full_loss_num=5209.97998047, mean_dist=2.11588597
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83700:, hard_loss_metric=0.20242748, full_loss_metric=0.14971997, full_loss_num=4420.91015625, mean_dist=2.16453838
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83800:, hard_loss_metric=0.21180160, full_loss_metric=0.15115726, full_loss_num=4755.37988281, mean_dist=2.15154839
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 83900:, hard_loss_metric=0.22106074, full_loss_metric=0.15339972, full_loss_num=5066.93994141, mean_dist=2.14855480
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:09.826984
+INFO:root:local_rank: 0
+iter 84000:, hard_loss_metric=0.23931789, full_loss_metric=0.15624540, full_loss_num=5789.83984375, mean_dist=2.11363196
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84100:, hard_loss_metric=0.21475917, full_loss_metric=0.14859216, full_loss_num=4746.87011719, mean_dist=2.13019466
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84200:, hard_loss_metric=0.20366664, full_loss_metric=0.14872348, full_loss_num=4408.08984375, mean_dist=2.14796138
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84300:, hard_loss_metric=0.21708496, full_loss_metric=0.14555494, full_loss_num=5072.18994141, mean_dist=2.11852837
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84400:, hard_loss_metric=0.20286626, full_loss_metric=0.15234928, full_loss_num=4468.72998047, mean_dist=2.17132497
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84500:, hard_loss_metric=0.21446705, full_loss_metric=0.15298362, full_loss_num=4924.75000000, mean_dist=2.14125085
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84600:, hard_loss_metric=0.21091945, full_loss_metric=0.15254451, full_loss_num=4777.14013672, mean_dist=2.12590933
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84700:, hard_loss_metric=0.21509103, full_loss_metric=0.15306176, full_loss_num=4926.70996094, mean_dist=2.12047648
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84800:, hard_loss_metric=0.20943817, full_loss_metric=0.14609462, full_loss_num=4795.95996094, mean_dist=2.14587212
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 84900:, hard_loss_metric=0.20015459, full_loss_metric=0.14747740, full_loss_num=4298.33984375, mean_dist=2.16827488
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:10.196694
+INFO:root:local_rank: 0
+iter 85000:, hard_loss_metric=0.21010540, full_loss_metric=0.15128198, full_loss_num=4815.14990234, mean_dist=2.16450119
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85100:, hard_loss_metric=0.21071126, full_loss_metric=0.14952135, full_loss_num=4972.72021484, mean_dist=2.12936378
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85200:, hard_loss_metric=0.21655498, full_loss_metric=0.15387519, full_loss_num=4778.85986328, mean_dist=2.15543580
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85300:, hard_loss_metric=0.20163591, full_loss_metric=0.14707184, full_loss_num=4529.56982422, mean_dist=2.15321445
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85400:, hard_loss_metric=0.20114911, full_loss_metric=0.14840379, full_loss_num=4612.68994141, mean_dist=2.15975523
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85500:, hard_loss_metric=0.21142645, full_loss_metric=0.14964014, full_loss_num=4922.56982422, mean_dist=2.13360333
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85600:, hard_loss_metric=0.21081974, full_loss_metric=0.14990549, full_loss_num=4860.14990234, mean_dist=2.17933798
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85700:, hard_loss_metric=0.20988572, full_loss_metric=0.15556780, full_loss_num=4674.66015625, mean_dist=2.15116358
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85800:, hard_loss_metric=0.22906227, full_loss_metric=0.15102817, full_loss_num=5278.18017578, mean_dist=2.09917140
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 85900:, hard_loss_metric=0.22407687, full_loss_metric=0.15214662, full_loss_num=5377.06005859, mean_dist=2.12424922
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:10.393119
+INFO:root:local_rank: 0
+iter 86000:, hard_loss_metric=0.20894760, full_loss_metric=0.15454958, full_loss_num=4921.75976562, mean_dist=2.15668130
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86100:, hard_loss_metric=0.22192860, full_loss_metric=0.15368222, full_loss_num=5169.54980469, mean_dist=2.12278366
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86200:, hard_loss_metric=0.21570547, full_loss_metric=0.15083265, full_loss_num=4769.64013672, mean_dist=2.12947011
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86300:, hard_loss_metric=0.19843617, full_loss_metric=0.15035746, full_loss_num=4545.14013672, mean_dist=2.15207052
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86400:, hard_loss_metric=0.20132165, full_loss_metric=0.14744598, full_loss_num=4451.64990234, mean_dist=2.15450478
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86500:, hard_loss_metric=0.21436754, full_loss_metric=0.15358441, full_loss_num=5004.10986328, mean_dist=2.15055156
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86600:, hard_loss_metric=0.22529487, full_loss_metric=0.15266764, full_loss_num=5377.35009766, mean_dist=2.11301088
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86700:, hard_loss_metric=0.21724871, full_loss_metric=0.15166321, full_loss_num=5069.27978516, mean_dist=2.13207531
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86800:, hard_loss_metric=0.20491543, full_loss_metric=0.14998202, full_loss_num=4473.22021484, mean_dist=2.15444946
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 86900:, hard_loss_metric=0.22057772, full_loss_metric=0.15289764, full_loss_num=5082.10986328, mean_dist=2.12324762
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:08.881047
+INFO:root:local_rank: 0
+iter 87000:, hard_loss_metric=0.19454233, full_loss_metric=0.14491887, full_loss_num=4242.97998047, mean_dist=2.17914009
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87100:, hard_loss_metric=0.20104380, full_loss_metric=0.15071520, full_loss_num=4426.60986328, mean_dist=2.17239356
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87200:, hard_loss_metric=0.19594969, full_loss_metric=0.14814991, full_loss_num=4331.81005859, mean_dist=2.16043758
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87300:, hard_loss_metric=0.21088578, full_loss_metric=0.14706102, full_loss_num=5079.31005859, mean_dist=2.14057517
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87400:, hard_loss_metric=0.21668611, full_loss_metric=0.15537494, full_loss_num=4797.93017578, mean_dist=2.15205789
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87500:, hard_loss_metric=0.21446063, full_loss_metric=0.15142150, full_loss_num=4855.39013672, mean_dist=2.16169429
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87600:, hard_loss_metric=0.21836124, full_loss_metric=0.15223819, full_loss_num=4950.27001953, mean_dist=2.15309763
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87700:, hard_loss_metric=0.21131140, full_loss_metric=0.15034838, full_loss_num=4715.00976562, mean_dist=2.16646218
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87800:, hard_loss_metric=0.19769655, full_loss_metric=0.14854035, full_loss_num=4363.37011719, mean_dist=2.15115714
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 87900:, hard_loss_metric=0.20639826, full_loss_metric=0.15102971, full_loss_num=4634.52978516, mean_dist=2.15830970
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:10.980903
+INFO:root:local_rank: 0
+iter 88000:, hard_loss_metric=0.21058956, full_loss_metric=0.15168263, full_loss_num=4822.43994141, mean_dist=2.14957476
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88100:, hard_loss_metric=0.19675447, full_loss_metric=0.14739355, full_loss_num=4377.72998047, mean_dist=2.16668773
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88200:, hard_loss_metric=0.19883437, full_loss_metric=0.14510146, full_loss_num=4391.50000000, mean_dist=2.16174960
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88300:, hard_loss_metric=0.21263938, full_loss_metric=0.15168089, full_loss_num=4959.50000000, mean_dist=2.16783428
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88400:, hard_loss_metric=0.20682694, full_loss_metric=0.14783208, full_loss_num=4620.06005859, mean_dist=2.15722513
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88500:, hard_loss_metric=0.20447735, full_loss_metric=0.14781290, full_loss_num=4530.79980469, mean_dist=2.14479256
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88600:, hard_loss_metric=0.21686536, full_loss_metric=0.15270181, full_loss_num=4682.64990234, mean_dist=2.13125038
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88700:, hard_loss_metric=0.20917560, full_loss_metric=0.14498505, full_loss_num=4793.04003906, mean_dist=2.13855553
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88800:, hard_loss_metric=0.19533905, full_loss_metric=0.15118362, full_loss_num=4322.39990234, mean_dist=2.17931890
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 88900:, hard_loss_metric=0.20359994, full_loss_metric=0.15105096, full_loss_num=4447.75000000, mean_dist=2.17645741
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:11.127577
+INFO:root:local_rank: 0
+iter 89000:, hard_loss_metric=0.20895413, full_loss_metric=0.14946714, full_loss_num=4828.70996094, mean_dist=2.14872003
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89100:, hard_loss_metric=0.19423185, full_loss_metric=0.14728415, full_loss_num=4208.35986328, mean_dist=2.16425753
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89200:, hard_loss_metric=0.20245305, full_loss_metric=0.14952581, full_loss_num=4511.33984375, mean_dist=2.17005277
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89300:, hard_loss_metric=0.22442432, full_loss_metric=0.15157370, full_loss_num=5371.49023438, mean_dist=2.11906838
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89400:, hard_loss_metric=0.20699392, full_loss_metric=0.15057269, full_loss_num=4771.85986328, mean_dist=2.14749312
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89500:, hard_loss_metric=0.20919895, full_loss_metric=0.15189862, full_loss_num=4752.47021484, mean_dist=2.18706274
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89600:, hard_loss_metric=0.20904164, full_loss_metric=0.14982581, full_loss_num=4530.27978516, mean_dist=2.15691733
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89700:, hard_loss_metric=0.20835216, full_loss_metric=0.14673740, full_loss_num=4768.85986328, mean_dist=2.14094687
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89800:, hard_loss_metric=0.19813961, full_loss_metric=0.14702205, full_loss_num=4366.70996094, mean_dist=2.13909674
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 89900:, hard_loss_metric=0.20175198, full_loss_metric=0.14782633, full_loss_num=4555.75000000, mean_dist=2.18396068
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:09.022459
+INFO:root:local_rank: 0
+iter 90000:, hard_loss_metric=0.22770083, full_loss_metric=0.15462826, full_loss_num=5259.27978516, mean_dist=2.13665724
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90100:, hard_loss_metric=0.20478891, full_loss_metric=0.15032439, full_loss_num=4606.64013672, mean_dist=2.15081525
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90200:, hard_loss_metric=0.20908178, full_loss_metric=0.15114795, full_loss_num=4763.10986328, mean_dist=2.17975974
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90300:, hard_loss_metric=0.20656408, full_loss_metric=0.15085843, full_loss_num=4784.60986328, mean_dist=2.16240072
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90400:, hard_loss_metric=0.21699509, full_loss_metric=0.14963974, full_loss_num=5078.20019531, mean_dist=2.13282967
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90500:, hard_loss_metric=0.21309428, full_loss_metric=0.15380968, full_loss_num=4981.58007812, mean_dist=2.16191745
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90600:, hard_loss_metric=0.21944280, full_loss_metric=0.15384182, full_loss_num=5278.87011719, mean_dist=2.15556645
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90700:, hard_loss_metric=0.21223782, full_loss_metric=0.15589119, full_loss_num=4831.85986328, mean_dist=2.16622734
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90800:, hard_loss_metric=0.20815447, full_loss_metric=0.14755929, full_loss_num=4688.00000000, mean_dist=2.13446474
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 90900:, hard_loss_metric=0.20827192, full_loss_metric=0.15126325, full_loss_num=4811.43017578, mean_dist=2.16399431
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:12.579449
+INFO:root:local_rank: 0
+iter 91000:, hard_loss_metric=0.20094438, full_loss_metric=0.14808832, full_loss_num=4474.02001953, mean_dist=2.18480992
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91100:, hard_loss_metric=0.19942194, full_loss_metric=0.14527005, full_loss_num=4462.87011719, mean_dist=2.13005209
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91200:, hard_loss_metric=0.19143730, full_loss_metric=0.14716108, full_loss_num=4145.89013672, mean_dist=2.18071127
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91300:, hard_loss_metric=0.19552661, full_loss_metric=0.14873537, full_loss_num=4329.85986328, mean_dist=2.15520740
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91400:, hard_loss_metric=0.19819425, full_loss_metric=0.14734299, full_loss_num=4491.77978516, mean_dist=2.16359997
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91500:, hard_loss_metric=0.20155063, full_loss_metric=0.14883664, full_loss_num=4546.62988281, mean_dist=2.18187714
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91600:, hard_loss_metric=0.20492610, full_loss_metric=0.14795855, full_loss_num=4545.00000000, mean_dist=2.18079448
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91700:, hard_loss_metric=0.20778477, full_loss_metric=0.14752847, full_loss_num=4759.08007812, mean_dist=2.13461328
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91800:, hard_loss_metric=0.19792818, full_loss_metric=0.14984013, full_loss_num=4327.18994141, mean_dist=2.17828894
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 91900:, hard_loss_metric=0.20167869, full_loss_metric=0.14801940, full_loss_num=4610.18017578, mean_dist=2.16892338
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:10.724685
+INFO:root:local_rank: 0
+iter 92000:, hard_loss_metric=0.19757658, full_loss_metric=0.14750668, full_loss_num=4400.97021484, mean_dist=2.16675663
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92100:, hard_loss_metric=0.20423563, full_loss_metric=0.14707074, full_loss_num=4529.66992188, mean_dist=2.17497849
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92200:, hard_loss_metric=0.19868305, full_loss_metric=0.14898932, full_loss_num=4484.06982422, mean_dist=2.17213535
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92300:, hard_loss_metric=0.22364999, full_loss_metric=0.15609413, full_loss_num=5176.87988281, mean_dist=2.15405321
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92400:, hard_loss_metric=0.20821027, full_loss_metric=0.14930947, full_loss_num=4817.58007812, mean_dist=2.16672754
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92500:, hard_loss_metric=0.20357928, full_loss_metric=0.14899722, full_loss_num=4435.39013672, mean_dist=2.16333866
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92600:, hard_loss_metric=0.19672464, full_loss_metric=0.14823978, full_loss_num=4232.39013672, mean_dist=2.16627741
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92700:, hard_loss_metric=0.19662020, full_loss_metric=0.14809676, full_loss_num=4167.68017578, mean_dist=2.16605711
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92800:, hard_loss_metric=0.21219178, full_loss_metric=0.15077758, full_loss_num=4706.52978516, mean_dist=2.16296101
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 92900:, hard_loss_metric=0.21260773, full_loss_metric=0.15015672, full_loss_num=4921.89990234, mean_dist=2.17085552
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:08.479281
+INFO:root:local_rank: 0
+iter 93000:, hard_loss_metric=0.20302294, full_loss_metric=0.14933160, full_loss_num=4564.70019531, mean_dist=2.17038369
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93100:, hard_loss_metric=0.20407873, full_loss_metric=0.14958152, full_loss_num=4622.81982422, mean_dist=2.15250397
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93200:, hard_loss_metric=0.20189688, full_loss_metric=0.14909124, full_loss_num=4493.58984375, mean_dist=2.16550207
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93300:, hard_loss_metric=0.21826483, full_loss_metric=0.15393065, full_loss_num=5195.83984375, mean_dist=2.15020061
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93400:, hard_loss_metric=0.19707803, full_loss_metric=0.14661306, full_loss_num=4596.20996094, mean_dist=2.18600941
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93500:, hard_loss_metric=0.20501342, full_loss_metric=0.14984749, full_loss_num=4728.18017578, mean_dist=2.17957258
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93600:, hard_loss_metric=0.21048601, full_loss_metric=0.15036769, full_loss_num=4802.52978516, mean_dist=2.15754724
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93700:, hard_loss_metric=0.20615253, full_loss_metric=0.15069045, full_loss_num=4491.97021484, mean_dist=2.17460203
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93800:, hard_loss_metric=0.19936451, full_loss_metric=0.14742723, full_loss_num=4422.25976562, mean_dist=2.16346288
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 93900:, hard_loss_metric=0.19815665, full_loss_metric=0.14477855, full_loss_num=4385.45019531, mean_dist=2.15404677
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:11.509644
+INFO:root:local_rank: 0
+iter 94000:, hard_loss_metric=0.20788363, full_loss_metric=0.14931864, full_loss_num=4610.33984375, mean_dist=2.17361045
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94100:, hard_loss_metric=0.20818001, full_loss_metric=0.15030815, full_loss_num=4586.99023438, mean_dist=2.16310930
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94200:, hard_loss_metric=0.20544384, full_loss_metric=0.14921616, full_loss_num=4739.18994141, mean_dist=2.16908336
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94300:, hard_loss_metric=0.19777754, full_loss_metric=0.14935182, full_loss_num=4550.29003906, mean_dist=2.17000270
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94400:, hard_loss_metric=0.20356108, full_loss_metric=0.15068242, full_loss_num=4442.79003906, mean_dist=2.18493366
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94500:, hard_loss_metric=0.20761989, full_loss_metric=0.14853504, full_loss_num=4638.56982422, mean_dist=2.16137862
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94600:, hard_loss_metric=0.20519824, full_loss_metric=0.14926037, full_loss_num=4544.52001953, mean_dist=2.19702268
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94700:, hard_loss_metric=0.20750766, full_loss_metric=0.14796232, full_loss_num=4659.97021484, mean_dist=2.16694498
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94800:, hard_loss_metric=0.19901709, full_loss_metric=0.14763145, full_loss_num=4537.50976562, mean_dist=2.17618465
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 94900:, hard_loss_metric=0.21023397, full_loss_metric=0.15209043, full_loss_num=4863.75000000, mean_dist=2.17113066
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:10.513162
+INFO:root:local_rank: 0
+iter 95000:, hard_loss_metric=0.20025241, full_loss_metric=0.14789093, full_loss_num=4499.49023438, mean_dist=2.19074273
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95100:, hard_loss_metric=0.20261513, full_loss_metric=0.15116240, full_loss_num=4441.64013672, mean_dist=2.18487811
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95200:, hard_loss_metric=0.19108246, full_loss_metric=0.15085723, full_loss_num=4033.51000977, mean_dist=2.20517945
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95300:, hard_loss_metric=0.20604247, full_loss_metric=0.14704250, full_loss_num=4799.29980469, mean_dist=2.15539742
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95400:, hard_loss_metric=0.19480446, full_loss_metric=0.14680813, full_loss_num=4240.68994141, mean_dist=2.18886542
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95500:, hard_loss_metric=0.20300165, full_loss_metric=0.14746909, full_loss_num=4453.97021484, mean_dist=2.17034435
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95600:, hard_loss_metric=0.20295529, full_loss_metric=0.14989120, full_loss_num=4509.81005859, mean_dist=2.18313193
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95700:, hard_loss_metric=0.19410537, full_loss_metric=0.14972426, full_loss_num=4271.49023438, mean_dist=2.18011832
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95800:, hard_loss_metric=0.19736862, full_loss_metric=0.14783186, full_loss_num=4364.37988281, mean_dist=2.16042829
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 95900:, hard_loss_metric=0.20911810, full_loss_metric=0.14906834, full_loss_num=4890.60986328, mean_dist=2.16188145
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:08.554649
+INFO:root:local_rank: 0
+iter 96000:, hard_loss_metric=0.20956852, full_loss_metric=0.14575613, full_loss_num=4772.49023438, mean_dist=2.12563610
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96100:, hard_loss_metric=0.20593472, full_loss_metric=0.15023127, full_loss_num=4673.79003906, mean_dist=2.13950539
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96200:, hard_loss_metric=0.20133334, full_loss_metric=0.14709535, full_loss_num=4304.12011719, mean_dist=2.17330313
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96300:, hard_loss_metric=0.20087372, full_loss_metric=0.14953448, full_loss_num=4602.91992188, mean_dist=2.15555358
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96400:, hard_loss_metric=0.19840029, full_loss_metric=0.14484788, full_loss_num=4213.85986328, mean_dist=2.18998694
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96500:, hard_loss_metric=0.22100332, full_loss_metric=0.14982483, full_loss_num=5022.43017578, mean_dist=2.11841130
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96600:, hard_loss_metric=0.19499363, full_loss_metric=0.14540812, full_loss_num=4243.12011719, mean_dist=2.18310332
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96700:, hard_loss_metric=0.19955719, full_loss_metric=0.14720182, full_loss_num=4536.47021484, mean_dist=2.19437504
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96800:, hard_loss_metric=0.20111437, full_loss_metric=0.14618562, full_loss_num=4430.89013672, mean_dist=2.17494392
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 96900:, hard_loss_metric=0.21516512, full_loss_metric=0.14913796, full_loss_num=4859.39990234, mean_dist=2.14083529
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:11.463674
+INFO:root:local_rank: 0
+iter 97000:, hard_loss_metric=0.22208270, full_loss_metric=0.15008350, full_loss_num=5089.52001953, mean_dist=2.16743422
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97100:, hard_loss_metric=0.20363557, full_loss_metric=0.15149367, full_loss_num=4766.52978516, mean_dist=2.18186116
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97200:, hard_loss_metric=0.20648675, full_loss_metric=0.14905252, full_loss_num=4546.04980469, mean_dist=2.15220451
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97300:, hard_loss_metric=0.20832403, full_loss_metric=0.14992350, full_loss_num=4756.22998047, mean_dist=2.16086221
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97400:, hard_loss_metric=0.19046056, full_loss_metric=0.14276882, full_loss_num=4067.42993164, mean_dist=2.19719625
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97500:, hard_loss_metric=0.19528511, full_loss_metric=0.14572102, full_loss_num=4164.02978516, mean_dist=2.18466592
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97600:, hard_loss_metric=0.21289319, full_loss_metric=0.15151764, full_loss_num=4741.45996094, mean_dist=2.16566539
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97700:, hard_loss_metric=0.20547535, full_loss_metric=0.15025668, full_loss_num=4702.43994141, mean_dist=2.18468547
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97800:, hard_loss_metric=0.21017776, full_loss_metric=0.14773212, full_loss_num=4651.56982422, mean_dist=2.15394402
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 97900:, hard_loss_metric=0.19845043, full_loss_metric=0.14879799, full_loss_num=4273.20019531, mean_dist=2.19486308
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:09.943719
+INFO:root:local_rank: 0
+iter 98000:, hard_loss_metric=0.19944023, full_loss_metric=0.14887168, full_loss_num=4626.81005859, mean_dist=2.16943073
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98100:, hard_loss_metric=0.20017727, full_loss_metric=0.14509785, full_loss_num=4373.99023438, mean_dist=2.18041849
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98200:, hard_loss_metric=0.20691763, full_loss_metric=0.15012136, full_loss_num=4639.89013672, mean_dist=2.17031837
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98300:, hard_loss_metric=0.21334684, full_loss_metric=0.14963578, full_loss_num=4770.12011719, mean_dist=2.15869331
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98400:, hard_loss_metric=0.20951010, full_loss_metric=0.14844719, full_loss_num=4624.87011719, mean_dist=2.16122842
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98500:, hard_loss_metric=0.20265743, full_loss_metric=0.14336009, full_loss_num=4385.12011719, mean_dist=2.17767453
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98600:, hard_loss_metric=0.20226038, full_loss_metric=0.14977355, full_loss_num=4350.68994141, mean_dist=2.19294596
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98700:, hard_loss_metric=0.20136882, full_loss_metric=0.14877400, full_loss_num=4496.45019531, mean_dist=2.19141865
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98800:, hard_loss_metric=0.21020140, full_loss_metric=0.15161486, full_loss_num=4788.31005859, mean_dist=2.15837169
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 98900:, hard_loss_metric=0.19926369, full_loss_metric=0.14915341, full_loss_num=4537.64990234, mean_dist=2.16987014
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:09.029470
+INFO:root:local_rank: 0
+iter 99000:, hard_loss_metric=0.21396568, full_loss_metric=0.15172082, full_loss_num=4877.37011719, mean_dist=2.18352795
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99100:, hard_loss_metric=0.19532523, full_loss_metric=0.14668949, full_loss_num=4244.25976562, mean_dist=2.19931102
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99200:, hard_loss_metric=0.20003916, full_loss_metric=0.14869951, full_loss_num=4367.60009766, mean_dist=2.19581962
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99300:, hard_loss_metric=0.20885964, full_loss_metric=0.15074016, full_loss_num=4576.43994141, mean_dist=2.19452405
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99400:, hard_loss_metric=0.21020181, full_loss_metric=0.15009847, full_loss_num=4667.33984375, mean_dist=2.15086818
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99500:, hard_loss_metric=0.20480530, full_loss_metric=0.15112378, full_loss_num=4229.25976562, mean_dist=2.21408224
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99600:, hard_loss_metric=0.19435114, full_loss_metric=0.14679855, full_loss_num=4135.04003906, mean_dist=2.18836164
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99700:, hard_loss_metric=0.20518018, full_loss_metric=0.14830884, full_loss_num=4554.75976562, mean_dist=2.16308570
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99800:, hard_loss_metric=0.19568561, full_loss_metric=0.15023419, full_loss_num=4254.62988281, mean_dist=2.19742870
+, lr=0.000100, hard or full='full'
+
+INFO:root:local_rank: 0
+iter 99900:, hard_loss_metric=0.19919395, full_loss_metric=0.14856438, full_loss_num=4225.85986328, mean_dist=2.19646430
+, lr=0.000100, hard or full='full'
+
+INFO:root:0:03:11.707289
+INFO:root:local_rank: 0
+iter 100000:, hard_loss_metric=0.20113668, full_loss_metric=0.14885512, full_loss_num=4584.18017578, mean_dist=2.18924069
+, lr=0.000010, hard or full='full'
+
+INFO:root:Training COMPLETE
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************

@@ -1,0 +1,18 @@
+conf: {'WORK_PATH': './work/pgg_skeleton', 'CUDA_VISIBLE_DEVICES': '2', 'dataset': 'OUMVLP_ALPHAPOSE', 'model': {'model_cfg': {'in_channels': 3, 'graph_cfg': {'layout': 'body_12', 'strategy': 'gait_temporal'}, 'edge_importance_weighting': True, 'out_channels': 128, 'num_id': 5153}, 'lr': 0.1, 'margin': 0.2, 'frame_num': 18, 'num_workers': 24, 'restore_iter': 0, 'step_iter': 75000, 'total_iter': 300000, 'hard_or_full_trip': 'full', 'batch_size': (32, 16), 'model_name': 'pgg_oumvlp_gait-temporal'}, 'data': {'data_type': 'skeletons', 'CASIA-B_HRNET': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/hrnet/pyramid_keypoints']}, 'CASIA-B_OPENPOSE': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/casia-b/pose/openpose/pyramid_keypoints']}, 'OUMVLP_ALPHAPOSE': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/ou-mvlp/pose/pyramid_alpha_pose_npy']}, }
+opt: Namespace(batch_size=1, cache=False, ckp_prefix=None, iter=300000, model='pgg')
+Loading the model of iteration 300000...
+Transforming...
+Evaluating...
+---in evaluation---, part_dim: False
+acc.shape: (1, 14, 14, 5)
+Evaluation complete. Cost: 1:22:17.838934
+===Rank-1 (Include identical-view cases)===
+57.628367346938774
+===Rank-1 (Exclude identical-view cases)===
+55.876318681318686
+===Rank-1 of each angle (Exclude identical-view cases)===
+[43.80 58.79 64.03 66.41 65.89 62.92 57.76 40.56 48.42 44.37 60.62 60.30
+ 56.56 51.84]
+===Rank-1 of each angle (Include identical-view cases)===
+[46.01 60.60 65.66 68.05 67.33 64.64 59.58 42.21 50.27 45.50 62.48 62.03
+ 58.58 53.86]

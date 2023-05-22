@@ -1,0 +1,20 @@
+conf: {'WORK_PATH': './work/msgg_skeleton', 'CUDA_VISIBLE_DEVICES': '0', 'dataset': 'CASIA-B_HRNET', 'model': {'model_cfg': {'in_channels': 3, 'graph_cfg': {'layout': 'body_12', 'strategy': 'gait_temporal'}, 'edge_importance_weighting': True, 'out_channels': 64, 'num_id': 73}, 'lr': 0.1, 'margin': 0.2, 'frame_num': 30, 'num_workers': 24, 'restore_iter': 0, 'step_iter': 25000, 'total_iter': 100000, 'hard_or_full_trip': 'full', 'batch_size': (8, 16), 'model_name': 'msgg_casia-b_gait-temporal'}, 'data': {'data_type': 'skeletons', 'CASIA-B_HRNET': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/hrnet/pyramid_keypoints']}, }
+opt: Namespace(batch_size=1, cache=False, ckp_prefix=None, iter=100000, model='msgg')
+Loading the model of iteration 100000...
+Transforming...
+Evaluating...
+---in evaluation---, part_dim: False
+acc.shape: (3, 11, 11, 5)
+Evaluation complete. Cost: 0:01:43.870178
+===Rank-1 (Include identical-view cases)===
+NM: 93.455,	BG: 79.017,	CL:69.165
+===Rank-1 (Exclude identical-view cases)===
+NM: 93.045,	BG: 78.064,	CL:68.345
+===Rank-1 of each angle (Exclude identical-view cases)===
+NM: [88.80 92.60 94.20 94.00 93.00 93.90 92.30 94.50 94.40 94.90 90.90]
+BG: [77.90 81.30 81.70 80.20 78.20 73.80 76.50 77.00 78.60 80.50 73.00]
+CL: [62.20 67.40 66.20 70.20 68.80 66.20 67.40 69.20 71.10 73.40 69.70]
+===Rank-1 of each angle (Include identical-view cases)===
+NM: [89.73 93.09 94.55 94.36 93.45 94.36 92.82 94.73 94.55 94.91 91.45]
+BG: [79.27 82.27 82.55 80.91 79.00 74.91 77.27 77.82 79.73 81.27 74.18]
+CL: [64.00 68.36 67.55 70.73 69.09 67.18 67.55 70.27 71.36 73.91 70.82]

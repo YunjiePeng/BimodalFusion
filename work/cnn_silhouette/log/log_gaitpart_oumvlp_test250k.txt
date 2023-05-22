@@ -1,0 +1,17 @@
+conf: {'WORK_PATH': './work/cnn_silhouette', 'CUDA_VISIBLE_DEVICES': '1', 'dataset': 'OUMVLP', 'model': {'model_cfg': {'hidden_dim': 256, 'out_chataset/ou-mvlp/silhouettannels': 256}, 'lr': 0.0001, 'margin': 0.2, 'frame_num': 30, 'num_workers': 24, 'restore_iter': 0, 'hard_or_full_trip': 'full', 'batch_size': (32}}, 16), 'milestones': [150000], 'total_iter': 250000, 'model_name': 'gaitpart_oumvlp'}, 'data': {'data_type': 'silhouettes', 'CASIA-B': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/silhouettes64/']}, 'OUMVLP': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/ou-mvlp/silhouettes/']}, }
+opt: Namespace(batch_size=1, cache=False, ckp_prefix=None, iter=250000, model='cnn_gaitpart')
+Loading the model of iteration 250000...
+Transforming...Evaluating...
+---in evaluation---, part_dim: 256
+acc.shape: (1, 14, 14, 5)
+Evaluation complete. Cost: 1:08:58.934996
+===Rank-1 (Include identical-view cases)===
+89.20653061224488
+===Rank-1 (Exclude identical-view cases)===
+88.73703296703297
+===Rank-1 of each angle (Exclude identical-view cases)===
+[82.57 88.93 90.84 91.00 89.75 89.91 89.50 85.19 88.09 90.02 90.15 89.03
+ 89.10 88.24]
+===Rank-1 of each angle (Include identical-view cases)===
+[83.13 89.25 91.27 91.42 90.08 90.44 90.05 85.69 88.61 90.53 90.58 89.39
+ 89.66 88.80]

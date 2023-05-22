@@ -1,0 +1,33 @@
+INFO:root:conf:{'WORK_PATH': './work/bimodal_fusion', 'CUDA_VISIBLE_DEVICES': '7,6,5,4,3,2,1,0', 'dataset': 'CASIA-B', 'model': {'pretrain_pgg': 'pretrain_pgg/pgg_casia-b_gait-temporal_CASIA-B_HRNET_73_False_body_12_gait_temporal_3_64_full_128_30_0.2-100000-encoder.ptm', 'pretrain_cnn': 'pretrain_cnn/gaitpart_casia-b_CASIA-B_73_False_128_256_full_128_30_0.2-120000-encoder.ptm', 'cnn_branch': 'gaitpart', 'cnn_cfg': {'hidden_dim': 128, 'out_channels': 256}, 'pgcn_cfg': {'in_channels': 3, 'graph_cfg': {'layout': 'body_12', 'strategy': 'gait_temporal'}, 'edge_importance_weighting': True, 'out_channels': 64, 'num_id': 73}, 'fuse_cfg': {'out_channels': 256}, 'lr': 0.1, 'margin': 0.2, 'frame_num': {'silhouette': 30, 'skeleton': 18}, 'frame_num_min': {'silhouette': 15, 'skeleton': 18}, 'num_workers': 24, 'restore_iter': 0, 'hard_or_full_trip': 'full', 'batch_size': (8, 16), 'step_iter': 2000, 'total_iter': 10000, 'model_name': 'bimodal_fusion_casia-b_batchDiff_new'}, 'data': {'data_type': 'all', 'CASIA-B': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/silhouettes64/', '/home/pengyunjie/data/casia-b/hrnet/pyramid_keypoints']}, 'OUMVLP': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/ou-mvlp/silhouettes/', '/data_1/pengyunjie/dataset/ou-mvlp/pose/pyramid_alpha_pose_npy']}, 'FVG': {'resolution': '64', 'pid_num': 126, 'pid_shuffle': False, 'data_path': ['/data_1/pengyunjie/dataset/fvg/fvg_new/silhouettes64/', '/home/pengyunjie/data/fvg/hrnet/pyramid_keypoints']}}}
+opt:Namespace(batch_size=8, cache=False, ckp_prefix=None, iter=10000, local_rank=0, model='fuse')
+INFO:root:Initialzing...
+INFO:root:Initializing data source...
+INFO:root:dataset:CASIA-B, data_type:all, data_path:['/home/pengyunjie/data/casia-b/silhouettes64/', '/home/pengyunjie/data/casia-b/hrnet/pyramid_keypoints'], cache:False
+INFO:root:pid_train:['001', '002', '003', '004', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032', '033', '034', '035', '036', '037', '038', '039', '040', '041', '042', '043', '044', '045', '046', '047', '048', '049', '050', '051', '052', '053', '054', '055', '056', '057', '058', '059', '060', '061', '062', '063', '064', '065', '066', '067', '068', '069', '070', '071', '072', '073', '074']
+pid_test:['075', '076', '077', '078', '079', '080', '081', '082', '083', '084', '085', '086', '087', '088', '089', '090', '091', '092', '093', '094', '095', '096', '097', '098', '099', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124']
+INFO:root:len(pid_train):73, len(pid_test):50
+INFO:root:Data initialization complete.
+INFO:root:Initializing model...
+INFO:root:Model initialization complete.
+INFO:root:Loading the model of iteration 10000...
+INFO:root:checkpoint/bimodal_fusion_casia-b_batchDiff_new/bimodal_fusion_casia-b_batchDiff_new_CASIA-B_73_False_256_body_12_gait_temporal_3_64_full_128_{'silhouette': 30, 'skeleton': 18}_0.2-10000-gcn_encoder.ptm
+INFO:root:Transforming...
+INFO:root:Transformation complete. Cost:0:01:41.623383
+INFO:root:Evaluating...
+INFO:root:acc.shape:(3, 11, 11, 5)
+INFO:root:Evaluation complete. Cost:0:00:03.266606
+===Rank-1 (Include identical-view cases)===
+NM: 98.612,	BG: 95.170,	CL:90.702
+===Rank-1 (Exclude identical-view cases)===
+NM: 98.491,	BG: 94.751,	CL:89.936
+===Rank-1 of each angle (Exclude identical-view cases)===
+NM: [97.90 99.00 99.50 99.50 98.20 97.30 98.30 98.90 99.40 99.40 96.00]
+BG: [95.00 97.47 97.68 97.65 91.70 90.40 93.60 95.50 97.70 95.35 90.20]
+CL: [85.80 92.50 94.10 92.00 87.30 87.20 88.10 91.60 94.60 91.00 85.10]
+===Rank-1 of each angle (Include identical-view cases)===
+NM: [98.09 99.09 99.55 99.55 98.36 97.55 98.45 99.00 99.27 99.45 96.36]
+BG: [95.45 97.70 97.89 97.87 92.45 91.27 94.18 95.82 97.73 95.59 90.91]
+CL: [86.91 93.18 94.64 92.64 88.27 88.27 89.00 92.09 94.82 91.73 86.18]
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************

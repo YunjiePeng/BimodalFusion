@@ -1,0 +1,32 @@
+INFO:root:conf:{'WORK_PATH': './work/ablation_study', 'CUDA_VISIBLE_DEVICES': '0,1,2,3', 'dataset': 'CASIA-B_HRNET', 'model': {'model_cfg': {'in_channels': 3, 'graph_cfg': {'layout': 'body_12', 'strategy': 'gait_temporal'}, 'edge_importance_weighting': True, 'out_channels': 64, 'num_id': 73}, 'lr': 0.1, 'margin': 0.2, 'num_workers': 24, 'restore_iter': 0, 'hard_or_full_trip': 'full', 'frame_num': 30, 'frame_num_min': 30, 'step_iter': 25000, 'total_iter': 100000, 'batch_size': (8, 16), 'model_name': 'msgg_casia-b_hrnet_gait-temporal_separate'}, 'data': {'data_type': 'skeletons', 'CASIA-B_HRNET': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/pose/hrnet/pyramid_keypoints']}, 'CASIA-B_OPENPOSE': {'resolution': '64', 'pid_num': 73, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/casia-b/pose/openpose/pyramid_keypoints']}, 'OUMVLP_ALPHAPOSE': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/data/ou-mvlp/pose/pyramid_alpha_pose_npy']}, 'OUMVLP_OPENPOSE': {'resolution': '64', 'pid_num': 5153, 'pid_shuffle': False, 'data_path': ['/home/pengyunjie/dataset/ou-mvlp/pose/pyramid_open_pose_npy']}}}
+opt:Namespace(batch_size=4, cache=False, ckp_prefix=None, iter=100000, local_rank=0, model='msgg')
+INFO:root:Initialzing...
+INFO:root:Initializing data source...
+INFO:root:dataset:CASIA-B_HRNET, data_type:skeletons, data_path:['/home/pengyunjie/data/casia-b/pose/hrnet/pyramid_keypoints'], cache:False
+INFO:root:pid_train:['001', '002', '003', '004', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032', '033', '034', '035', '036', '037', '038', '039', '040', '041', '042', '043', '044', '045', '046', '047', '048', '049', '050', '051', '052', '053', '054', '055', '056', '057', '058', '059', '060', '061', '062', '063', '064', '065', '066', '067', '068', '069', '070', '071', '072', '073', '074']
+pid_test:['075', '076', '077', '078', '079', '080', '081', '082', '083', '084', '085', '086', '087', '088', '089', '090', '091', '092', '093', '094', '095', '096', '097', '098', '099', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124']
+INFO:root:len(pid_train):73, len(pid_test):50
+INFO:root:Data initialization complete.
+INFO:root:Initializing model...
+INFO:root:Model initialization complete.
+INFO:root:Loading the model of iteration 100000...
+INFO:root:Transforming...
+INFO:root:Transformation complete. Cost:0:00:52.965235
+INFO:root:Evaluating...
+INFO:root:acc.shape:(3, 11, 11, 5)
+INFO:root:Evaluation complete. Cost:0:00:01.178279
+===Rank-1 (Include identical-view cases)===
+NM: 90.802,	BG: 72.901,	CL:60.901
+===Rank-1 (Exclude identical-view cases)===
+NM: 90.155,	BG: 71.945,	CL:60.127
+===Rank-1 of each angle (Exclude identical-view cases)===
+NM: [89.10 88.50 91.20 91.10 90.00 88.20 89.30 91.70 93.40 92.00 87.20]
+BG: [71.50 71.90 73.70 73.40 71.30 70.20 71.30 72.70 74.30 74.80 66.30]
+CL: [60.60 57.20 61.50 58.80 59.30 53.40 60.70 60.40 61.70 65.80 62.00]
+===Rank-1 of each angle (Include identical-view cases)===
+NM: [90.00 89.36 91.82 91.82 90.73 89.00 90.00 92.09 93.64 92.27 88.09]
+BG: [73.09 73.00 74.55 74.36 72.09 71.18 72.09 73.36 74.91 75.64 67.64]
+CL: [61.00 58.18 62.09 59.36 60.09 54.64 61.36 60.64 62.18 66.82 63.55]
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
